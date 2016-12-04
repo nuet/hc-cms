@@ -39,7 +39,7 @@ class PageCtrl extends Controller
     public function index()
     {
         $this->data['title'] = Gen::genOpt('title');
-        return view('front.bds.pages.home', $this->data);
+        return view('frontend.recreation-center.pages.home', $this->data);
     }
     /**
      * 
@@ -70,13 +70,13 @@ class PageCtrl extends Controller
         } else {
             $this->data['title'] = $findcat->name.' | '.Gen::genOpt('title');
             $postcat = $findcat->blog()->where('status', '=', 1);
-            return view('front.bds.pages.category', $this->data);
+            return view('frontend.recreation-center.pages.category', $this->data);
         }
         $page = Page\Page::where('page_slug', $slug)->first();
         if (count($page)) {
             $this->data['page'] = $page;
             $this->data['title'] = $page->page_name.' | '.Gen::genOpt('title');;
-            return view('front.bds.pages.pages', $this->data);
+            return view('frontend.recreation-center.pages.pages', $this->data);
         }
         return abort('404', 'Page Not Found');
     }
@@ -107,7 +107,7 @@ class PageCtrl extends Controller
         if (!Auth::check()) {
             return redirect('customer/login');
         }
-        return view('front.bds.pages.account', $this->data);
+        return view('frontend.recreation-center.pages.account', $this->data);
     }
     /**
      * 

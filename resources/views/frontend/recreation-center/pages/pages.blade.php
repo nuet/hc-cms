@@ -1,4 +1,4 @@
-@extends('front.bds.layouts.index')
+@extends('frontend.recreation-center.layouts.index')
 @section('main')
 <section class="pv-20">
     <div class="container">

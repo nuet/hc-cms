@@ -3,19 +3,19 @@
 <form action="" method="get" id="searchForm" name="searchForm" class="form-inline">
 <!--    <input type="hidden" value="{{csrf_token()}}" name="_token">-->
     @section('sidebar')
-    @include('front.bds.widget.sidebar')
+    @include('frontend.recreation-center.widget.sidebar')
     @show
     <section>
         <div class="container">
             <div class="row">
                 <div class="col-sm-9">
                     @section('postcat')
-                    @include('front.bds.widget.postcat')
+                    @include('frontend.recreation-center.widget.postcat')
                     @show
                 </div>
                 <div class="col-sm-3">
                     @section('profile')
-                    @include('front.bds.widget.profile')
+                    @include('frontend.recreation-center.widget.profile')
                     @show
                     <div class="image-box shadow bordered text-center mb-20">
                         @foreach(Options::getMedia(Config::get('constants.mediatype.slide'),Config::get('constants.slidetype.anh_ben_trai_trang_tin')) as $key =>$ss)

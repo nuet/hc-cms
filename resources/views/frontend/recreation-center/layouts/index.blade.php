@@ -10,17 +10,15 @@
         <meta name="description" content="{{Gen::genOpt('store_description')}}" />
         <meta name="keywords" content="{{Gen::genOpt('store_keywords')}}" />
         
-        <link href="{{asset('front/bds/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
-        <link href="{{asset('front/bds/font-awesome-4.6.3/css/font-awesome.min.css')}}" rel="stylesheet">
-        <link href="{{asset('front/bds/bootstrap-select-1.11.0/dist/css/bootstrap-select.min.css')}}" rel="stylesheet">
-        <link href="{{asset('front/bds/css/style.css')}}" rel="stylesheet">
-        <link href="{{asset('front/bds/css/responsive.css')}}" rel="stylesheet">
-        <script src="{{asset('front/bds/js/jquery.min.js')}}"></script>
-        <script src="{{asset('front/bds/bootstrap/js/bootstrap.min.js')}}"></script>
-        <script src="{{asset('front/bds/bootstrap-select-1.11.0/dist/js/bootstrap-select.min.js')}}"></script>
-        <script src="{{asset('front/bds/js/jquery-cookie-master/src/jquery.cookie.js')}}"></script>
-        <script src="{{asset('front/bds/js/jssocials-1.3.1/dist/jssocials.min.js')}}"></script>
-        <script src="{{asset('front/bds/js/main.js')}}"></script>
+        <link href="{{asset('frontend/recreation-center/bootstrap-3.3.7-dist/css/bootstrap.min.css')}}" rel="stylesheet">
+
+        <link href="{{asset('frontend/recreation-center/font-awesome-4.6.3/css/font-awesome.min.css')}}" rel="stylesheet">
+
+
+        <script src="{{asset('frontend/recreation-center/js/jquery.min.js')}}"></script>
+        <script src="{{asset('frontend/recreation-center/bootstrap-3.3.7-dist/js/bootstrap.min.js')}}"></script>
+        <script src="{{asset('frontend/recreation-center/js/jssocials-1.3.1/dist/jssocials.min.js')}}"></script>
+        <script src="{{asset('frontend/recreation-center/js/main.js')}}"></script>
     </head>
     <body class="front-page">
         <div id="fb-root"></div>
@@ -42,13 +40,13 @@
         </script>
         <div class="page-wrapper">
             @section('header')
-            @include('front.bds.layouts.header')
+            @include('frontend.recreation-center.layouts.header')
             @show
             <div id="content">
                 @yield('main')
             </div>
             @section('footer')
-            @include('front.bds.layouts.footer')
+            @include('frontend.recreation-center.layouts.footer')
             @show
         </div>
     </body>
