@@ -37,3 +37,17 @@
         </div>
     </div>
 </header>
+<nav id="site-navigation" class="main-navigation clearfix" role="navigation">
+    <div class="container">
+        <div class="clearfix navinside">
+            <div id="main-nav" class="collapse navbar-collapse"><ul id="menu-footer-menu" class="menu moztheme-nav nav navbar-nav"><li id="menu-item-188" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-31 current_page_item menu-item-188 active"><a title="Trang chủ" href="http://dongamruou.vn/">Trang chủ</a></li>
+                    <li id="menu-item-189" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-189"><a title="Giới thiệu" href="http://dongamruou.vn/gioi-thieu/">Giới thiệu</a></li>
+                    <li id="menu-item-190" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-190"><a title="Sản Phẩm" href="http://dongamruou.vn/danh-muc/san-pham/">Sản Phẩm</a></li>
+                    <li id="menu-item-840" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-840"><a title="Bình Thủy Tinh" href="http://dongamruou.vn/danh-muc/binh-thuy-tinh/">Bình Thủy Tinh</a></li>
+                    <li id="menu-item-191" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-191"><a title="Kho Rượu Ngâm" href="http://dongamruou.vn/danh-muc/kho-ruou-ngam/">Kho Rượu Ngâm</a></li>
+                    <li id="menu-item-192" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-192"><a title="Cách Ngâm" href="http://dongamruou.vn/cach-ngam/">Cách Ngâm</a></li>
+                    <li id="menu-item-194" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-194"><a title="Tin tức" href="http://dongamruou.vn/tin-tuc/">Tin tức</a></li>
+                    <li id="menu-item-193" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-193"><a title="Liên hệ" href="http://dongamruou.vn/lien-he/">Liên hệ</a></li>
+                </ul></div>	</div><!-- /.row -->
+    </div><!-- /.container navbar -->
+</nav>
