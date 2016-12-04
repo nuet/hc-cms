@@ -16,7 +16,7 @@
     <body class="login-page">
         <div class="login-box">
             <div class="login-logo">
-                <a href="../../index2.html"><b>Admin</b></a>
+                <a href="../../index2.html"><b>HC-CMS</b></a>
             </div><!-- /.login-logo -->
                 @if(count($errors))
                 <div class="alert alert-danger">
@@ -29,7 +29,6 @@
                 </div>
                 @endif
             <div class="login-box-body">
-                <p class="login-box-msg">Sign in to start your session</p>
                 <form class="form-login" method="post" action="{{route('do.login')}}" novalidate>
                     <input type="hidden" name="_token" value="{{ csrf_token()}}">
                     <div class="form-group has-feedback">
@@ -54,7 +53,6 @@
                     </div>
                 </form>
                 <a href="#">I forgot my password</a><br>
-
             </div><!-- /.login-box-body -->
         </div><!-- /.login-box -->
 

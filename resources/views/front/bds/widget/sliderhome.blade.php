@@ -10,7 +10,7 @@
                             <?php $index++; ?>
                         @endforeach
                     </ol>
-                    
+
                     <div class="carousel-inner">
                         @foreach(Gen::getMedia(Config::get('constants.mediatype.slide'),Config::get('constants.slidetype.home')) as $key =>$ss)
                             <div class="item {{$key == 0 ? 'active' : ''}}">
@@ -30,7 +30,7 @@
                     </a>
                     <a href="#slider-carousel" class="right carousel-control hidden-xs" data-slide="next">
                         <i class="glyphicon glyphicon-chevron-right"></i>
-                    </a> 
+                    </a>
                 </div>
             </div>
         </div>
