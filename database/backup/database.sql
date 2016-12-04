@@ -1,7 +1,7 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : localhost
+Source Server         : maria
 Source Server Version : 50505
 Source Host           : localhost:3306
 Source Database       : cms
@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2016-09-29 14:24:51
+Date: 2016-12-04 11:00:23
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -40,8 +40,6 @@ INSERT INTO `category` VALUES ('12', '0', 'Tin rao', 'tin-rao', '1', '1', 'vi', 
 INSERT INTO `category` VALUES ('13', '7', 'Thể thao', 'tin-tuc/the-thao', '0', '1', 'vi', '2016-09-29 11:03:40', '2016-09-29 04:03:40');
 INSERT INTO `category` VALUES ('14', '7', 'Test1', 'tin-tuc/test1', '1', '1', 'vi', '2016-09-29 11:03:40', '2016-09-29 04:03:40');
 INSERT INTO `category` VALUES ('15', '7', 'Kinh tế', 'tin-tuc/kinh-te', '2', '1', 'vi', '2016-09-29 11:03:40', '2016-09-29 04:03:40');
-INSERT INTO `category` VALUES ('20', '0', 'News', 'news', '3', '1', 'en', '2016-09-29 04:50:07', '2016-09-29 04:50:07');
-INSERT INTO `category` VALUES ('21', '0', 'Products', 'products', '4', '1', 'en', '2016-09-29 04:50:23', '2016-09-29 04:50:23');
 
 -- ----------------------------
 -- Table structure for media
@@ -64,12 +62,10 @@ CREATE TABLE `media` (
 -- ----------------------------
 -- Records of media
 -- ----------------------------
-INSERT INTO `media` VALUES ('1', '1', '0', 'ảnh 1 1', 'ảnh slide 1', 'anh-1-1_slide1.jpg', '/images/admin/images/slide/slide1.jpg', 'http://localhost', '2016-09-20 09:06:35', '2016-09-20 02:06:35');
-INSERT INTO `media` VALUES ('2', '1', '0', 'ảnh 2', 'slide 2', 'anh-2_slide1.jpg', '/images/admin/images/slide/slide1.jpg', 'http://localhost', '2016-09-20 08:42:50', '2016-09-20 01:42:50');
-INSERT INTO `media` VALUES ('6', '1', '0', 'pic 6', 'xyz', 'pic-6_slide1.jpg', '/images/admin/images/slide/slide1.jpg', 'abc', '2016-09-20 08:42:58', '2016-09-20 01:42:58');
-INSERT INTO `media` VALUES ('7', '1', '0', 'pic 7', 'df', 'pic-7_slide1.jpg', '/images/admin/images/slide/slide1.jpg', 'd', '2016-09-20 08:43:08', '2016-09-20 01:43:08');
+INSERT INTO `media` VALUES ('1', '1', '0', 'ảnh 1 1', 'ảnh slide 1', 'anh-1-1_slide1.jpg', '/images/admin/images/ba-kich-tim-dep.jpg', 'http://localhost', '2016-12-04 10:15:01', '2016-12-04 03:15:01');
+INSERT INTO `media` VALUES ('2', '1', '0', 'ảnh 2', 'slide 2', 'anh-2_slide1.jpg', '/images/admin/images/cu-tam-that-tuoi.jpg', 'http://localhost', '2016-12-04 10:15:11', '2016-12-04 03:15:11');
+INSERT INTO `media` VALUES ('6', '1', '0', 'pic 6', 'xyz', 'pic-6_slide1.jpg', '/images/admin/images/nam-ngoc-cau-dep.jpg', 'abc', '2016-12-04 10:15:21', '2016-12-04 03:15:21');
 INSERT INTO `media` VALUES ('8', '4', '0', 'Tiến độ bàn giao đúng thời hạn cam kết', 'Việt nam được xem là điểm đến mới đầy tiềm năng của du lịch quốc tế, vì thế đầu tư vào bất động sản nghỉ', 'tien-do-ban-giao-dung-thoi-han-cam-ket_slide1.jpg', '/images/admin/images/slide/slide1.jpg', 'sd', '2016-09-20 09:02:46', '2016-09-20 02:02:46');
-INSERT INTO `media` VALUES ('9', '1', '0', 'pic8', 'as', 'pic8_slide1.jpg', '/images/admin/images/slide/slide1.jpg', 'http://localhost', '2016-09-20 08:43:19', '2016-09-20 01:43:19');
 INSERT INTO `media` VALUES ('10', '4', '0', 'Tiến độ bàn giao đúng thời hạn cam kết', 'Việt nam được xem là điểm đến mới đầy tiềm năng của du lịch quốc tế, vì thế đầu tư vào bất động sản nghỉ', 'tien-do-ban-giao-dung-thoi-han-cam-ket_conten_loiichdautu.png', '/images/admin/images/slide/conten_loiichdautu.png', 'as', '2016-09-20 08:50:15', '2016-09-20 01:50:15');
 INSERT INTO `media` VALUES ('11', '4', '0', 'Việt nam được xem là điểm đến mới đầy tiềm năng ', 'Việt nam được xem là điểm đến mới đầy tiềm năng của du lịch quốc tế, vì thế đầu tư vào bất động sản nghỉ', 'viet-nam-duoc-xem-la-diem-den-moi-day-tiem-nang_conten_loiichdautu.png', '/images/admin/images/slide/conten_loiichdautu.png', 'sdf', '2016-09-20 08:50:28', '2016-09-20 01:50:28');
 INSERT INTO `media` VALUES ('12', '4', '0', 'Việt nam được xem là điểm đến mới', 'Việt nam được xem là điểm đến mới đầy tiềm năng của du lịch quốc tế, vì thế đầu tư vào bất động sản nghỉ', 'viet-nam-duoc-xem-la-diem-den-moi_conten_loiichdautu.png', '/images/admin/images/slide/conten_loiichdautu.png', 'ádfas', '2016-09-20 08:50:36', '2016-09-20 01:50:36');
@@ -115,9 +111,6 @@ INSERT INTO `menu` VALUES ('34', '31', 'Kinh tế', 'tin-tuc/kinh-te', 'category
 INSERT INTO `menu` VALUES ('35', '33', 'Tin tức', 'tin-tuc', 'category', '1', 'top', '0', 'vi', '2016-09-23 07:41:30', '2016-09-23 07:43:01');
 INSERT INTO `menu` VALUES ('36', '35', 'Thể thao', 'tin-tuc/the-thao', 'category', '1', 'top', '0', 'vi', '2016-09-23 07:41:30', '2016-09-23 07:41:30');
 INSERT INTO `menu` VALUES ('38', '35', 'Kinh tế', 'tin-tuc/kinh-te', 'category', '1', 'top', '2', 'vi', '2016-09-23 07:41:30', '2016-09-23 07:41:30');
-INSERT INTO `menu` VALUES ('39', '0', 'Home', 'home', 'link', '1', 'top', '0', 'en', '2016-09-29 06:22:28', '2016-09-29 06:22:28');
-INSERT INTO `menu` VALUES ('40', '0', 'News', 'news', 'category', '1', 'top', '1', 'en', '2016-09-29 06:25:44', '2016-09-29 06:29:46');
-INSERT INTO `menu` VALUES ('41', '0', 'Products', 'products', 'category', '1', 'top', '2', 'en', '2016-09-29 06:25:44', '2016-09-29 06:29:46');
 
 -- ----------------------------
 -- Table structure for migrations
@@ -163,7 +156,6 @@ CREATE TABLE `news` (
 INSERT INTO `news` VALUES ('25', '7', 'Vingroup đồng loạt đạt ba giải nhất tại', 'vingroup-dong-loat-dat-ba-giai-nhat-tai', 'sdf', '/images/admin/images/post/conten_tinraovat.png', null, '', '1', '0', null, 'vi', '2016-09-21 06:18:42', '2016-09-21 06:39:49');
 INSERT INTO `news` VALUES ('26', '7', 'Vingroup đồng loạt đạt ba giải nhất tại đồng loạt đạt ba giải nhất tại đồng loạt đạt âs tin tức', 'vingroup-dong-loat-dat-ba-giai-nhat-tai-dong-loat-dat-ba-giai-nhat-tai-dong-loat-dat-as-tin-tuc', '<a href=\"http://cuongnh/vingroup-dong-loat-dat-ba-giai-nhat-tai-dong-loat-dat-ba-giai-nhat-tai-dong-loat-dat-ass-24#\">Vingroup đồng loạt đạt ba giải nhất tại đồng loạt đạt ba giải nhất tại đồng loạt đạt &acirc;s 24 </a>', '/images/admin/images/post/conten_tinraovat.png', null, 'https://www.youtube.com/embed/FCDXZhfepNI', '1', '0', null, 'vi', '2016-09-21 06:23:29', '2016-09-21 06:39:26');
 INSERT INTO `news` VALUES ('29', '7', 'Bán gấp nhà MT Bạch Đằng, P. 2, Q. Tân Bình, 10x33msd qq', 'ban-gap-nha-mt-bach-dang-p-2-q-tan-binh-10x33msd-qq', '&aacute;dsa', '', null, '', '0', '0,1,2', null, 'vi', '2016-09-22 01:25:55', '2016-09-28 02:48:09');
-INSERT INTO `news` VALUES ('30', '7', 'test', 'test', 'df', '/images/admin/images/post/re-product.jpg', null, '', '1', '0,1,2', null, 'en', '2016-09-29 06:49:12', '2016-09-29 06:49:12');
 
 -- ----------------------------
 -- Table structure for option
@@ -245,7 +237,7 @@ CREATE TABLE `pages` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of pages
@@ -463,10 +455,6 @@ CREATE TABLE `slideshow` (
 -- ----------------------------
 INSERT INTO `slideshow` VALUES ('1', 'Slide trang chủ', '1', '0', '1', 'vi', '2016-09-13 00:27:07', '2016-09-12 17:27:07');
 INSERT INTO `slideshow` VALUES ('2', 'Ảnh quảng cáo bên trái của trang chủ', '4', '0', '1', 'vi', '2016-09-16 18:10:19', '2016-09-16 11:10:19');
-INSERT INTO `slideshow` VALUES ('4', 'Slide lợi ích đầu tư', '1', '0', '1', 'vi', '2016-09-14 16:07:27', '2016-09-14 09:07:27');
-INSERT INTO `slideshow` VALUES ('5', 'Ảnh quảng cáo bên trái của trang chuyên mục, chi tiết', '4', '0', '1', 'vi', '2016-09-16 11:19:50', '2016-09-16 11:19:50');
-INSERT INTO `slideshow` VALUES ('6', 'slide1', '0', '0', '1', 'en', '2016-09-29 06:59:25', '2016-09-29 06:59:25');
-INSERT INTO `slideshow` VALUES ('7', 'slideshow2', '0', '0', '1', 'en', '2016-09-29 06:59:43', '2016-09-29 06:59:43');
 
 -- ----------------------------
 -- Table structure for users
@@ -502,7 +490,7 @@ CREATE TABLE `users` (
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES ('2', 'Nguyễn', 'Hoàng Trung', 'ada@ada.com', '$2y$10$y27cEyVnpBD3BbNAgJKtKurwtrXUpDBd4MnoIGHH2Cxz/18Ly1BNu', '5DULaRVueFopPhxNv43fKv95elvOTwwhqUhwCLKtqNHX2ptfZq98n1t8qeaM', null, '2015-05-19 10:00:32', '2016-09-29 04:24:55', '1', 'admin', '/images/admin/images/avata/profile.jpg', null, null, '0974856231', '0974856231', null, null, '', null, null, null);
+INSERT INTO `users` VALUES ('2', 'Nguyễn', 'Hoàng Trung', 'ada@ada.com', '$2y$10$y27cEyVnpBD3BbNAgJKtKurwtrXUpDBd4MnoIGHH2Cxz/18Ly1BNu', 'lANJH2OZ1FFhpyE8FtkE1kID1qSAciu832O3BqzhkvZuO98GdR1QgXeLc1qk', null, '2015-05-19 10:00:32', '2016-12-04 02:37:40', '1', 'admin', '/images/admin/images/avata/profile.jpg', null, null, '0974856231', '0974856231', null, null, '', null, null, null);
 INSERT INTO `users` VALUES ('6', 'test 12345', null, 'telo33@telo.com', '', null, null, '2015-05-20 11:01:38', '2015-05-20 11:08:00', '0', null, 'http://pbs.twimg.com/profile_images/450900068724273152/IGbwH2oI_normal.jpeg', null, null, null, null, null, null, null, null, null, null);
 INSERT INTO `users` VALUES ('9', 'Wasi Arnosa', null, 'devil.syiewa@gmail.com', '$2y$10$4xJ47eOcHvb.HqpAM32WxOG1CaufB5aryFP01kumUMJ8Xf.mc3uR6', 'OlZQ3hA1MLoNEZrwTyH1XMuDM51Rdn91iSQPtudZaBYCyprxbJArL9OmUm0d', null, '2015-05-22 15:04:42', '2015-06-16 10:48:16', '1', null, 'https://graph.facebook.com/v2.2/1044947206/picture?type=normal', null, '1044947206', '1414141', '114141', '', '', 'address 1', null, null, null);
 INSERT INTO `users` VALUES ('10', 'Nguyễn', 'Hùng Cường', 'telo333@telo.com', '$2y$10$IVF53irdmefw6VF.Gfxw8e1rN.9vy03dFprG90GdPj2.M6iM65hAa', 'Vjpji04YgcdimjOaNg85liT2ljY9ZjPK4jhArIII2H8dbKEIFObvVKy20h9O', null, '2015-05-25 10:58:58', '2016-09-08 14:43:13', '1', 'cuongnh', 'http://pbs.twimg.com/profile_images/450900068724273152/IGbwH2oI_normal.jpeg', null, '63434803', null, null, null, null, null, null, null, null);
