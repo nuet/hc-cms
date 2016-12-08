@@ -27,7 +27,7 @@ class RoleCtrl extends Controller {
     }
 
     public function getPerm() {
-        $this->data['modul'] = ['post', 'menu', 'page', 'slideshow', 'category', 'user'];
+        $this->data['modul'] = ['post' , 'product', 'menu', 'page', 'slideshow', 'category', 'user'];
         $this->data['roles'] = Role::all();
         return view('backend.user.permissions.index', $this->data);
     }

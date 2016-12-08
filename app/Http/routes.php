@@ -17,6 +17,15 @@ function()
 
     // Backend Route
     Route::group(['prefix' => 'backend'], function() {
+        // Route Products
+        Route::group(['namespace' => 'backend\Products'], function() {
+
+            Route::resource('product', 'ProductCtrl');
+            Route::resource('category', 'CategoryCtrl');
+            Route::resource('image', 'ImageCtrl');
+            Route::post('meta/product', ['as' => 'backend.product.meta', 'uses' => 'ProductCtrl@metaProduct']);
+        });
+
         // Route Category
         Route::group(['namespace' => 'backend\Category'], function() {
             Route::resource('category', 'CategoryCtrl');
@@ -58,6 +67,12 @@ function()
     
     // API route
     Route::group(['prefix' => 'api'], function() {
+        Route::group(['namespace' => 'backend\Products'], function() {
+            Route::get('product', ['as' => 'api.product', 'uses' => 'ProductCtrl@getProduct']);
+            Route::get('category', ['as' => 'api.category', 'uses' => 'CategoryCtrl@getCat']);
+            Route::post('category', ['as' => 'api.postcat', 'uses' => 'CategoryCtrl@getCat']);
+        });
+
         Route::group(['namespace' => 'backend\Category'], function() {
             Route::get('category', ['as' => langRouteName('api.category'), 'uses' => 'CategoryCtrl@getCat']);
             Route::post('category', ['as' => langRouteName('api.postcat'), 'uses' => 'CategoryCtrl@getCat']);
@@ -108,6 +123,15 @@ function()
 
 // Backend Route
 Route::group(['prefix' => 'backend'], function() {
+    // Route Products
+    Route::group(['namespace' => 'backend\Products'], function() {
+
+        Route::resource('product', 'ProductCtrl');
+        Route::resource('category', 'CategoryCtrl');
+        Route::resource('image', 'ImageCtrl');
+        Route::post('meta/product', ['as' => 'backend.product.meta', 'uses' => 'ProductCtrl@metaProduct']);
+    });
+
     // Route Category
     Route::group(['namespace' => 'backend\Category'], function() {
         Route::resource('category', 'CategoryCtrl');

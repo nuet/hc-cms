@@ -54,6 +54,18 @@
                 </ul>
             </li>
             @endif
+            @if(Entrust::can('product-read'))
+                <li class="treeview {{ Ekko::areActiveRoutes([langRouteName('backend.product.index'),langRouteName('backend.product.create')]) }}">
+                    <a href="#">
+                        <i class="fa fa-files-o"></i>
+                        <span>{{ ucfirst(trans('sidebar.product')) }}</span><i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul id="backend-news" class="treeview-menu">
+                        <li class="{{ Ekko::isActiveRoute(langRouteName('backend.product.index')) }}"><a href="{{langRoute('backend.product.index')}}"><i class="fa fa-circle-o"></i>{{ ucfirst(trans('sidebar.list')) }}</a></li>
+                        <li class="{{ Ekko::isActiveRoute(langRouteName('backend.product.create')) }}"><a href="{{langRoute('backend.product.create')}}"><i class="fa fa-plus"></i>{{ ucfirst(trans('sidebar.add')).' '.trans('sidebar.news') }}</a></li>
+                    </ul>
+                </li>
+            @endif
             @if(Entrust::can('user-read'))
             <li class="treeview {{ Ekko::areActiveRoutes([langRouteName('backend.user.index'),langRouteName('backend.user.create')]) }}">
                 <a href="#">

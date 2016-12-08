@@ -8,6 +8,18 @@
 Breadcrumbs::register('home', function($breadcrumbs) {
     $breadcrumbs->push(ucfirst(trans('sidebar.home')), route('backend.news.index'));
 });
+Breadcrumbs::register('products', function($breadcrumbs) {
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push('Products', route('backend.product.index'));
+});
+Breadcrumbs::register('productcreate', function($breadcrumbs) {
+    $breadcrumbs->parent('products');
+    $breadcrumbs->push('Create Product', route('backend.product.create'));
+});
+Breadcrumbs::register('productedit', function($breadcrumbs) {
+    $breadcrumbs->parent('products');
+    $breadcrumbs->push('Edit Product', route('backend.product.edit'));
+});
 Breadcrumbs::register('category', function($breadcrumbs) {
     $breadcrumbs->parent('home');
     $breadcrumbs->push(ucfirst(trans('sidebar.categories')), route('backend.category.index'));
