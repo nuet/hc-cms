@@ -79,6 +79,7 @@ class CategoryCtrl extends Controller {
     public function store(CategoryRequest $request) {
         $input = $request->all();
         $input['status'] = $request->get('status') == 'on' ? 1 : 0;
+        $input['viewhome'] = $request->get('viewhome') == 'on' ? 1 : 0;
         if ($request->get('parent')) {
             $parent_slug = Category::find($input['parent'])->slug;
             $input['slug'] = $parent_slug . '/' . str_slug($input['name']);
@@ -129,6 +130,7 @@ class CategoryCtrl extends Controller {
     public function update(CategoryRequest $request, $id) {
         $input = $request->all();
         $input['status'] = $request->get('status') == 'on' ? 1 : 0;
+        $input['viewhome'] = $request->get('viewhome') == 'on' ? 1 : 0;
         if ($request->get('parent')) {
             $parent_slug = Category::find($input['parent'])->slug;
             $input['slug'] = $parent_slug . '/' . str_slug($input['name']);

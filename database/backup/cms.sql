@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2016-12-11 05:11:41
+Date: 2016-12-17 23:20:14
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -29,27 +29,28 @@ CREATE TABLE `category` (
   `lang` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `viewhome` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of category
 -- ----------------------------
-INSERT INTO `category` VALUES ('7', '0', 'Tin tức', 'tin-tuc', '0', '1', 'vi', '2016-09-29 11:03:40', '2016-09-29 04:03:40');
-INSERT INTO `category` VALUES ('12', '0', 'Dịch vụ', 'dich-vu', '1', '1', 'vi', '2016-12-11 02:18:18', '2016-12-10 19:18:18');
-INSERT INTO `category` VALUES ('13', '7', 'Tin hoạt động', 'tin-tuc/tin-hoat-dong', '0', '1', 'vi', '2016-12-11 02:47:48', '2016-12-10 19:47:48');
-INSERT INTO `category` VALUES ('14', '7', 'Test1', 'tin-tuc/test1', '2', '1', 'vi', '2016-12-11 02:16:21', '2016-12-10 19:16:21');
-INSERT INTO `category` VALUES ('15', '7', 'Kinh tế', 'tin-tuc/kinh-te', '1', '1', 'vi', '2016-12-11 02:16:21', '2016-12-10 19:16:21');
-INSERT INTO `category` VALUES ('22', '12', 'Trò chơi trong nhà', 'dich-vu/tro-choi-trong-nha', '3', '1', 'vi', '2016-12-11 02:53:59', '2016-12-10 19:18:09');
-INSERT INTO `category` VALUES ('23', '12', 'Trò chơi ngoài trời', 'dich-vu/tro-choi-ngoai-troi', '4', '1', 'vi', '2016-12-10 19:18:48', '2016-12-10 19:18:48');
-INSERT INTO `category` VALUES ('24', '12', 'Thể thao trong nhà', 'dich-vu/the-thao-trong-nha', '5', '1', 'vi', '2016-12-10 19:19:11', '2016-12-10 19:19:11');
-INSERT INTO `category` VALUES ('25', '12', 'Thể thao ngoài trời', 'dich-vu/the-thao-ngoai-troi', '6', '1', 'vi', '2016-12-10 19:19:26', '2016-12-10 19:19:26');
-INSERT INTO `category` VALUES ('26', '12', 'Ăn uống', 'dich-vu/an-uong', '7', '1', 'vi', '2016-12-10 19:19:51', '2016-12-10 19:19:51');
-INSERT INTO `category` VALUES ('27', '12', 'Bán hàng', 'dich-vu/ban-hang', '8', '1', 'vi', '2016-12-10 19:20:09', '2016-12-10 19:20:09');
-INSERT INTO `category` VALUES ('28', '12', 'Tổ chức sự kiện', 'dich-vu/to-chuc-su-kien', '9', '1', 'vi', '2016-12-10 19:20:31', '2016-12-10 19:20:31');
-INSERT INTO `category` VALUES ('29', '12', 'Tour du lịch', 'dich-vu/tour-du-lich', '10', '1', 'vi', '2016-12-10 19:20:58', '2016-12-10 19:20:58');
-INSERT INTO `category` VALUES ('30', '12', 'Bán vé máy bay', 'dich-vu/ban-ve-may-bay', '11', '1', 'vi', '2016-12-10 19:21:19', '2016-12-10 19:21:19');
-INSERT INTO `category` VALUES ('31', '12', 'Dịch vụ bảo vệ', 'dich-vu/dich-vu-bao-ve', '12', '1', 'vi', '2016-12-10 19:21:46', '2016-12-10 19:21:46');
+INSERT INTO `category` VALUES ('7', '0', 'Tin tức', 'tin-tuc', '0', '1', 'vi', '2016-09-29 11:03:40', '2016-09-29 04:03:40', null);
+INSERT INTO `category` VALUES ('12', '0', 'Dịch vụ', 'dich-vu', '1', '1', 'vi', '2016-12-11 02:18:18', '2016-12-10 19:18:18', null);
+INSERT INTO `category` VALUES ('13', '7', 'Tin hoạt động', 'tin-tuc/tin-hoat-dong', '0', '1', 'vi', '2016-12-11 02:47:48', '2016-12-10 19:47:48', null);
+INSERT INTO `category` VALUES ('14', '7', 'Test1', 'tin-tuc/test1', '2', '1', 'vi', '2016-12-11 02:16:21', '2016-12-10 19:16:21', null);
+INSERT INTO `category` VALUES ('15', '7', 'Kinh tế', 'tin-tuc/kinh-te', '1', '1', 'vi', '2016-12-11 02:16:21', '2016-12-10 19:16:21', null);
+INSERT INTO `category` VALUES ('22', '12', 'Trò chơi trong nhà', 'dich-vu/tro-choi-trong-nha', '3', '1', 'vi', '2016-12-11 02:53:59', '2016-12-10 19:18:09', null);
+INSERT INTO `category` VALUES ('23', '12', 'Trò chơi ngoài trời', 'dich-vu/tro-choi-ngoai-troi', '4', '1', 'vi', '2016-12-10 19:18:48', '2016-12-10 19:18:48', null);
+INSERT INTO `category` VALUES ('24', '12', 'Thể thao trong nhà', 'dich-vu/the-thao-trong-nha', '5', '1', 'vi', '2016-12-10 19:19:11', '2016-12-10 19:19:11', null);
+INSERT INTO `category` VALUES ('25', '12', 'Thể thao ngoài trời', 'dich-vu/the-thao-ngoai-troi', '6', '1', 'vi', '2016-12-10 19:19:26', '2016-12-10 19:19:26', null);
+INSERT INTO `category` VALUES ('26', '12', 'Ăn uống', 'dich-vu/an-uong', '7', '1', 'vi', '2016-12-10 19:19:51', '2016-12-10 19:19:51', null);
+INSERT INTO `category` VALUES ('27', '12', 'Bán hàng', 'dich-vu/ban-hang', '8', '1', 'vi', '2016-12-10 19:20:09', '2016-12-10 19:20:09', null);
+INSERT INTO `category` VALUES ('28', '12', 'Tổ chức sự kiện', 'dich-vu/to-chuc-su-kien', '9', '1', 'vi', '2016-12-10 19:20:31', '2016-12-10 19:20:31', null);
+INSERT INTO `category` VALUES ('29', '12', 'Tour du lịch', 'dich-vu/tour-du-lich', '10', '1', 'vi', '2016-12-10 19:20:58', '2016-12-10 19:20:58', null);
+INSERT INTO `category` VALUES ('30', '12', 'Bán vé máy bay', 'dich-vu/ban-ve-may-bay', '11', '1', 'vi', '2016-12-10 19:21:19', '2016-12-10 19:21:19', null);
+INSERT INTO `category` VALUES ('31', '12', 'Dịch vụ bảo vệ', 'dich-vu/dich-vu-bao-ve', '12', '1', 'vi', '2016-12-10 19:21:46', '2016-12-10 19:21:46', null);
 
 -- ----------------------------
 -- Table structure for media
@@ -67,7 +68,7 @@ CREATE TABLE `media` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of media
@@ -88,6 +89,7 @@ INSERT INTO `media` VALUES ('18', '5', '0', 'anh2', 's', 'anh2_right_tinrao2.jpg
 INSERT INTO `media` VALUES ('19', '7', '0', 'a1', '', null, '/images/admin/images/slide/slide1.jpg', '', '2016-09-29 07:04:25', '2016-09-29 07:04:25');
 INSERT INTO `media` VALUES ('20', '8', '0', 'ảnh hoạt động', 'acd', null, '/images/admin/files/15203279_714175835410288_4950455490887737955_n.jpg', 'anh-hoat-dong', '2016-12-11 03:58:10', '2016-12-10 20:58:10');
 INSERT INTO `media` VALUES ('21', '9', '0', 'as', 'ád', null, '/images/admin/files/12573016_548998435261363_2033968578888933088_n.jpg', 'ad', '2016-12-10 21:25:07', '2016-12-10 21:25:07');
+INSERT INTO `media` VALUES ('22', '10', '0', 'a1', 'as', null, '/images/admin/files/12650916_548998438594696_4309564370475331379_n.jpg', '', '2016-12-17 15:19:09', '2016-12-17 15:19:09');
 
 -- ----------------------------
 -- Table structure for menu
@@ -170,14 +172,14 @@ CREATE TABLE `news` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of news
 -- ----------------------------
-INSERT INTO `news` VALUES ('25', '7', 'Vingroup đồng loạt đạt ba giải nhất tại', 'vingroup-dong-loat-dat-ba-giai-nhat-tai', 'sdf', '/images/admin/images/post/conten_tinraovat.png', null, '', '1', '0', null, 'vi', '2016-09-21 06:18:42', '2016-09-21 06:39:49');
-INSERT INTO `news` VALUES ('26', '7', 'Vingroup đồng loạt đạt ba giải nhất tại đồng loạt đạt ba giải nhất tại đồng loạt đạt âs tin tức', 'vingroup-dong-loat-dat-ba-giai-nhat-tai-dong-loat-dat-ba-giai-nhat-tai-dong-loat-dat-as-tin-tuc', '<a href=\"http://cuongnh/vingroup-dong-loat-dat-ba-giai-nhat-tai-dong-loat-dat-ba-giai-nhat-tai-dong-loat-dat-ass-24#\">Vingroup đồng loạt đạt ba giải nhất tại đồng loạt đạt ba giải nhất tại đồng loạt đạt &acirc;s 24 </a>', '/images/admin/images/post/conten_tinraovat.png', null, 'https://www.youtube.com/embed/FCDXZhfepNI', '1', '0', null, 'vi', '2016-09-21 06:23:29', '2016-09-21 06:39:26');
-INSERT INTO `news` VALUES ('29', '7', 'Bán gấp nhà MT Bạch Đằng, P. 2, Q. Tân Bình, 10x33msd qq', 'ban-gap-nha-mt-bach-dang-p-2-q-tan-binh-10x33msd-qq', '&aacute;dsa', '', null, '', '0', '0,1,2', null, 'vi', '2016-09-22 01:25:55', '2016-09-28 02:48:09');
+INSERT INTO `news` VALUES ('25', '7', 'Trung tâm Giải trí và Thể thao Thế Hệ Mới, huyện Lệ Thuỷ, tỉnh Quảng Bình đang đẩy nhanh...', 'trung-tam-giai-tri-va-the-thao-the-he-moi-huyen-le-thuy-tinh-quang-binh-dang-day-nhanh', 'sdf', '/images/admin/files/11896260_491702007657673_3877675263664202134_n.jpg', null, '', '1', '0,1', null, 'vi', '2016-09-21 06:18:42', '2016-12-17 15:34:20');
+INSERT INTO `news` VALUES ('26', '7', 'THÔNG BÁO KHUYẾN MÃI BÓNG ĐÁ', 'thong-bao-khuyen-mai-bong-da', 'đấ', '/images/admin/files/15203279_714175835410288_4950455490887737955_n.jpg', null, '', '1', '0,1', null, 'vi', '2016-09-21 06:23:29', '2016-12-17 15:34:36');
+INSERT INTO `news` VALUES ('29', '7', 'Khu vui chơi thể thao thế hệ mới mai khai trương ca Fe', 'khu-vui-choi-the-thao-the-he-moi-mai-khai-truong-ca-fe', '&aacute;dsa', '/images/admin/files/tinhte_vn_4d21151e8b0c8__TMH3611.jpg', null, '', '1', '0,1,2', null, 'vi', '2016-09-22 01:25:55', '2016-12-17 15:32:48');
 
 -- ----------------------------
 -- Table structure for option
@@ -474,7 +476,7 @@ CREATE TABLE `product` (
 -- ----------------------------
 -- Records of product
 -- ----------------------------
-INSERT INTO `product` VALUES ('23', '7', 'test', 'test 1', 'test', '200000', '1', '2015-05-05 05:55:54', '2015-05-12 07:36:02', 'test-1');
+INSERT INTO `product` VALUES ('23', '7', 'test', 'test 1', 'test', '200000', '1', '2015-05-05 05:55:54', '2016-12-17 16:04:13', 'test-1');
 INSERT INTO `product` VALUES ('25', '8', '1231', 'Madrid 4th', 'Madrid 4th', '200000', '1', '2015-05-05 07:38:02', '2015-05-13 02:22:58', 'madrid-4th');
 INSERT INTO `product` VALUES ('26', '8', '1212', 'Madrid Home', 'Madrid Home Warna Putih', '100000', '1', '2015-05-12 05:11:49', '2015-05-12 05:11:49', 'jersey/la-liga/madrid-home');
 INSERT INTO `product` VALUES ('27', '8', '221313', 'Madrid Away', '', '100000', '1', '2015-05-12 07:05:11', '2015-05-12 07:05:11', 'jersey/la-liga/madrid-away');
@@ -493,14 +495,14 @@ CREATE TABLE `product_attr` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of product_attr
 -- ----------------------------
-INSERT INTO `product_attr` VALUES ('24', '23', 'warna', 'biru,hijau,kuning', '2015-05-12 07:36:02', '2015-05-12 07:36:02');
-INSERT INTO `product_attr` VALUES ('25', '23', 'ukuran', 's,m,l,xl,xxl', '2015-05-12 07:36:02', '2015-05-12 07:36:02');
 INSERT INTO `product_attr` VALUES ('26', '25', 'ukuran', 'S,M,L,XL,XXL', '2015-05-13 02:22:58', '2015-05-13 02:22:58');
+INSERT INTO `product_attr` VALUES ('33', '23', 'warna', 'biru,hijau,kuning', '2016-12-17 16:04:13', '2016-12-17 16:04:13');
+INSERT INTO `product_attr` VALUES ('34', '23', 'ukuran', 's,m,l,xl,xxl', '2016-12-17 16:04:13', '2016-12-17 16:04:13');
 
 -- ----------------------------
 -- Table structure for product_category
@@ -542,20 +544,19 @@ CREATE TABLE `product_img` (
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `primary` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of product_img
 -- ----------------------------
 INSERT INTO `product_img` VALUES ('14', '22', '6jkxL.jpg', 'images/products/thumb/6jkxL.jpg', 'images/products/full/6jkxL.jpg', '2015-05-05 04:36:32', '2015-05-05 04:36:32', '0');
 INSERT INTO `product_img` VALUES ('17', '25', 'pixXL.jpg', 'images/products/thumb/pixXL.jpg', 'images/products/full/pixXL.jpg', '2015-05-05 07:38:02', '2015-05-05 07:38:02', '0');
-INSERT INTO `product_img` VALUES ('27', '23', 'vJxbG.jpg', 'images/products/thumb/vJxbG.jpg', 'images/products/full/vJxbG.jpg', '2015-05-06 08:01:18', '2015-05-06 08:01:18', '0');
-INSERT INTO `product_img` VALUES ('28', '23', 'h4gFM.jpg', 'images/products/thumb/h4gFM.jpg', 'images/products/full/h4gFM.jpg', '2015-05-06 08:01:20', '2015-05-06 08:01:20', '0');
 INSERT INTO `product_img` VALUES ('34', '25', 'emGp8.jpg', 'images/products/thumb/emGp8.jpg', 'images/products/full/emGp8.jpg', '2015-05-13 02:23:31', '2015-05-13 02:23:31', '0');
 INSERT INTO `product_img` VALUES ('35', '25', 'aA0bL.jpg', 'images/products/thumb/aA0bL.jpg', 'images/products/full/aA0bL.jpg', '2015-05-13 02:23:50', '2015-05-13 02:23:50', '0');
 INSERT INTO `product_img` VALUES ('36', '29', 'Vt8GP.jpg', 'images/products/thumb/Vt8GP.jpg', 'images/products/full/Vt8GP.jpg', '2016-12-10 10:14:05', '2016-12-10 10:14:05', '0');
-INSERT INTO `product_img` VALUES ('37', '23', 'kHAuR.jpg', 'images/products/thumb/kHAuR.jpg', 'images/products/full/kHAuR.jpg', '2016-12-10 10:54:57', '2016-12-10 10:54:57', '0');
-INSERT INTO `product_img` VALUES ('38', '23', 'O2PBN.jpg', 'images/products/thumb/O2PBN.jpg', 'images/products/full/O2PBN.jpg', '2016-12-10 10:55:13', '2016-12-10 10:55:13', '0');
+INSERT INTO `product_img` VALUES ('39', '23', 'Ln9wM.jpg', 'images/products/thumb/Ln9wM.jpg', 'images/products/full/Ln9wM.jpg', '2016-12-17 16:03:34', '2016-12-17 16:03:34', '0');
+INSERT INTO `product_img` VALUES ('40', '23', 'JnzQk.jpg', 'images/products/thumb/JnzQk.jpg', 'images/products/full/JnzQk.jpg', '2016-12-17 16:03:43', '2016-12-17 16:03:43', '0');
+INSERT INTO `product_img` VALUES ('41', '23', 'mZ3HC.jpg', 'images/products/thumb/mZ3HC.jpg', 'images/products/full/mZ3HC.jpg', '2016-12-17 16:03:57', '2016-12-17 16:03:57', '0');
 
 -- ----------------------------
 -- Table structure for product_meta
@@ -633,7 +634,7 @@ CREATE TABLE `slideshow` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of slideshow
@@ -642,6 +643,7 @@ INSERT INTO `slideshow` VALUES ('1', 'Slide trang chủ', '1', '0', '1', 'vi', '
 INSERT INTO `slideshow` VALUES ('2', 'Ảnh quảng cáo bên trái của trang chủ', '4', '0', '1', 'vi', '2016-09-16 18:10:19', '2016-09-16 11:10:19');
 INSERT INTO `slideshow` VALUES ('8', 'Ảnh đặt link ảnh hoạt động', '0', '0', '1', 'vi', '2016-12-10 20:53:06', '2016-12-10 20:53:06');
 INSERT INTO `slideshow` VALUES ('9', 'ảnh quảng cáo trên header', '0', '0', '1', 'vi', '2016-12-10 21:24:49', '2016-12-10 21:24:49');
+INSERT INTO `slideshow` VALUES ('10', 'Ảnh quảng cáo bên phải trang chủ', '0', '0', '1', 'vi', '2016-12-17 15:18:37', '2016-12-17 15:18:37');
 
 -- ----------------------------
 -- Table structure for users

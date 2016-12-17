@@ -9,7 +9,7 @@ class Category extends Model {
 
     //
     protected $table = 'category';
-    protected $fillable = ['name', 'parent', 'order', 'slug', 'status', 'lang'];
+    protected $fillable = ['name', 'parent', 'order', 'slug', 'status', 'viewhome', 'lang'];
 
     public function children() {
         return $this->hasMany('App\Models\Category\Category', 'parent', 'id');
