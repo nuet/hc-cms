@@ -191,7 +191,7 @@ $(document).ready(function() {
                                     <li><a href="#page" data-toggle="tab">{{ucfirst(trans('sidebar.page'))}}</a></li>
                                     <li><a href="#mail" data-toggle="tab">{{ucfirst(trans('sidebar.mail'))}}</a></li>
                                     <li><a href="#social" data-toggle="tab">{{ucfirst(trans('sidebar.social'))}}</a></li>
-                                    <li><a href="#customize" data-toggle="tab">{{ucfirst(trans('sidebar.customize'))}}</a></li>
+                                    {{--<li><a href="#customize" data-toggle="tab">{{ucfirst(trans('sidebar.customize'))}}</a></li>--}}
                                     <li><a href="#metatag" data-toggle="tab">{{ucfirst(trans('sidebar.metatag'))}}</a></li>
                                 </ul>
                                 <div class="tab-content">

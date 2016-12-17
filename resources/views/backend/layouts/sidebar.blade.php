@@ -62,22 +62,11 @@
                     </a>
                     <ul id="backend-news" class="treeview-menu">
                         <li class="{{ Ekko::isActiveRoute(langRouteName('backend.product.index')) }}"><a href="{{langRoute('backend.product.index')}}"><i class="fa fa-circle-o"></i>{{ ucfirst(trans('sidebar.list')) }}</a></li>
-                        <li class="{{ Ekko::isActiveRoute(langRouteName('backend.product.create')) }}"><a href="{{langRoute('backend.product.create')}}"><i class="fa fa-plus"></i>{{ ucfirst(trans('sidebar.add')).' '.trans('sidebar.news') }}</a></li>
+                        <li class="{{ Ekko::isActiveRoute(langRouteName('backend.product.create')) }}"><a href="{{langRoute('backend.product.create')}}"><i class="fa fa-plus"></i>{{ ucfirst(trans('sidebar.add')).' '.trans('sidebar.product') }}</a></li>
                     </ul>
                 </li>
             @endif
-            @if(Entrust::can('user-read'))
-            <li class="treeview {{ Ekko::areActiveRoutes([langRouteName('backend.user.index'),langRouteName('backend.user.create')]) }}">
-                <a href="#">
-                    <i class="fa fa-files-o"></i>
-                    <span>{{ ucfirst(trans('sidebar.users')) }}</span><i class="fa fa-angle-left pull-right"></i>
-                </a>
-                <ul id="backend-user" class="treeview-menu">
-                    <li class="{{ Ekko::isActiveRoute(langRouteName('backend.user.index')) }}"><a href="{{langRoute('backend.user.index')}}"><i class="fa fa-circle-o"></i>{{ ucfirst(trans('sidebar.list')) }}</a></li>
-                    <li class="{{ Ekko::isActiveRoute(langRouteName('backend.user.create')) }}"><a href="{{langRoute('backend.user.create')}}"><i class="fa fa-plus"></i>{{ ucfirst(trans('sidebar.add')).' '.trans('sidebar.users') }}</a></li>
-                </ul>
-            </li>
-            @endif
+            @if(Entrust::can('slideshow-read'))
             <li class="treeview {{ Ekko::areActiveRoutes([langRouteName('backend.slideshow.index'),langRouteName('backend.slideshow.create')]) }}">
                 <a href="#">
                     <i class="fa fa-files-o"></i>
@@ -88,6 +77,19 @@
                     <li class="{{ Ekko::isActiveRoute(langRouteName('backend.slideshow.create')) }}"><a href="{{langRoute('backend.slideshow.create')}}"><i class="fa fa-plus"></i>{{ ucfirst(trans('sidebar.add')).' '.trans('sidebar.slideshow') }}</a></li>
                 </ul>
             </li>
+            @endif
+            @if(Entrust::can('user-read'))
+                <li class="treeview {{ Ekko::areActiveRoutes([langRouteName('backend.user.index'),langRouteName('backend.user.create')]) }}">
+                    <a href="#">
+                        <i class="fa fa-files-o"></i>
+                        <span>{{ ucfirst(trans('sidebar.users')) }}</span><i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul id="backend-user" class="treeview-menu">
+                        <li class="{{ Ekko::isActiveRoute(langRouteName('backend.user.index')) }}"><a href="{{langRoute('backend.user.index')}}"><i class="fa fa-circle-o"></i>{{ ucfirst(trans('sidebar.list')) }}</a></li>
+                        <li class="{{ Ekko::isActiveRoute(langRouteName('backend.user.create')) }}"><a href="{{langRoute('backend.user.create')}}"><i class="fa fa-plus"></i>{{ ucfirst(trans('sidebar.add')).' '.trans('sidebar.users') }}</a></li>
+                    </ul>
+                </li>
+            @endif
             <li class="treeview {{ Ekko::isActiveURL(langURL('/backend/options')) }}">
                 <a href="{{langURL('/backend/options')}}">
                     <i class="fa fa-files-o"></i>

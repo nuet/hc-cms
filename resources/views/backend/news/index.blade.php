@@ -21,17 +21,17 @@ $(function() {
         "sAjaxSource": "{{langRoute('api.news')}}",
         "bServerSide": true,
         "bProcessing": true,
-	"oLanguage": {
-		"sLengthMenu": "_MENU_ Tin bài trên một trang",
-                "sInfo": "Hiển thị _START_ đến _END_ của _TOTAL_ tin bài",
-                "oPaginate": {
-                    "sFirst":       "Đầu tiên",
-                    "sLast":        "Cuối cùng",
-                    "sNext":        "Sau",
-                    "sPrevious":    "Trước"
-		},
-                "sSearch":         "Tìm kiếm: ",
-	},
+        "oLanguage": {
+            "sLengthMenu": "_MENU_ Tin bài trên một trang",
+            "sInfo": "Hiển thị _START_ đến _END_ của _TOTAL_ tin bài",
+            "oPaginate": {
+                "sFirst": "Đầu tiên",
+                "sLast": "Cuối cùng",
+                "sNext": "Sau",
+                "sPrevious": "Trước"
+            },
+            "sSearch": "Tìm kiếm: ",
+        },
         "aoColumns": [
             {"mData": "id", sWidth: '5%'},
             {"mData": "title", sWidth: '50%'},

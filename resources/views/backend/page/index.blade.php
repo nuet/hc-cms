@@ -69,15 +69,9 @@
 <script src="{{asset('backend/plugins/bootbox/bootbox.min.js')}}" type="text/javascript"></script>
 <script type="text/javascript">
 var tpage = function() {
-    $.get('{{ langRoute("api.page","top") }}', {}, function(data) {
+    $.get('{{ langRoute("api.page") }}', {}, function(data) {
         $('#nestable').html(data);
         setuplist('nestable');
-    })
-};
-var bpage = function() {
-    $.get('{{ langRoute("api.page","bottom") }}', {}, function(data) {
-        $('#nestable2').html(data);
-        setuplist('nestable2');
     })
 };
 
@@ -93,14 +87,9 @@ var setuplist = function(nestable) {
                             type: 'DELETE',
                             data: data,
                             success: function(result) {
+                                console.log(result);
                                 if (result) {
-                                    if(nestable=='nestable'){
-                                        tpage();
-                                    } else if (nestable=='nestable2'){
-                                        bpage();
-                                    } else if (nestable=='nestable3'){
-                                        opage();
-                                    }    
+                                    tpage();
                                 }
                             }
                         }).done(function() {
@@ -117,14 +106,6 @@ $(document).ready(function() {
         maxDepth: 2
     });
     tpage();
-    $('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
-        var target = $(e.target).attr("href") // activated tab
-        if (target == '#menu-top') {
-            tpage();
-        } else if (target == '#menu-bottom') {
-            bpage();
-        }
-    });
     $('#save-top').click(function(e) {
         $('#nestable').slideUp(function() {
             var data = {"data": $('#nestable').nestable('serialize'), '_token': '{{csrf_token()}}', 'position': 'top'};
@@ -134,19 +115,6 @@ $(document).ready(function() {
                 }
             }).done(function() {
                 $('#nestable').slideDown();
-            });
-        });
-        e.preventDefault();
-    });
-    $('#save-bottom').click(function(e) {
-        $('#nestable2').slideUp(function() {
-            var data = {"data": $('#nestable2').nestable('serialize'), '_token': '{{csrf_token()}}', 'position': 'bottom'};
-            $.post('{{langRoute("api.postpage")}}', data, function(e) {
-                if (e) {
-                    bpage();
-                }
-            }).done(function() {
-                $('#nestable2').slideDown();
             });
         });
         e.preventDefault();
@@ -161,7 +129,7 @@ $(document).ready(function() {
         {{$title}}
         <small>{{$sub_title}}</small>
     </h1>
-    {!! Breadcrumbs::render('menu') !!}
+    {!! Breadcrumbs::render('page') !!}
 </section>
 
 <section class="content">
@@ -172,26 +140,9 @@ $(document).ready(function() {
                     <h3 class="box-title">{{$title}}</h3>
                 </div><!-- /.box-header -->
                 <div class="box-body">
-                    <div class="nav-tabs-custom">
-                        <ul class="nav nav-tabs">
-                            <li class="active"><a href="#menu-top" data-toggle="tab">Top Menu</a></li>
-                            <li><a href="#menu-bottom" data-toggle="tab">Bottom Menu</a></li>
-                        </ul>
-                        <div class="tab-content">
-                            <div class="tab-pane active" id="menu-top">
-                                <a class="btn btn-success" href="{{langRoute('backend.page.create',['position'=>'top'])}}">Add Top Menu</a>
-                                <div id="nestable" class="dd">
-                                </div>
-                                <br />
-                                <button class="btn btn-default" id="save-top">Save</button>
-                            </div>
-                            <div class="tab-pane" id="menu-bottom">
-                                <a class="btn btn-success" href="{{langRoute('backend.page.create',['position'=>'bottom'])}}">Add Bottom Menu</a>
-                                <div id="nestable2" class="dd">
-                                </div>
-                                <br />
-                                <button class="btn btn-default" id="save-bottom">Save</button>
-                            </div>
+                    <div class="tab-pane active" id="menu-top">
+                        <a class="btn btn-success" href="{{langRoute('backend.page.create')}}">{{ucfirst(trans('sidebar.addnew'))}}</a>
+                        <div id="nestable" class="dd">
                         </div>
                     </div>
                 </div><!-- /.box-body -->

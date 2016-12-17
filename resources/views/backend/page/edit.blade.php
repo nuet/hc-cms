@@ -38,35 +38,25 @@ function make_slug(str)
 }    
 
 var setupform = function() {
-    var kupret = $("select[name=page_type] option:selected").val();
     var fcontent = "<label for='exampleInputEmail1'>Content<\/label>";
     fcontent += "<textarea id='summernote' name='page_content'>";
     fcontent += "{!!$page->page_content!!}";
     fcontent += "<\/textarea>";
-    if (kupret == 'link') {
-        $('#fslug').html('<label for="exampleInputEmail1">URL</label><input name="page_slug" type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" id="url" value="{{$page->page_slug}}">');
-        $('#fcontent').html('');
-    } else {
-        $('#fslug').html('<label for="exampleInputEmail1">Slug</label><div class="input-group"><span class="input-group-addon" id="basic-addon1">{{url()}}/</span><input name="page_slug" type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" id="slug" value="{{$page->page_slug}}"> </div>');
-        $('#fcontent').html(fcontent);
-        var editor = CKEDITOR.replace( 'page_content', {
-            language:'vi',
-            filebrowserBrowseUrl : "{{asset('backend/plugins/ckfinder/ckfinder.html')}}",
-            filebrowserImageBrowseUrl : "{{asset('backend/plugins/ckfinder/ckfinder.html?Type=Images')}}",
-            filebrowserFlashBrowseUrl : "{{asset('backend/plugins/ckfinder/ckfinder.html?Type=Flash')}}",
-            filebrowserUploadUrl : "{{asset('backend/plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files')}}",
-            filebrowserImageUploadUrl : "{{asset('backend/plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images')}}",
-            filebrowserFlashUploadUrl : "{{asset('backend/plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash')}}"
-        });
-    }
+    $('#fslug').html('<label for="exampleInputEmail1">Slug</label><div class="input-group"><span class="input-group-addon" id="basic-addon1">{{url()}}/</span><input name="page_slug" type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" id="slug" value="{{$page->page_slug}}"> </div>');
+    $('#fcontent').html(fcontent);
+    var editor = CKEDITOR.replace( 'page_content', {
+        language:'vi',
+        filebrowserBrowseUrl : "{{asset('backend/plugins/ckfinder/ckfinder.html')}}",
+        filebrowserImageBrowseUrl : "{{asset('backend/plugins/ckfinder/ckfinder.html?Type=Images')}}",
+        filebrowserFlashBrowseUrl : "{{asset('backend/plugins/ckfinder/ckfinder.html?Type=Flash')}}",
+        filebrowserUploadUrl : "{{asset('backend/plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files')}}",
+        filebrowserImageUploadUrl : "{{asset('backend/plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images')}}",
+        filebrowserFlashUploadUrl : "{{asset('backend/plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash')}}"
+    });
 }
 
 $(function() {
     setupform();
-    $('select[name="page_type"]').change(function() {
-        setupform();
-    });
-
 
     $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
         checkboxClass: 'icheckbox_minimal-blue',
@@ -98,7 +88,7 @@ $(function() {
         {{$title}}
         <small>{{$sub_title}}</small>
     </h1>
-    {!! Breadcrumbs::render('menuedit') !!}
+    {!! Breadcrumbs::render('pageedit') !!}
 </section>
 
 <section class="content">
@@ -113,7 +103,6 @@ $(function() {
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <input type="hidden" name="_method" value="put">
                     <input type="hidden" name="id" value="{{$page->id}}">
-                    <input type="hidden" name="page_position" value="{{ $position }}">
                     <div class="box-body">
                         @if(count($errors))
                         <div class="alert alert-danger">
@@ -125,13 +114,6 @@ $(function() {
                             </ul>
                         </div>
                         @endif
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Menu Type</label>
-                            <select id="form-field-select-3" class="form-control search-select kopet" name="page_type">
-                                <option value="link" {{$page->page_type == 'link' ? 'selected="selected"' : ''}}>Link</option>
-                                <option value="page" {{$page->page_type == 'page' ? 'selected="selected"' : ''}}>Page</option>
-                            </select>
-                        </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Title</label>
                             <input type="text" value="{{$page->page_name}}" class="form-control" id="name" placeholder="Enter Page Title" name='page_name'>
@@ -148,15 +130,6 @@ $(function() {
                             <textarea id="summernote" name="page_content">{!!$page->page_content!!}</textarea>
                         </div>
                         <div class="form-group">
-                            <label>Select Parent</label>
-                            <select id="form-field-select-3" class="form-control search-select" name="page_parent">
-                                <option value="">Parent</option>
-                                @foreach($parent as $key=>$val)
-                                <option value="{{$key}}" {{$key == $page->page_parent ? 'selected="selected"' : ''}}>{{$val}}</option>
-                                @endforeach
-                            </select>
-                        </div>
-                        <div class="form-group">
                             <label>
                                 @if($page->page_status == 1)
                                 <input type="checkbox" class="minimal" name='page_status' checked /> Active ?
@@ -168,8 +141,8 @@ $(function() {
                     </div><!-- /.box-body -->
 
                     <div class="box-footer">
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                        <a href="{{URL::previous()}}" class="btn btn-warning">Back</a>
+                        <button type="submit" class="btn btn-primary">{{ucfirst(trans('sidebar.submit'))}}</button>
+                        <a href="{{URL::previous()}}" class="btn btn-warning">{{ucfirst(trans('sidebar.back'))}}</a>
                     </div>
                 </form>
             </div><!-- /.box -->

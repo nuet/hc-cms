@@ -38,23 +38,17 @@ function make_slug(str)
 }    
 
 var setupform = function() {
-    var kupret = $("select[name=page_type] option:selected").val();
-    if (kupret == 'link') {
-        $('#fslug').html('<label for="exampleInputEmail1">URL</label><input name="page_slug" type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" id="slug">');
-        $('#fcontent').html('');
-    } else {
-        $('#fslug').html('<label for="exampleInputEmail1">Slug</label><div class="input-group"><span class="input-group-addon" id="basic-addon1">{{url()}}/</span><input name="page_slug" type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" id="slug"></div>');
-        $('#fcontent').html('<label for="exampleInputEmail1">Content</label><textarea id="summernote" name="page_content">{{old("page_content")}}</textarea>');
-        var editor = CKEDITOR.replace( 'page_content', {
-            language:'vi',
-            filebrowserBrowseUrl : "{{asset('backend/plugins/ckfinder/ckfinder.html')}}",
-            filebrowserImageBrowseUrl : "{{asset('backend/plugins/ckfinder/ckfinder.html?Type=Images')}}",
-            filebrowserFlashBrowseUrl : "{{asset('backend/plugins/ckfinder/ckfinder.html?Type=Flash')}}",
-            filebrowserUploadUrl : "{{asset('backend/plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files')}}",
-            filebrowserImageUploadUrl : "{{asset('backend/plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images')}}",
-            filebrowserFlashUploadUrl : "{{asset('backend/plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash')}}"
-        });
-    }
+    $('#fslug').html('<label for="exampleInputEmail1">Slug</label><div class="input-group"><span class="input-group-addon" id="basic-addon1">{{url()}}/</span><input name="page_slug" type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" id="slug"></div>');
+    $('#fcontent').html('<label for="exampleInputEmail1">Content</label><textarea id="summernote" name="page_content">{{old("page_content")}}</textarea>');
+    var editor = CKEDITOR.replace( 'page_content', {
+        language:'vi',
+        filebrowserBrowseUrl : "{{asset('backend/plugins/ckfinder/ckfinder.html')}}",
+        filebrowserImageBrowseUrl : "{{asset('backend/plugins/ckfinder/ckfinder.html?Type=Images')}}",
+        filebrowserFlashBrowseUrl : "{{asset('backend/plugins/ckfinder/ckfinder.html?Type=Flash')}}",
+        filebrowserUploadUrl : "{{asset('backend/plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files')}}",
+        filebrowserImageUploadUrl : "{{asset('backend/plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images')}}",
+        filebrowserFlashUploadUrl : "{{asset('backend/plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash')}}"
+    });
 }
 
 $(function() {
@@ -62,9 +56,6 @@ $(function() {
         $('#slug').val(make_slug($(this).val()));
     });
     setupform();
-    $('select[name="page_type"]').change(function() {
-        setupform();
-    });
     
     $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
         checkboxClass: 'icheckbox_minimal-blue',
@@ -93,7 +84,7 @@ $(function() {
         {{$title}}
         <small>{{$sub_title}}</small>
     </h1>
-    {!! Breadcrumbs::render('menucreate') !!}
+    {!! Breadcrumbs::render('pagecreate') !!}
 </section>
 
 <section class="content">
@@ -106,7 +97,6 @@ $(function() {
                 </div><!-- /.box-header -->
                 <form role="form" action='{{langRoute('backend.page.store')}}' method="post" enctype="multipart/form-data">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                    <input type="hidden" name="page_position" value="{{ $position }}">
                     <div class="box-body">
                         @if(count($errors))
                         <div class="alert alert-danger">
@@ -118,13 +108,6 @@ $(function() {
                             </ul>
                         </div>
                         @endif
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Menu Type</label>
-                            <select id="form-field-select-3" class="form-control search-select kopet" name="page_type">
-                                <option value="link">Link</option>
-                                <option value="page">Page</option>
-                            </select>
-                        </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Title</label>
                             <input type="text" value="{{old('name')}}" class="form-control" id="name" placeholder="Enter Page Title" name='page_name'>
@@ -139,15 +122,6 @@ $(function() {
                         <div class="form-group" id="fcontent">
                         </div>
                         <div class="form-group">
-                            <label>Select Parent</label>
-                            <select id="form-field-select-3" class="form-control search-select" name="page_parent">
-                                <option value="">Pilih Parent</option>
-                                @foreach($parent as $key=>$val)
-                                <option value="{{$key}}">{{$val}}</option>
-                                @endforeach
-                            </select>
-                        </div>
-                        <div class="form-group">
                             <label>
                                 <input type="checkbox" class="minimal" name='page_status'/> Active ?
                             </label>
@@ -155,8 +129,8 @@ $(function() {
                     </div><!-- /.box-body -->
 
                     <div class="box-footer">
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                        <a href="{{URL::previous()}}" class="btn btn-warning">Back</a>
+                        <button type="submit" class="btn btn-primary">{{ucfirst(trans('sidebar.submit'))}}</button>
+                        <a href="{{URL::previous()}}" class="btn btn-warning">{{ucfirst(trans('sidebar.back'))}}</a>
                     </div>
                 </form>
             </div><!-- /.box -->

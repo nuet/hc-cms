@@ -33,7 +33,7 @@ return [
     'service' => 'tiện ích - tiện nghi',
     'users' => 'người dùng',
     'role' => 'vai trò',
-    'slideshow' => 'slideshow',
+    'slideshow' => 'Media',
 
     'image' => 'Ảnh',
 

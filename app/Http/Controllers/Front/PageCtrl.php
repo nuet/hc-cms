@@ -38,6 +38,11 @@ class PageCtrl extends Controller
      */
     public function index()
     {
+        //Chuyen muc dich vu
+        $slugcat = 'dich-vu';
+        $findcat = Category\Category::where('slug', $slugcat)->first();
+        $this->data['services'] = Category\Category::where('status','=','1')->where('parent','=',$findcat['id'])->orderBy('order')->get();
+        //dd($this->data['service']);
         $this->data['title'] = Gen::genOpt('title');
         return view('frontend.recreation-center.pages.home', $this->data);
     }

@@ -10,7 +10,7 @@ use DB,Request,Entrust;
 class PageCtrl extends Controller {
 
     public function __construct() {
-        $this->data['title'] = 'Menu';
+        $this->data['title'] = ucfirst(trans('sidebar.page'));
     }
 
     /**
@@ -23,15 +23,14 @@ class PageCtrl extends Controller {
         if (!Entrust::can('page-read')) {
             return redirect('');
         }
-        $this->data['sub_title'] = 'Menu List';
+        $this->data['sub_title'] = ucfirst(trans('sidebar.list')).' '.ucfirst(trans('sidebar.page'));
         return view('backend.page.index', $this->data);
     }
 
-    public function getPage($position = '') {
+    public function getPage() {
         if (Request::isMethod('post')) {
             //
             $data = Request::get('data');
-            $position = Request::get('position');
             foreach ($data as $key => $val) {
                 $page = Page::find($val['id']);
                 $page->page_order = $key;
@@ -48,7 +47,7 @@ class PageCtrl extends Controller {
             }
             return response()->json(['success' => TRUE]);
         }
-        $this->data['pages'] = Page::getNested($position);
+        $this->data['pages'] = Page::getNested();
         return view('backend.page.lists', $this->data);
     }
 
@@ -62,11 +61,7 @@ class PageCtrl extends Controller {
         if (!Entrust::can('page-create')) {
             return redirect('');
         }
-        $this->data['sub_title'] = "Create " . ucfirst(Request::get('position')) . " Menu";
-        $this->data['position'] = Request::get('position');
-        $this->data['parent'] = Page::where('page_position', Request::get('position'))
-                ->where('page_parent', '=', 0)
-                ->lists('page_name', 'id');
+        $this->data['sub_title'] = ucfirst(trans('sidebar.add')).' '.trans('sidebar.page');
         return view('backend.page.create', $this->data);
     }
 
@@ -107,12 +102,8 @@ class PageCtrl extends Controller {
         if (!Entrust::can('page-update')) {
             return redirect('');
         }
-        $this->data['sub_title'] = "Edit " . ucfirst(Request::get('position')) . " Menu";
-        $this->data['position'] = Request::get('position');
+        $this->data['sub_title'] = ucfirst(trans('sidebar.edit')).' '.trans('sidebar.page');
         $this->data['page'] = Page::find($id);
-        $this->data['parent'] = Page::where('id', '!=', $id)->where('page_position', Request::get('position'))
-                ->where('page_parent', '=', 0)
-                ->lists('page_name', 'id');
         return view('backend.page.edit', $this->data);
     }
 
@@ -146,7 +137,6 @@ class PageCtrl extends Controller {
         }
         $page = Page::find($id);
         if ($page->delete()) {
-            $page->where('page_parent', $id)->update(['page_parent' => 0]);
             return response()->json(['success' => TRUE]);
         }
     }

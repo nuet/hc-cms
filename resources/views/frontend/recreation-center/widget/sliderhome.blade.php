@@ -1,5 +1,6 @@
 <section id="slider"><!--slider-->
-    <div class="container">
+    <div class="container slick-list draggable" style="display: block;
+    width: 100%;">
         <div class="row">
             <div class="col-sm-12">
                 <div id="slider-carousel" class="carousel slide" data-ride="carousel">
@@ -16,7 +17,7 @@
                             <div class="item {{$key == 0 ? 'active' : ''}}">
                                 <div class="col-sm-12" style="padding: 0;" >
                                     @if($ss->img_url)
-                                    <a href="{{$ss->img_url}}"><img src="{{asset(Gen::genImgUrl($ss->path_full))}}?w=1140" class="girl img-responsive" alt="" /></a>
+                                    <a href="{{$ss->img_url}}"><img src="{{asset(Gen::genImgUrl($ss->path_full))}}?w=730" class="girl img-responsive" alt="" /></a>
                                     @else
                                     <a><img src="{{asset(Gen::genImgUrl($ss->path_full))}}?w=1140" class="girl img-responsive" alt="" /></a>
                                     @endif

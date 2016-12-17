@@ -10,15 +10,15 @@ Breadcrumbs::register('home', function($breadcrumbs) {
 });
 Breadcrumbs::register('products', function($breadcrumbs) {
     $breadcrumbs->parent('home');
-    $breadcrumbs->push('Products', route('backend.product.index'));
+    $breadcrumbs->push(ucfirst(trans('sidebar.product')), route('backend.product.index'));
 });
 Breadcrumbs::register('productcreate', function($breadcrumbs) {
     $breadcrumbs->parent('products');
-    $breadcrumbs->push('Create Product', route('backend.product.create'));
+    $breadcrumbs->push(ucfirst(trans('sidebar.add')).' '.trans('sidebar.product'), route('backend.product.create'));
 });
 Breadcrumbs::register('productedit', function($breadcrumbs) {
     $breadcrumbs->parent('products');
-    $breadcrumbs->push('Edit Product', route('backend.product.edit'));
+    $breadcrumbs->push(ucfirst(trans('sidebar.edit')).' '.trans('sidebar.product'), route('backend.product.edit'));
 });
 Breadcrumbs::register('category', function($breadcrumbs) {
     $breadcrumbs->parent('home');
@@ -44,6 +44,24 @@ Breadcrumbs::register('menuedit', function($breadcrumbs) {
     $breadcrumbs->parent('menu');
     $breadcrumbs->push(ucfirst(trans('sidebar.edit')).' '.trans('sidebar.menu'), route('backend.page.edit'));
 });
+
+
+
+Breadcrumbs::register('page', function($breadcrumbs) {
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push(ucfirst(trans('sidebar.page')), route('backend.page.index'));
+});
+Breadcrumbs::register('pagecreate', function($breadcrumbs) {
+    $breadcrumbs->parent('page');
+    $breadcrumbs->push(ucfirst(trans('sidebar.add')).' '.trans('sidebar.page'), route('backend.page.create'));
+});
+Breadcrumbs::register('pageedit', function($breadcrumbs) {
+    $breadcrumbs->parent('page');
+    $breadcrumbs->push(ucfirst(trans('sidebar.edit')).' '.trans('sidebar.page'), route('backend.page.edit'));
+});
+
+
+
 Breadcrumbs::register('newslist', function($breadcrumbs) {
     $breadcrumbs->parent('home');
     $breadcrumbs->push(ucfirst(trans('sidebar.news')), route('backend.news.index'));

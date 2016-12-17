@@ -80,7 +80,7 @@ function()
         });
 
         Route::group(['namespace' => 'backend\Page'], function() {
-            Route::get('page/{position}', ['as' => langRouteName('api.page'), 'uses' => 'PageCtrl@getPage']);
+            Route::get('page', ['as' => langRouteName('api.page'), 'uses' => 'PageCtrl@getPage']);
             Route::post('page', ['as' => langRouteName('api.postpage'), 'uses' => 'PageCtrl@getPage']);
         });
 

@@ -69,7 +69,6 @@ class Gen{
      * @return type
      */
     function genImgUrl($fullpath = '') {
-        $path = '';
         $arrpath = explode('/',$fullpath);
         if(array_key_exists(1,$arrpath)){
             if($arrpath[1]=='images'){

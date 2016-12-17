@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2016-12-04 11:00:23
+Date: 2016-12-11 05:11:41
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -30,16 +30,26 @@ CREATE TABLE `category` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of category
 -- ----------------------------
 INSERT INTO `category` VALUES ('7', '0', 'Tin tức', 'tin-tuc', '0', '1', 'vi', '2016-09-29 11:03:40', '2016-09-29 04:03:40');
-INSERT INTO `category` VALUES ('12', '0', 'Tin rao', 'tin-rao', '1', '1', 'vi', '2016-09-29 11:03:40', '2016-09-29 04:03:40');
-INSERT INTO `category` VALUES ('13', '7', 'Thể thao', 'tin-tuc/the-thao', '0', '1', 'vi', '2016-09-29 11:03:40', '2016-09-29 04:03:40');
-INSERT INTO `category` VALUES ('14', '7', 'Test1', 'tin-tuc/test1', '1', '1', 'vi', '2016-09-29 11:03:40', '2016-09-29 04:03:40');
-INSERT INTO `category` VALUES ('15', '7', 'Kinh tế', 'tin-tuc/kinh-te', '2', '1', 'vi', '2016-09-29 11:03:40', '2016-09-29 04:03:40');
+INSERT INTO `category` VALUES ('12', '0', 'Dịch vụ', 'dich-vu', '1', '1', 'vi', '2016-12-11 02:18:18', '2016-12-10 19:18:18');
+INSERT INTO `category` VALUES ('13', '7', 'Tin hoạt động', 'tin-tuc/tin-hoat-dong', '0', '1', 'vi', '2016-12-11 02:47:48', '2016-12-10 19:47:48');
+INSERT INTO `category` VALUES ('14', '7', 'Test1', 'tin-tuc/test1', '2', '1', 'vi', '2016-12-11 02:16:21', '2016-12-10 19:16:21');
+INSERT INTO `category` VALUES ('15', '7', 'Kinh tế', 'tin-tuc/kinh-te', '1', '1', 'vi', '2016-12-11 02:16:21', '2016-12-10 19:16:21');
+INSERT INTO `category` VALUES ('22', '12', 'Trò chơi trong nhà', 'dich-vu/tro-choi-trong-nha', '3', '1', 'vi', '2016-12-11 02:53:59', '2016-12-10 19:18:09');
+INSERT INTO `category` VALUES ('23', '12', 'Trò chơi ngoài trời', 'dich-vu/tro-choi-ngoai-troi', '4', '1', 'vi', '2016-12-10 19:18:48', '2016-12-10 19:18:48');
+INSERT INTO `category` VALUES ('24', '12', 'Thể thao trong nhà', 'dich-vu/the-thao-trong-nha', '5', '1', 'vi', '2016-12-10 19:19:11', '2016-12-10 19:19:11');
+INSERT INTO `category` VALUES ('25', '12', 'Thể thao ngoài trời', 'dich-vu/the-thao-ngoai-troi', '6', '1', 'vi', '2016-12-10 19:19:26', '2016-12-10 19:19:26');
+INSERT INTO `category` VALUES ('26', '12', 'Ăn uống', 'dich-vu/an-uong', '7', '1', 'vi', '2016-12-10 19:19:51', '2016-12-10 19:19:51');
+INSERT INTO `category` VALUES ('27', '12', 'Bán hàng', 'dich-vu/ban-hang', '8', '1', 'vi', '2016-12-10 19:20:09', '2016-12-10 19:20:09');
+INSERT INTO `category` VALUES ('28', '12', 'Tổ chức sự kiện', 'dich-vu/to-chuc-su-kien', '9', '1', 'vi', '2016-12-10 19:20:31', '2016-12-10 19:20:31');
+INSERT INTO `category` VALUES ('29', '12', 'Tour du lịch', 'dich-vu/tour-du-lich', '10', '1', 'vi', '2016-12-10 19:20:58', '2016-12-10 19:20:58');
+INSERT INTO `category` VALUES ('30', '12', 'Bán vé máy bay', 'dich-vu/ban-ve-may-bay', '11', '1', 'vi', '2016-12-10 19:21:19', '2016-12-10 19:21:19');
+INSERT INTO `category` VALUES ('31', '12', 'Dịch vụ bảo vệ', 'dich-vu/dich-vu-bao-ve', '12', '1', 'vi', '2016-12-10 19:21:46', '2016-12-10 19:21:46');
 
 -- ----------------------------
 -- Table structure for media
@@ -57,14 +67,14 @@ CREATE TABLE `media` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of media
 -- ----------------------------
-INSERT INTO `media` VALUES ('1', '1', '0', 'ảnh 1 1', 'ảnh slide 1', 'anh-1-1_slide1.jpg', '/images/admin/images/ba-kich-tim-dep.jpg', 'http://localhost', '2016-12-04 10:15:01', '2016-12-04 03:15:01');
-INSERT INTO `media` VALUES ('2', '1', '0', 'ảnh 2', 'slide 2', 'anh-2_slide1.jpg', '/images/admin/images/cu-tam-that-tuoi.jpg', 'http://localhost', '2016-12-04 10:15:11', '2016-12-04 03:15:11');
-INSERT INTO `media` VALUES ('6', '1', '0', 'pic 6', 'xyz', 'pic-6_slide1.jpg', '/images/admin/images/nam-ngoc-cau-dep.jpg', 'abc', '2016-12-04 10:15:21', '2016-12-04 03:15:21');
+INSERT INTO `media` VALUES ('1', '1', '0', 'ảnh 1 1', 'ảnh slide 1', 'anh-1-1_slide1.jpg', '/images/admin/files/12507451_545867358907804_7979913525610331269_n.jpg', 'http://localhost', '2016-12-11 04:34:38', '2016-12-10 21:34:38');
+INSERT INTO `media` VALUES ('2', '1', '0', 'ảnh 2', 'slide 2', 'anh-2_slide1.jpg', '/images/admin/files/11896260_491702007657673_3877675263664202134_n.jpg', 'http://localhost', '2016-12-11 04:34:48', '2016-12-10 21:34:48');
+INSERT INTO `media` VALUES ('6', '1', '0', 'pic 6', 'xyz', 'pic-6_slide1.jpg', '/images/admin/files/945867_539979719496568_1127823345394084773_n.jpg', 'abc', '2016-12-11 04:34:58', '2016-12-10 21:34:58');
 INSERT INTO `media` VALUES ('8', '4', '0', 'Tiến độ bàn giao đúng thời hạn cam kết', 'Việt nam được xem là điểm đến mới đầy tiềm năng của du lịch quốc tế, vì thế đầu tư vào bất động sản nghỉ', 'tien-do-ban-giao-dung-thoi-han-cam-ket_slide1.jpg', '/images/admin/images/slide/slide1.jpg', 'sd', '2016-09-20 09:02:46', '2016-09-20 02:02:46');
 INSERT INTO `media` VALUES ('10', '4', '0', 'Tiến độ bàn giao đúng thời hạn cam kết', 'Việt nam được xem là điểm đến mới đầy tiềm năng của du lịch quốc tế, vì thế đầu tư vào bất động sản nghỉ', 'tien-do-ban-giao-dung-thoi-han-cam-ket_conten_loiichdautu.png', '/images/admin/images/slide/conten_loiichdautu.png', 'as', '2016-09-20 08:50:15', '2016-09-20 01:50:15');
 INSERT INTO `media` VALUES ('11', '4', '0', 'Việt nam được xem là điểm đến mới đầy tiềm năng ', 'Việt nam được xem là điểm đến mới đầy tiềm năng của du lịch quốc tế, vì thế đầu tư vào bất động sản nghỉ', 'viet-nam-duoc-xem-la-diem-den-moi-day-tiem-nang_conten_loiichdautu.png', '/images/admin/images/slide/conten_loiichdautu.png', 'sdf', '2016-09-20 08:50:28', '2016-09-20 01:50:28');
@@ -72,10 +82,12 @@ INSERT INTO `media` VALUES ('12', '4', '0', 'Việt nam được xem là điểm
 INSERT INTO `media` VALUES ('13', '4', '0', 'Tiến độ bàn giao đúng thời hạn cam kết', 'Việt nam được xem là điểm đến mới đầy tiềm năng của du lịch quốc tế, vì thế đầu tư vào bất động sản nghỉ', 'tien-do-ban-giao-dung-thoi-han-cam-ket_conten_loiichdautu.png', '/images/admin/images/slide/conten_loiichdautu.png', 'sd', '2016-09-20 08:50:45', '2016-09-20 01:50:45');
 INSERT INTO `media` VALUES ('14', '24', '1', 'sp1 dsf', 'sfd', 'sp1-dsf_slide-chi-tiet.jpg', '/images/admin/images/post/slide-chi-tiet.jpg', 'abc', '2016-09-20 09:25:26', '2016-09-20 02:25:26');
 INSERT INTO `media` VALUES ('15', '24', '1', 'sp2', 'ádadad', 'sp2_slide-chi-tiet.jpg', '/images/admin/images/post/slide-chi-tiet.jpg', 'sdas sadada', '2016-09-20 09:25:35', '2016-09-20 02:25:35');
-INSERT INTO `media` VALUES ('16', '2', '0', 'ảnh 1', 'df', 'anh-1_right_qc1.jpg', '/images/admin/images/advertisement/right_qc1.jpg', 'df', '2016-09-20 09:36:26', '2016-09-20 02:36:26');
+INSERT INTO `media` VALUES ('16', '2', '0', 'ảnh 1', 'df', 'anh-1_right_qc1.jpg', '/images/admin/files/12650916_548998438594696_4309564370475331379_n.jpg', 'df', '2016-12-11 04:05:37', '2016-12-10 21:05:37');
 INSERT INTO `media` VALUES ('17', '5', '0', 'ảnh 1', 'dsf', 'anh-1_right_tinrao1.jpg', '/images/admin/images/advertisement/right_tinrao1.jpg', 'df', '2016-09-20 09:37:06', '2016-09-20 02:37:06');
 INSERT INTO `media` VALUES ('18', '5', '0', 'anh2', 's', 'anh2_right_tinrao2.jpg', '/images/admin/images/advertisement/right_tinrao2.jpg', 's', '2016-09-20 09:37:13', '2016-09-20 02:37:13');
 INSERT INTO `media` VALUES ('19', '7', '0', 'a1', '', null, '/images/admin/images/slide/slide1.jpg', '', '2016-09-29 07:04:25', '2016-09-29 07:04:25');
+INSERT INTO `media` VALUES ('20', '8', '0', 'ảnh hoạt động', 'acd', null, '/images/admin/files/15203279_714175835410288_4950455490887737955_n.jpg', 'anh-hoat-dong', '2016-12-11 03:58:10', '2016-12-10 20:58:10');
+INSERT INTO `media` VALUES ('21', '9', '0', 'as', 'ád', null, '/images/admin/files/12573016_548998435261363_2033968578888933088_n.jpg', 'ad', '2016-12-10 21:25:07', '2016-12-10 21:25:07');
 
 -- ----------------------------
 -- Table structure for menu
@@ -94,23 +106,33 @@ CREATE TABLE `menu` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of menu
 -- ----------------------------
-INSERT INTO `menu` VALUES ('12', '0', 'Giới thiệu', 'gioi-thieu', 'page', '1', 'top', '2', 'vi', '2015-05-12 10:49:46', '2016-09-23 07:43:01');
-INSERT INTO `menu` VALUES ('16', '0', 'Trang chủ', 'http://cuongnh', 'link', '1', 'top', '0', 'vi', '2016-09-08 11:29:47', '2016-09-28 10:11:59');
-INSERT INTO `menu` VALUES ('17', '0', 'Nhà phân phối', 'nha-phan-phoi', 'page', '1', 'top', '4', 'vi', '2016-09-08 11:30:44', '2016-09-23 07:43:01');
-INSERT INTO `menu` VALUES ('23', '17', 'test3', 'test3', 'link', '1', 'top', '0', 'vi', '2016-09-22 08:05:26', '2016-09-22 08:05:49');
-INSERT INTO `menu` VALUES ('30', '0', 'Kinh tế', 'tin-tuc/kinh-te', 'category', '1', 'top', '3', 'vi', '2016-09-23 07:28:20', '2016-09-23 07:43:01');
-INSERT INTO `menu` VALUES ('31', '0', 'Tin tức', 'tin-tuc', 'category', '1', 'top', '1', 'vi', '2016-09-23 07:34:35', '2016-09-23 07:43:01');
-INSERT INTO `menu` VALUES ('32', '31', 'Thể thao', 'tin-tuc/the-thao', 'category', '1', 'top', '0', 'vi', '2016-09-23 07:34:35', '2016-09-23 07:34:35');
-INSERT INTO `menu` VALUES ('33', '31', 'Test1', 'tin-tuc/test1', 'category', '1', 'top', '1', 'vi', '2016-09-23 07:34:35', '2016-09-23 07:34:35');
-INSERT INTO `menu` VALUES ('34', '31', 'Kinh tế', 'tin-tuc/kinh-te', 'category', '1', 'top', '2', 'vi', '2016-09-23 07:34:35', '2016-09-23 07:34:35');
-INSERT INTO `menu` VALUES ('35', '33', 'Tin tức', 'tin-tuc', 'category', '1', 'top', '0', 'vi', '2016-09-23 07:41:30', '2016-09-23 07:43:01');
-INSERT INTO `menu` VALUES ('36', '35', 'Thể thao', 'tin-tuc/the-thao', 'category', '1', 'top', '0', 'vi', '2016-09-23 07:41:30', '2016-09-23 07:41:30');
-INSERT INTO `menu` VALUES ('38', '35', 'Kinh tế', 'tin-tuc/kinh-te', 'category', '1', 'top', '2', 'vi', '2016-09-23 07:41:30', '2016-09-23 07:41:30');
+INSERT INTO `menu` VALUES ('12', '0', 'Giới thiệu', 'gioi-thieu', 'page', '1', 'top', '3', 'vi', '2015-05-12 10:49:46', '2016-12-10 21:58:34');
+INSERT INTO `menu` VALUES ('16', '0', 'Trang chủ', '/', 'link', '1', 'top', '0', 'vi', '2016-09-08 11:29:47', '2016-12-10 19:14:15');
+INSERT INTO `menu` VALUES ('17', '0', 'Liên hệ', 'lien-he', 'link', '1', 'top', '6', 'vi', '2016-09-08 11:30:44', '2016-12-10 22:06:26');
+INSERT INTO `menu` VALUES ('30', '0', 'Dịch vụ', 'dich-vu', 'category', '1', 'top', '1', 'vi', '2016-09-23 07:28:20', '2016-12-10 21:58:34');
+INSERT INTO `menu` VALUES ('35', '0', 'Tin tức', 'tin-tuc', 'category', '1', 'top', '2', 'vi', '2016-09-23 07:41:30', '2016-12-10 21:58:34');
+INSERT INTO `menu` VALUES ('42', '0', 'LIÊN KẾT WEB', 'dongamruouvn', 'link', '1', 'bottom', '0', 'vi', '2016-12-10 20:22:30', '2016-12-10 20:24:06');
+INSERT INTO `menu` VALUES ('43', '0', 'Chính sách & Quy định', 'chinh-sach-quy-dinh', 'link', '1', 'bottom', '0', 'vi', '2016-12-10 20:22:56', '2016-12-10 20:22:56');
+INSERT INTO `menu` VALUES ('44', '0', 'Hướng dẫn khách hàng', 'huong-dan-khach-hang', 'link', '1', 'bottom', '0', 'vi', '2016-12-10 20:23:18', '2016-12-10 20:23:18');
+INSERT INTO `menu` VALUES ('45', '42', 'lethuy.gov.vn', 'http://lethuy.gov.vn', 'link', '1', 'bottom', '0', 'vi', '2016-12-10 20:24:56', '2016-12-10 20:24:56');
+INSERT INTO `menu` VALUES ('46', '42', 'lethuy.edu.vn', 'http://lethuy.edu.vn', 'link', '1', 'bottom', '0', 'vi', '2016-12-10 20:25:38', '2016-12-10 20:26:23');
+INSERT INTO `menu` VALUES ('47', '42', 'tourquangbinh.com', 'http://tourquangbinh.com', 'link', '1', 'bottom', '0', 'vi', '2016-12-10 20:26:08', '2016-12-10 20:26:08');
+INSERT INTO `menu` VALUES ('48', '42', 'quangbinhtourism.vn', 'http://quangbinhtourism.vn', 'link', '1', 'bottom', '0', 'vi', '2016-12-10 20:27:34', '2016-12-10 20:27:34');
+INSERT INTO `menu` VALUES ('49', '43', 'Chính sách ưu đãi', 'chinh-sach-uu-dai', 'link', '1', 'bottom', '0', 'vi', '2016-12-10 20:28:25', '2016-12-10 20:28:25');
+INSERT INTO `menu` VALUES ('50', '43', 'Chính sách vận chuyển', 'chinh-sach-van-chuyen', 'link', '1', 'bottom', '0', 'vi', '2016-12-10 20:28:42', '2016-12-10 20:28:42');
+INSERT INTO `menu` VALUES ('51', '43', 'Quy định giao hàng & thanh toán', 'quy-dinh-giao-hang-thanh-toan', 'link', '1', 'bottom', '0', 'vi', '2016-12-10 20:29:04', '2016-12-10 20:29:04');
+INSERT INTO `menu` VALUES ('52', '43', 'Hòm thư góp ý & khiếu nại', 'hom-thu-gop-y-khieu-nai', 'link', '1', 'bottom', '0', 'vi', '2016-12-10 20:29:21', '2016-12-10 20:29:21');
+INSERT INTO `menu` VALUES ('53', '44', 'Tư vấn mua hàng', 'tu-van-mua-hang', 'link', '1', 'bottom', '0', 'vi', '2016-12-10 20:29:41', '2016-12-10 20:29:41');
+INSERT INTO `menu` VALUES ('54', '44', 'Hướng dẫn mua hàng ', 'huong-dan-mua-hang', 'link', '1', 'bottom', '0', 'vi', '2016-12-10 20:30:07', '2016-12-10 20:30:07');
+INSERT INTO `menu` VALUES ('55', '44', 'Hướng dẫn mua online', 'huong-dan-mua-online', 'link', '1', 'bottom', '0', 'vi', '2016-12-10 20:30:27', '2016-12-10 20:30:27');
+INSERT INTO `menu` VALUES ('56', '44', 'Hướng dẫn thanh toán', 'huong-dan-thanh-toan', 'link', '1', 'bottom', '0', 'vi', '2016-12-10 20:30:46', '2016-12-10 20:30:57');
+INSERT INTO `menu` VALUES ('57', '0', 'Chính sách & Quy định', 'chinh', 'link', '1', 'top', '4', 'vi', '2016-12-10 22:05:30', '2016-12-10 22:05:43');
+INSERT INTO `menu` VALUES ('58', '0', 'Hướng dẫn mua hàng ', 'huong-dan', 'link', '1', 'top', '5', 'vi', '2016-12-10 22:06:21', '2016-12-10 22:06:26');
 
 -- ----------------------------
 -- Table structure for migrations
@@ -175,18 +197,18 @@ CREATE TABLE `option` (
 -- ----------------------------
 -- Records of option
 -- ----------------------------
-INSERT INTO `option` VALUES ('1', 'url', 'http://cuongnh:81', '1', 'vi', '2016-09-29 11:21:25', '2016-09-29 04:21:25');
-INSERT INTO `option` VALUES ('2', 'name', 'Công Ty Cổ Phần Dịch Vụ Chu Du Hai Bốn.', '1', 'vi', '2016-09-29 11:21:25', '2016-09-29 04:21:25');
-INSERT INTO `option` VALUES ('3', 'address', 'Tầng 12, Tòa Nhà SCB, 242 Cống Quỳnh, P.Phạm Ngũ Lão, Q.1, TP.HCM.', '1', 'vi', '2016-09-29 11:21:25', '2016-09-29 04:21:25');
-INSERT INTO `option` VALUES ('4', 'email', 'batdongsan@aquilan.com', '1', 'vi', '2016-09-29 11:21:25', '2016-09-29 04:21:25');
-INSERT INTO `option` VALUES ('5', 'phone', '1900 5454 40', '1', 'vi', '2016-09-29 11:21:25', '2016-09-29 04:21:25');
-INSERT INTO `option` VALUES ('6', 'logo', '/images/admin/images/logo/logo.png', '1', 'vi', '2016-09-29 11:21:25', '2016-09-29 04:21:25');
-INSERT INTO `option` VALUES ('7', 'map', 'https://goo.gl/maps/9ynWsMj6PMQ2', '1', 'vi', '2016-09-29 11:21:25', '2016-09-29 04:21:25');
-INSERT INTO `option` VALUES ('8', 'copyright', '2008 Công Ty Cổ Phần Dịch Vụ Chu Du Hai Bốn.', '1', 'vi', '2016-09-29 11:21:25', '2016-09-29 04:21:25');
-INSERT INTO `option` VALUES ('9', 'title', 'Nhà đất | Mua bán nhà đất | Cho thuê nhà đất', '2', 'vi', '2016-09-29 11:16:03', '2016-09-29 04:16:03');
-INSERT INTO `option` VALUES ('10', 'favicon', '/images/admin/images/Icon/mastercard.png', '2', 'vi', '2016-09-29 11:16:03', '2016-09-29 04:16:03');
-INSERT INTO `option` VALUES ('11', 'description', '2008 Công Ty Cổ Phần Dịch Vụ Chu Du Hai Bốn', '2', 'vi', '2016-09-29 11:16:03', '2016-09-29 04:16:03');
-INSERT INTO `option` VALUES ('12', 'keywords', 'Mua bán nhà đất', '2', 'vi', '2016-09-29 11:16:03', '2016-09-29 04:16:03');
+INSERT INTO `option` VALUES ('1', 'url', 'http://giaitrilethuy.vn', '1', 'vi', '2016-12-11 02:57:56', '2016-12-10 19:57:56');
+INSERT INTO `option` VALUES ('2', 'name', 'Trung tâm Giải trí và Thể thao Thế Hệ Mới', '1', 'vi', '2016-12-11 02:57:56', '2016-12-10 19:57:56');
+INSERT INTO `option` VALUES ('3', 'address', 'Tầng 12, Tòa Nhà SCB, .....', '1', 'vi', '2016-12-11 02:57:56', '2016-12-10 19:57:56');
+INSERT INTO `option` VALUES ('4', 'email', 'giaitrilethuy@aquilan.com', '1', 'vi', '2016-12-11 02:57:56', '2016-12-10 19:57:56');
+INSERT INTO `option` VALUES ('5', 'phone', '1900 5454 40', '1', 'vi', '2016-12-11 02:57:56', '2016-12-10 19:57:56');
+INSERT INTO `option` VALUES ('6', 'logo', '/images/admin/images/logo.jpg', '1', 'vi', '2016-12-11 02:57:56', '2016-12-10 19:57:56');
+INSERT INTO `option` VALUES ('7', 'map', 'https://goo.gl/maps/9ynWsMj6PMQ2', '1', 'vi', '2016-12-11 02:57:56', '2016-12-10 19:57:56');
+INSERT INTO `option` VALUES ('8', 'copyright', '2016 Trung tâm Giải trí và Thể thao Thế Hệ Mới', '1', 'vi', '2016-12-11 02:57:56', '2016-12-10 19:57:56');
+INSERT INTO `option` VALUES ('9', 'title', 'Trung tâm Giải trí và Thể thao Thế Hệ Mới', '2', 'vi', '2016-12-04 14:19:23', '2016-12-04 07:19:23');
+INSERT INTO `option` VALUES ('10', 'favicon', '/images/admin/images/Icon/mastercard.png', '2', 'vi', '2016-12-04 14:19:23', '2016-12-04 07:19:23');
+INSERT INTO `option` VALUES ('11', 'description', '2008 Công Ty Cổ Phần Dịch Vụ Chu Du Hai Bốn', '2', 'vi', '2016-12-04 14:19:23', '2016-12-04 07:19:23');
+INSERT INTO `option` VALUES ('12', 'keywords', 'Ăn uống, Bán hàng, Tổ chức sự kiện, Tour du lịch và bán vé máy bay, Bảo vệ', '2', 'vi', '2016-12-04 14:19:23', '2016-12-04 07:19:23');
 INSERT INTO `option` VALUES ('13', 'header', '<p>Header ass as dfdf</p>\r\n', '3', 'vi', '2016-09-29 11:15:58', '2016-09-29 04:15:58');
 INSERT INTO `option` VALUES ('14', 'footer', '            <footer id=\"footer\">\r\n                <div class=\"container\">\r\n                    <div class=\"row\">\r\n                        <div class=\"col-md-12 col-sm-12\">\r\n                            <div style=\"background-color: #ff9b1d;height: 5px;margin-bottom: 10px;\"></div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <div class=\"container\">\r\n                        <div class=\"row\">\r\n                            <div class=\"col-md-4 col-sm-4\">\r\n                                <div class=\"block-widget1 block\">\r\n                                        <a title=\"\">\r\n                                                <img src=\"/images/admin/images/logo/logo-footer.png\" class=\"logo\" alt=\"\">\r\n                                        </a>\r\n                                        <p>Chudu24 luôn không ngừng đẩy mạnh hoạt động và phát triển, cả về sản phẩm, dịch vụ và đội ngũ, nhằm đáp ứng tốt nhất nhu cầu của khách hàng.</p>\r\n                                        <span id=\"phone-contact\"><i class=\"fa fa-phone\"></i>Hotline:<span class=\"phone\">1900 54 54 40</span></span>\r\n                                        <a href=\"mailto:datphong@chudu24.com\">datphong@chudu24.com</a>\r\n                                        <div class=\"best-the form-inline\">\r\n                                            <h3>Đừng bỏ lỡ cơ hội giá tốt!</h3>\r\n                                            <p>Chudu24 sẽ cập nhật thường xuyên về những ưu đãi, khuyến mãi mới và hot nhất trong tháng đến quý khách.</p>\r\n                                            <div class=\"input-group newsletter\">\r\n                                                <input type=\"email\" required=\"\" placeholder=\"Email của bạn\" class=\"form-control\" id=\"txt-newsletter-email\">\r\n                                                <span class=\"input-group-addon subscrible-submit-btn\">\r\n                                                    <button name=\"subscrible_submit\" type=\"submit\" id=\"btn-newsletter-email\"><i class=\"fa fa-check\"></i></button>\r\n                                                </span>\r\n                                            </div>\r\n                                            <p style=\"font-size: 11px;\">Chúng tôi không bao giờ chia sẻ thông tin của bạn.</p>\r\n                                        </div>\r\n                                </div>\r\n                            </div>\r\n                            <div class=\"col-md-4 col-sm-4\">\r\n                                <div class=\"block-widget3 block\">\r\n                                    <h3>AQUI.LAND</h3>\r\n                                    <ul class=\"menu-about\">\r\n                                        <li><i class=\"fa fa-stop\" aria-hidden=\"true\"></i><a href=\"\" title=\"\">Hợp Tác Với Aqui.lan</a></li>\r\n                                        <li><i class=\"fa fa-stop\" aria-hidden=\"true\"></i><a href=\"\" title=\"\">Nói Về Aqui.lan</a></li>\r\n                                        <li><i class=\"fa fa-stop\" aria-hidden=\"true\"></i><a href=\"\" title=\"\">Lợi ích đầu tư</a></li>\r\n                                        <li><i class=\"fa fa-stop\" aria-hidden=\"true\"></i><a href=\"\" title=\"\">Dịch vụ</a></li>\r\n                                        <li><i class=\"fa fa-stop\" aria-hidden=\"true\"></i><a href=\"\" title=\"\">Hình Ảnh Aqui.lan</a></li>\r\n                                        <li><i class=\"fa fa-stop\" aria-hidden=\"true\"></i><a href=\"\" title=\"\">Voucher quà tặng</a></li>\r\n                                        <li><i class=\"fa fa-stop\" aria-hidden=\"true\"></i><a href=\"\" title=\"Câu Hỏi Thường Gặp\">Câu Hỏi Thường Gặp</a></li>\r\n                                        <li><i class=\"fa fa-stop\" aria-hidden=\"true\"></i><a href=\"\" title=\"Chính Sách Quyền Riêng Tư\">Chính Sách Quyền Riêng Tư</a></li>\r\n                                        <li><i class=\"fa fa-stop\" aria-hidden=\"true\"></i><a href=\"\" title=\"Quy Chế Sàn Giao Dịch TMĐT Chudu24\">Quy Chế</a></li>\r\n                                    </ul>\r\n                                </div>\r\n                                <div class=\"block-payment\">\r\n                                    <h3>Hỗ trợ thanh toán thẻ</h3>\r\n                                    <ul class=\"list-inline list-payment-methods\">\r\n                                        <li>\r\n                                            <img alt=\"Visa\" src=\"/images/admin/images/Icon/visa.png\"></li>\r\n                                        <li>\r\n                                            <img alt=\"Master Card\" src=\"/images/admin/images/Icon/mastercard.png\"></li>\r\n                                        <li>\r\n                                            <img alt=\"American Express\" src=\"/images/admin/images/Icon/american-express.png\"></li>\r\n                                        <li>\r\n                                            <img alt=\"OnePay\" src=\"/images/admin/images/Icon/onepay.png\"></li>\r\n                                    </ul>\r\n                                </div>\r\n                            </div>\r\n                            <div class=\"col-md-4 col-sm-4\">\r\n                                <div class=\"block-widget4 block\">\r\n                                    <h3>Liên hệ</h3>\r\n                                    <ul class=\"menu-contact\">\r\n                                        <li><i class=\"fa fa-building-o\"></i>\r\n                                            <p>Tầng 12, Tòa Nhà SCB, 242 Cống Quỳnh, P.Phạm Ngũ Lão, Q.1, TP.HCM.</p>\r\n                                        </li>\r\n                                        <li><i class=\"fa fa-map-marker\"></i>\r\n                                            <p><a href=\"\">Bản đồ Chudu24</a></p>\r\n                                        </li>\r\n                                        <li><i class=\"fa fa-phone\"></i>\r\n                                            <p>1900 54 54 40</p>\r\n                                        </li>\r\n                                        <li><i class=\"fa fa-envelope-o\"></i>\r\n                                            <p><a href=\"mailto:\">datphong@chudu24.com</a></p>\r\n                                        </li>\r\n                                        <li><i class=\"fa fa-copyright\"></i>\r\n                                            <p>2008 Công Ty Cổ Phần Dịch Vụ<br>Chu Du Hai Bốn.</p>\r\n                                        </li>\r\n                                    </ul>\r\n                                    <ul class=\"socail-link\">\r\n                                        <li><i class=\"fa fa-facebook-square\"></i></li>\r\n                                        <li><i class=\"fa fa-google-plus-square\"></i></li>\r\n                                        <li><i class=\"fa fa-youtube-square\"></i></li>\r\n                                        <li><i class=\"fa fa-twitter-square\"></i></li>\r\n                                    </ul>\r\n                                    <p style=\"clear: both;padding-top: 10px;\">\r\n                                        <a href=\"\">\r\n                                            <img class=\"img-responsive\" src=\"/images/admin/images/logo/logoBCT.png\" title=\"\" alt=\"Đã đăng ký với Bộ Công Thương\">\r\n                                        </a>\r\n                                    </p>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                </div>\r\n            </footer>', '3', 'vi', '2016-09-29 11:15:58', '2016-09-29 04:15:58');
 INSERT INTO `option` VALUES ('15', 'post_perpage_front', '15', '4', 'vi', '2016-09-29 11:21:39', '2016-09-29 04:21:39');
@@ -220,6 +242,49 @@ INSERT INTO `option_mail` VALUES ('5', 'mail_password', '', '2016-09-06 17:58:08
 INSERT INTO `option_mail` VALUES ('6', 'mail_encryption', 'TLS', '2016-09-06 17:58:08', '2016-09-06 10:58:08');
 
 -- ----------------------------
+-- Table structure for order
+-- ----------------------------
+DROP TABLE IF EXISTS `order`;
+CREATE TABLE `order` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `order_id` int(10) DEFAULT NULL,
+  `user_id` int(10) NOT NULL,
+  `payment_id` int(10) DEFAULT NULL,
+  `order_status` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `total_price` int(100) DEFAULT NULL,
+  `comments` text,
+  `shipping_type` varchar(255) DEFAULT NULL,
+  `shipping_fee` varchar(255) DEFAULT NULL,
+  `shipping_to` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of order
+-- ----------------------------
+INSERT INTO `order` VALUES ('10', null, '11', null, null, '2015-06-18 02:48:50', '2015-06-18 02:48:50', '103000', null, 'jne-CTC-4000', '3000', '419');
+INSERT INTO `order` VALUES ('11', '1', '11', '3', 'settlement', '2015-06-18 09:54:38', '2015-06-18 02:54:38', '104000', null, 'jne-CTC-4000', '4000', '419');
+
+-- ----------------------------
+-- Table structure for order_product
+-- ----------------------------
+DROP TABLE IF EXISTS `order_product`;
+CREATE TABLE `order_product` (
+  `order_id` int(10) DEFAULT NULL,
+  `product_id` int(10) DEFAULT NULL,
+  `quantity` int(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of order_product
+-- ----------------------------
+INSERT INTO `order_product` VALUES ('9', '26', '1');
+INSERT INTO `order_product` VALUES ('10', '26', '1');
+INSERT INTO `order_product` VALUES ('11', '26', '1');
+
+-- ----------------------------
 -- Table structure for pages
 -- ----------------------------
 DROP TABLE IF EXISTS `pages`;
@@ -227,30 +292,20 @@ CREATE TABLE `pages` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `page_name` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `page_slug` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `page_type` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
   `page_status` int(11) DEFAULT '0',
-  `page_position` enum('top','other','bottom') COLLATE utf8_unicode_ci DEFAULT 'top',
   `page_order` int(11) DEFAULT '0',
-  `page_parent` int(11) DEFAULT '0',
   `page_content` text COLLATE utf8_unicode_ci,
   `lang` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of pages
 -- ----------------------------
-INSERT INTO `pages` VALUES ('9', 'Privacy Policy', 'privacy-policy', 'page', '1', 'bottom', '0', '0', '<span style=\"font-weight: bold;\">PRIVACY STATEMENT</span><br><br><br><br>----<br><br><br><br>SECTION 1 - WHAT DO WE DO WITH YOUR INFORMATION?<br><br><br><br>When you purchase something from our store, as part of the buying and selling process, we collect the personal information you give us such as your name, address and email address.<br><br>When you browse our store, we also automatically receive your computer’s internet protocol (IP) address in order to provide us with information that helps us learn about your browser and operating system.<br><br>Email marketing (if applicable): With your permission, we may send you emails about our store, new products and other updates.<br><br><br><br>SECTION 2 - CONSENT<br><br><br><br>How do you get my consent?<br><br>When you provide us with personal information to complete a transaction, verify your credit card, place an order, arrange for a delivery or return a purchase, we imply that you consent to our collecting it and using it for that specific reason only.<br><br>If we ask for your personal information for a secondary reason, like marketing, we will either ask you directly for your expressed consent, or provide you with an opportunity to say no.<br><br><br><br>How do I withdraw my consent?<br><br>If after you opt-in, you change your mind, you may withdraw your consent for us to contact you, for the continued collection, use or disclosure of your information, at anytime, by contacting us at support@shopify.com or mailing us at: Shopify 126 York Street, Suite 200 Ottawa Ontario Canada K1N 5T5<br><br><br>SECTION 3 - DISCLOSURE<br><br><br><br>We may disclose your personal information if we are required by law to do so or if you violate our Terms of Service.<br><br><br><br>SECTION 4 - SHOPIFY<br><br><br><br>Our store is hosted on Shopify Inc. They provide us with the online e-commerce platform that allows us to sell our products and services to you.<br><br>Your data is stored through Shopify’s data storage, databases and the general Shopify application. They store your data on a secure server behind a firewall.<br><br><br><br>Payment:<br><br>If you choose a direct payment gateway to complete your purchase, then Shopify stores your credit card data. It is encrypted through the Payment Card Industry Data Security Standard (PCI-DSS). Your purchase transaction data is stored only as long as is necessary to complete your purchase transaction. After that is complete, your purchase transaction information is deleted.<br><br>All direct payment gateways adhere to the standards set by PCI-DSS as managed by the PCI Security Standards Council, which is a joint effort of brands like Visa, MasterCard, American Express and Discover.<br><br>PCI-DSS requirements help ensure the secure handling of credit card information by our store and its service providers.<br><br>For more insight, you may also want to read Shopify’s Terms of Service here or Privacy Statement here.<br><br><br><br>SECTION 5 - THIRD-PARTY SERVICES<br><br><br><br>In general, the third-party providers used by us will only collect, use and disclose your information to the extent necessary to allow them to perform the services they provide to us.<br><br>However, certain third-party service providers, such as payment gateways and other payment transaction processors, have their own privacy policies in respect to the information we are required to provide to them for your purchase-related transactions.<br><br>For these providers, we recommend that you read their privacy policies so you can understand the manner in which your personal information will be handled by these providers.<br><br>In particular, remember that certain providers may be located in or have facilities that are located a different jurisdiction than either you or us. So if you elect to proceed with a transaction that involves the services of a third-party service provider, then your information may become subject to the laws of the jurisdiction(s) in which that service provider or its facilities are located.<br><br>As an example, if you are located in Canada and your transaction is processed by a payment gateway located in the United States, then your personal information used in completing that transaction may be subject to disclosure under United States legislation, including the Patriot Act.<br><br>Once you leave our store’s website or are redirected to a third-party website or application, you are no longer governed by this Privacy Policy or our website’s Terms of Service. <br><br><br><br>Links<br><br>When you click on links on our store, they may direct you away from our site. We are not responsible for the privacy practices of other sites and encourage you to read their privacy statements.<br><br>SECTION 6 - SECURITY<br><br><br><br>To protect your personal information, we take reasonable precautions and follow industry best practices to make sure it is not inappropriately lost, misused, accessed, disclosed, altered or destroyed.<br><br>If you provide us with your credit card information, the information is encrypted using secure socket layer technology (SSL) and stored with a AES-256 encryption.&nbsp; Although no method of transmission over the Internet or electronic storage is 100% secure, we follow all PCI-DSS requirements and implement additional generally accepted industry standards.<br><br><br><br>SECTION 7 - COOKIES<br><br><br><br>&nbsp;Here is a list of cookies that we use. We’ve listed them here so you that you can choose if you want to opt-out of cookies or not.<br><br>&nbsp;_session_id, unique token, sessional, Allows Shopify to store information about your session (referrer, landing page, etc).<br><br>&nbsp;_shopify_visit, no data held, Persistent for 30 minutes from the last visit, Used by our website provider’s internal stats tracker to record the number of visits<br><br>&nbsp;_shopify_uniq, no data held, expires midnight (relative to the visitor) of the next day, Counts the number of visits to a store by a single customer.<br><br>cart, unique token, persistent for 2 weeks, Stores information about the contents of your cart.<br><br>&nbsp;_secure_session_id, unique token, sessional<br><br>&nbsp;storefront_digest, unique token, indefinite If the shop has a password, this is used to determine if the current visitor has access.<br><br><br><br><br><br>SECTION 8 - AGE OF CONSENT<br><br><br><br>&nbsp;By using this site, you represent that you are at least the age of majority in your state or province of residence, or that you are the age of majority in your state or province of residence and you have given us your consent to allow any of your minor dependents to use this site.<br><br><br><br>SECTION 9 - CHANGES TO THIS PRIVACY POLICY<br><br><br><br>We reserve the right to modify this privacy policy at any time, so please review it frequently. Changes and clarifications will take effect immediately upon their posting on the website. If we make material changes to this policy, we will notify you here that it has been updated, so that you are aware of what information we collect, how we use it, and under what circumstances, if any, we use and/or disclose it.<br><br>If our store is acquired or merged with another company, your information may be transferred to the new owners so that we may continue to sell products to you.<br><br><br><br>QUESTIONS AND CONTACT INFORMATION<br><br><br><br>If you would like to: access, correct, amend or delete any personal information we have about you, register a complaint, or simply want more information contact our Privacy Compliance Officer at support@shopify.com or by mail at Shopify<br><br>[Re: Privacy Compliance Officer]<br><br>[126 York Street, Suite 200 Ottawa Ontario Canada K1N 5T5]<br><br>----', 'vi', '2015-05-11 13:07:28', '2015-05-13 11:08:57');
-INSERT INTO `pages` VALUES ('10', 'Tin tức', '/tin-tuc', 'link', '1', 'top', '3', '0', '', 'vi', '2015-05-12 10:43:30', '2016-09-28 02:10:58');
-INSERT INTO `pages` VALUES ('12', 'Giới thiệu', 'gioi-thieu', 'page', '1', 'top', '2', '0', '<h1>&nbsp;</h1>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n\r\n<p>&nbsp;</p>\r\n', 'vi', '2015-05-12 10:49:46', '2016-09-28 02:10:54');
-INSERT INTO `pages` VALUES ('13', 'Terms of use', 'privacy-policy/terms-of-use', 'page', '1', 'bottom', '0', '9', '', 'vi', '2015-05-13 09:18:12', '2015-05-13 11:33:16');
-INSERT INTO `pages` VALUES ('14', 'Refund Policy', 'privacy-policy/refund-policy', 'page', '1', 'bottom', '1', '9', '', 'vi', '2015-05-13 09:19:18', '2015-05-13 11:33:16');
-INSERT INTO `pages` VALUES ('15', 'Tin rao', '/tin-rao', 'link', '1', 'top', '1', '0', null, 'vi', '2016-09-08 11:20:03', '2016-09-28 02:10:46');
-INSERT INTO `pages` VALUES ('16', 'Trang chủ', '/', 'link', '1', 'top', '0', '0', null, 'vi', '2016-09-08 11:29:47', '2016-09-29 04:04:42');
-INSERT INTO `pages` VALUES ('17', 'Nhà phân phối', 'nha-phan-phoi', 'page', '1', 'top', '4', '0', '', 'vi', '2016-09-08 11:30:44', '2016-09-28 02:11:03');
-INSERT INTO `pages` VALUES ('18', 'Liên hệ', 'lien-he', 'page', '1', 'other', '0', '0', '', 'vi', '2016-09-08 11:35:25', '2016-09-08 11:35:25');
+INSERT INTO `pages` VALUES ('19', 'asd fefd', 'asd-fefd', '1', '0', 'sdsadsa', 'vi', '2016-12-10 08:26:37', '2016-12-10 08:43:42');
+INSERT INTO `pages` VALUES ('23', 'asd', 'asd', '1', '0', 'asd adsa', 'vi', '2016-12-10 09:04:19', '2016-12-10 09:04:33');
 
 -- ----------------------------
 -- Table structure for password_resets
@@ -343,6 +398,14 @@ INSERT INTO `permission_role` VALUES ('17', '3');
 INSERT INTO `permission_role` VALUES ('17', '4');
 INSERT INTO `permission_role` VALUES ('18', '3');
 INSERT INTO `permission_role` VALUES ('18', '4');
+INSERT INTO `permission_role` VALUES ('19', '3');
+INSERT INTO `permission_role` VALUES ('19', '4');
+INSERT INTO `permission_role` VALUES ('20', '3');
+INSERT INTO `permission_role` VALUES ('20', '4');
+INSERT INTO `permission_role` VALUES ('21', '3');
+INSERT INTO `permission_role` VALUES ('21', '4');
+INSERT INTO `permission_role` VALUES ('22', '3');
+INSERT INTO `permission_role` VALUES ('22', '4');
 INSERT INTO `permission_role` VALUES ('23', '3');
 INSERT INTO `permission_role` VALUES ('23', '4');
 INSERT INTO `permission_role` VALUES ('24', '3');
@@ -377,12 +440,142 @@ INSERT INTO `permission_role` VALUES ('37', '4');
 INSERT INTO `permission_role` VALUES ('37', '5');
 INSERT INTO `permission_role` VALUES ('38', '3');
 INSERT INTO `permission_role` VALUES ('38', '4');
+INSERT INTO `permission_role` VALUES ('38', '5');
 INSERT INTO `permission_role` VALUES ('39', '3');
 INSERT INTO `permission_role` VALUES ('39', '4');
+INSERT INTO `permission_role` VALUES ('39', '5');
+INSERT INTO `permission_role` VALUES ('40', '3');
 INSERT INTO `permission_role` VALUES ('40', '4');
+INSERT INTO `permission_role` VALUES ('41', '3');
 INSERT INTO `permission_role` VALUES ('41', '4');
+INSERT INTO `permission_role` VALUES ('42', '3');
 INSERT INTO `permission_role` VALUES ('42', '4');
+INSERT INTO `permission_role` VALUES ('43', '3');
 INSERT INTO `permission_role` VALUES ('43', '4');
+
+-- ----------------------------
+-- Table structure for product
+-- ----------------------------
+DROP TABLE IF EXISTS `product`;
+CREATE TABLE `product` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `id_category` int(10) NOT NULL,
+  `product_sku` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `product_name` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `product_description` text CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+  `product_price` bigint(100) DEFAULT NULL,
+  `product_status` int(10) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `slug` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of product
+-- ----------------------------
+INSERT INTO `product` VALUES ('23', '7', 'test', 'test 1', 'test', '200000', '1', '2015-05-05 05:55:54', '2015-05-12 07:36:02', 'test-1');
+INSERT INTO `product` VALUES ('25', '8', '1231', 'Madrid 4th', 'Madrid 4th', '200000', '1', '2015-05-05 07:38:02', '2015-05-13 02:22:58', 'madrid-4th');
+INSERT INTO `product` VALUES ('26', '8', '1212', 'Madrid Home', 'Madrid Home Warna Putih', '100000', '1', '2015-05-12 05:11:49', '2015-05-12 05:11:49', 'jersey/la-liga/madrid-home');
+INSERT INTO `product` VALUES ('27', '8', '221313', 'Madrid Away', '', '100000', '1', '2015-05-12 07:05:11', '2015-05-12 07:05:11', 'jersey/la-liga/madrid-away');
+INSERT INTO `product` VALUES ('28', '8', '1231', 'Madrid 3rd', '', '100000', '1', '2015-05-12 07:05:55', '2015-05-12 07:05:55', 'jersey/la-liga/madrid-3rd');
+INSERT INTO `product` VALUES ('29', '7', 'ád', 'áđá', 'ád', '20000000', '0', '2016-12-10 10:13:30', '2016-12-10 10:13:30', 'tin-tuc/ada');
+
+-- ----------------------------
+-- Table structure for product_attr
+-- ----------------------------
+DROP TABLE IF EXISTS `product_attr`;
+CREATE TABLE `product_attr` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `id_product` int(10) DEFAULT NULL,
+  `name` varchar(100) DEFAULT NULL,
+  `values` varchar(100) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of product_attr
+-- ----------------------------
+INSERT INTO `product_attr` VALUES ('24', '23', 'warna', 'biru,hijau,kuning', '2015-05-12 07:36:02', '2015-05-12 07:36:02');
+INSERT INTO `product_attr` VALUES ('25', '23', 'ukuran', 's,m,l,xl,xxl', '2015-05-12 07:36:02', '2015-05-12 07:36:02');
+INSERT INTO `product_attr` VALUES ('26', '25', 'ukuran', 'S,M,L,XL,XXL', '2015-05-13 02:22:58', '2015-05-13 02:22:58');
+
+-- ----------------------------
+-- Table structure for product_category
+-- ----------------------------
+DROP TABLE IF EXISTS `product_category`;
+CREATE TABLE `product_category` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) DEFAULT NULL,
+  `parent` int(10) DEFAULT '0',
+  `order` int(10) DEFAULT NULL,
+  `status` int(10) DEFAULT '0',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `slug` varchar(100) DEFAULT NULL,
+  `image` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of product_category
+-- ----------------------------
+INSERT INTO `product_category` VALUES ('7', 'Jersey', '0', '0', '1', '2015-05-12 12:04:15', '2015-05-12 05:04:15', 'jersey', null);
+INSERT INTO `product_category` VALUES ('8', 'La Liga', '7', '0', '1', '2015-05-12 12:06:48', '2015-05-12 05:06:48', 'jersey/la-liga', null);
+INSERT INTO `product_category` VALUES ('9', 'Seri A', '7', '1', '1', '2015-05-13 02:15:53', '2015-05-13 02:15:53', 'jersey/seri-a', null);
+INSERT INTO `product_category` VALUES ('10', 'Sepatu', '0', '2', '1', '2015-05-13 08:53:51', '2015-05-13 08:53:51', 'sepatu', null);
+INSERT INTO `product_category` VALUES ('11', 'Sepatu Lari', '10', '3', '1', '2015-05-13 08:54:23', '2015-05-13 08:54:23', 'sepatu/sepatu-lari', null);
+
+-- ----------------------------
+-- Table structure for product_img
+-- ----------------------------
+DROP TABLE IF EXISTS `product_img`;
+CREATE TABLE `product_img` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `id_product` int(10) DEFAULT NULL,
+  `img_name` varchar(100) DEFAULT NULL,
+  `path_thumb` varchar(100) DEFAULT NULL,
+  `path_full` varchar(100) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `primary` tinyint(1) DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of product_img
+-- ----------------------------
+INSERT INTO `product_img` VALUES ('14', '22', '6jkxL.jpg', 'images/products/thumb/6jkxL.jpg', 'images/products/full/6jkxL.jpg', '2015-05-05 04:36:32', '2015-05-05 04:36:32', '0');
+INSERT INTO `product_img` VALUES ('17', '25', 'pixXL.jpg', 'images/products/thumb/pixXL.jpg', 'images/products/full/pixXL.jpg', '2015-05-05 07:38:02', '2015-05-05 07:38:02', '0');
+INSERT INTO `product_img` VALUES ('27', '23', 'vJxbG.jpg', 'images/products/thumb/vJxbG.jpg', 'images/products/full/vJxbG.jpg', '2015-05-06 08:01:18', '2015-05-06 08:01:18', '0');
+INSERT INTO `product_img` VALUES ('28', '23', 'h4gFM.jpg', 'images/products/thumb/h4gFM.jpg', 'images/products/full/h4gFM.jpg', '2015-05-06 08:01:20', '2015-05-06 08:01:20', '0');
+INSERT INTO `product_img` VALUES ('34', '25', 'emGp8.jpg', 'images/products/thumb/emGp8.jpg', 'images/products/full/emGp8.jpg', '2015-05-13 02:23:31', '2015-05-13 02:23:31', '0');
+INSERT INTO `product_img` VALUES ('35', '25', 'aA0bL.jpg', 'images/products/thumb/aA0bL.jpg', 'images/products/full/aA0bL.jpg', '2015-05-13 02:23:50', '2015-05-13 02:23:50', '0');
+INSERT INTO `product_img` VALUES ('36', '29', 'Vt8GP.jpg', 'images/products/thumb/Vt8GP.jpg', 'images/products/full/Vt8GP.jpg', '2016-12-10 10:14:05', '2016-12-10 10:14:05', '0');
+INSERT INTO `product_img` VALUES ('37', '23', 'kHAuR.jpg', 'images/products/thumb/kHAuR.jpg', 'images/products/full/kHAuR.jpg', '2016-12-10 10:54:57', '2016-12-10 10:54:57', '0');
+INSERT INTO `product_img` VALUES ('38', '23', 'O2PBN.jpg', 'images/products/thumb/O2PBN.jpg', 'images/products/full/O2PBN.jpg', '2016-12-10 10:55:13', '2016-12-10 10:55:13', '0');
+
+-- ----------------------------
+-- Table structure for product_meta
+-- ----------------------------
+DROP TABLE IF EXISTS `product_meta`;
+CREATE TABLE `product_meta` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `meta_title` varchar(100) DEFAULT NULL,
+  `meta_description` text,
+  `meta_keyword` varchar(100) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `id_product` int(10) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of product_meta
+-- ----------------------------
+INSERT INTO `product_meta` VALUES ('10', 'test', 'test', 'test', '2015-05-07 07:05:12', '2015-05-07 07:05:12', '23');
 
 -- ----------------------------
 -- Table structure for roles
@@ -423,15 +616,7 @@ CREATE TABLE `role_user` (
 -- Records of role_user
 -- ----------------------------
 INSERT INTO `role_user` VALUES ('2', '4');
-INSERT INTO `role_user` VALUES ('6', '4');
-INSERT INTO `role_user` VALUES ('9', '5');
 INSERT INTO `role_user` VALUES ('10', '5');
-INSERT INTO `role_user` VALUES ('11', '5');
-INSERT INTO `role_user` VALUES ('12', '5');
-INSERT INTO `role_user` VALUES ('13', '5');
-INSERT INTO `role_user` VALUES ('14', '5');
-INSERT INTO `role_user` VALUES ('15', '5');
-INSERT INTO `role_user` VALUES ('16', '5');
 INSERT INTO `role_user` VALUES ('17', '5');
 
 -- ----------------------------
@@ -448,13 +633,15 @@ CREATE TABLE `slideshow` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of slideshow
 -- ----------------------------
 INSERT INTO `slideshow` VALUES ('1', 'Slide trang chủ', '1', '0', '1', 'vi', '2016-09-13 00:27:07', '2016-09-12 17:27:07');
 INSERT INTO `slideshow` VALUES ('2', 'Ảnh quảng cáo bên trái của trang chủ', '4', '0', '1', 'vi', '2016-09-16 18:10:19', '2016-09-16 11:10:19');
+INSERT INTO `slideshow` VALUES ('8', 'Ảnh đặt link ảnh hoạt động', '0', '0', '1', 'vi', '2016-12-10 20:53:06', '2016-12-10 20:53:06');
+INSERT INTO `slideshow` VALUES ('9', 'ảnh quảng cáo trên header', '0', '0', '1', 'vi', '2016-12-10 21:24:49', '2016-12-10 21:24:49');
 
 -- ----------------------------
 -- Table structure for users
@@ -490,14 +677,24 @@ CREATE TABLE `users` (
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES ('2', 'Nguyễn', 'Hoàng Trung', 'ada@ada.com', '$2y$10$y27cEyVnpBD3BbNAgJKtKurwtrXUpDBd4MnoIGHH2Cxz/18Ly1BNu', 'lANJH2OZ1FFhpyE8FtkE1kID1qSAciu832O3BqzhkvZuO98GdR1QgXeLc1qk', null, '2015-05-19 10:00:32', '2016-12-04 02:37:40', '1', 'admin', '/images/admin/images/avata/profile.jpg', null, null, '0974856231', '0974856231', null, null, '', null, null, null);
-INSERT INTO `users` VALUES ('6', 'test 12345', null, 'telo33@telo.com', '', null, null, '2015-05-20 11:01:38', '2015-05-20 11:08:00', '0', null, 'http://pbs.twimg.com/profile_images/450900068724273152/IGbwH2oI_normal.jpeg', null, null, null, null, null, null, null, null, null, null);
-INSERT INTO `users` VALUES ('9', 'Wasi Arnosa', null, 'devil.syiewa@gmail.com', '$2y$10$4xJ47eOcHvb.HqpAM32WxOG1CaufB5aryFP01kumUMJ8Xf.mc3uR6', 'OlZQ3hA1MLoNEZrwTyH1XMuDM51Rdn91iSQPtudZaBYCyprxbJArL9OmUm0d', null, '2015-05-22 15:04:42', '2015-06-16 10:48:16', '1', null, 'https://graph.facebook.com/v2.2/1044947206/picture?type=normal', null, '1044947206', '1414141', '114141', '', '', 'address 1', null, null, null);
+INSERT INTO `users` VALUES ('2', 'Nguyễn', 'Hoàng Trung', 'ada@ada.com', '$2y$10$y27cEyVnpBD3BbNAgJKtKurwtrXUpDBd4MnoIGHH2Cxz/18Ly1BNu', 'gRnMy2SAsD4UjBFa1hsJtD9aLrid3ZABRDqd3wBX0iM8xWfanRS0QAKXzozA', null, '2015-05-19 10:00:32', '2016-12-06 15:09:31', '1', 'admin', '/images/admin/images/avata/profile.jpg', null, null, '0974856231', '0974856231', null, null, '', null, null, null);
 INSERT INTO `users` VALUES ('10', 'Nguyễn', 'Hùng Cường', 'telo333@telo.com', '$2y$10$IVF53irdmefw6VF.Gfxw8e1rN.9vy03dFprG90GdPj2.M6iM65hAa', 'Vjpji04YgcdimjOaNg85liT2ljY9ZjPK4jhArIII2H8dbKEIFObvVKy20h9O', null, '2015-05-25 10:58:58', '2016-09-08 14:43:13', '1', 'cuongnh', 'http://pbs.twimg.com/profile_images/450900068724273152/IGbwH2oI_normal.jpeg', null, '63434803', null, null, null, null, null, null, null, null);
-INSERT INTO `users` VALUES ('11', 'Nguyễn', 'Hùng Cường', 'hungcuongqn86@gmail.com', '$2y$10$hOdvgaImpc2pGlC6TKe/n.pzHpcA32nLBfdIvWcylZiy094pUmN2i', 'vMRSjKaBO7jre82c88x9hbvfkRcMUwCFb4C17gBhrqqAOVJIjOrf2qVhPxsl', null, '2016-09-20 03:11:50', '2016-09-20 07:09:31', '1', 'cuongnh1', '/images/cuongnh1/images/avata/profile.jpg', null, null, '0974586211', '0974586211', null, null, '', null, null, null);
-INSERT INTO `users` VALUES ('12', 'nguyễn', 'hậu', 'nh1990@gmail.com', '$2y$10$0V22ly5qboIXpN1C2TpUqehtB8.9xlfeTAOsoqEuPtdexAxVEMO2i', 'rtDzuJeTVGzHbQ7VEfqFoyHTGwislLGyPxaSKP38HcjCKNaFadKOu5j4WieM', null, '2016-09-20 10:10:35', '2016-09-20 10:11:25', '1', 'hoai12345', '', null, null, '', '0971090205', null, null, '', null, null, null);
-INSERT INTO `users` VALUES ('13', 'nguyễn', 'hoài', 'nguyenhau902@gmail.com', '$2y$10$.pOiVAe2KFELoHlPISssbuIn/1gwjHf7CqPg1n765g7wy4PuGn63W', null, null, '2016-09-20 10:53:27', '2016-09-20 10:53:27', '1', ' ggg 12345', null, null, null, '', '0971090205', null, null, null, null, null, null);
-INSERT INTO `users` VALUES ('14', 'nguyễn', 'hoa', '123@gmail.com', '$2y$10$6J3FLn2QHqBtRDdrpDXLgefC07Vql0wgxPtlgLnftm5BmeSJgLoPC', 'NYI0exl6D3Ghgo5nUMfTl25QxDmNYYmstqzhnrhLCbk2dMJCi98qn0GuuuZK', null, '2016-09-20 10:56:30', '2016-09-21 03:02:32', '1', 'n h 1234', '', null, null, '', '0972820167', null, null, '', null, null, null);
-INSERT INTO `users` VALUES ('15', 'trần', 'hoài', 'hht@gmail.com', '$2y$10$LmmYVu5tLDFVOLet7gtzguhpfG5BLQ0xlRypbYXUNnivyGxwFeAcC', null, null, '2016-09-21 01:13:57', '2016-09-21 01:13:57', '1', '@#<< hht', null, null, null, '', '0978806535', null, null, null, null, null, null);
-INSERT INTO `users` VALUES ('16', 'nguyễn', 'hoài', 'nht1990@gmail.com', '$2y$10$VPsaY5qWKlLqnYPsNP3GIu1og.vORWmbHuvL3EP5N.hhhmWoxmr72', null, null, '2016-09-21 02:09:11', '2016-09-21 02:09:11', '1', 'fhhhhhhhf', null, null, null, '', '0971090205', null, null, null, null, null, null);
 INSERT INTO `users` VALUES ('17', 'trần', 'hoa', 'banhmi@gmail.com', '$2y$10$o9OirzN2AxlwsXY/6mfZKuMyOZbbNN1SN0MtUb6Z.EN8YfQDA1H72', null, null, '2016-09-21 02:24:08', '2016-09-21 02:24:08', '1', 'hhhhhh', null, null, null, '', '0978806535', null, null, null, null, null, null);
+
+-- ----------------------------
+-- Table structure for user_payment
+-- ----------------------------
+DROP TABLE IF EXISTS `user_payment`;
+CREATE TABLE `user_payment` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `user_id` int(10) DEFAULT NULL,
+  `payment_code` int(10) DEFAULT NULL,
+  `description` text,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of user_payment
+-- ----------------------------

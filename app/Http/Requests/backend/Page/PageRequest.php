@@ -24,7 +24,6 @@ class PageRequest extends Request {
     public function rules() {
         return [
             //
-            'page_type' => 'required',
             "page_name" => "required",
             "page_slug" => 'required|unique:pages,page_slug,' . Request::get('id'),
         ];
@@ -32,7 +31,6 @@ class PageRequest extends Request {
 
     public function messages() {
         return [
-            'page_type' => 'Menu Type diperlukan',
             'page_name.required' => 'Title diperlukan',
             'page_slug.required' => 'Slug URL diperlukan',
             'page.slug.unique' => 'URL sudah terpakai',
