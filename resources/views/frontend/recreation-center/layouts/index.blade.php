@@ -51,12 +51,12 @@
     if (clientWidth >= 1024) {
         document.write('<div id="divAdRight" style="position: absolute; top: 0px; width:160px; height:600px; overflow:hidden;"> ' +
                 '<a href="http://dongamruou.vn/gioi-thieu/" target="_blank">' +
-                '<img src="images/admin/files/12650916_548998438594696_4309564370475331379_n.jpg" alt="ruou-ngam-ha-noi"/> ' +
+                '<img src="{{asset(Gen::genImgUrl($leftPath))}}" alt="ruou-ngam-ha-noi"/> ' +
                 '</a>' +
                 '</div>' +
                 '<div id="divAdLeft" style="position: absolute; top: 0px; width:160px; height:600px; overflow:hidden;">' +
                 '<a href="http://dongamruou.vn/gioi-thieu/" target="_blank">' +
-                '<img src="images/admin/files/12650916_548998438594696_4309564370475331379_n.jpg" alt="ruou-ngam-ha-noi"/> ' +
+                '<img src="{{asset(Gen::genImgUrl($rightPath))}}" alt="ruou-ngam-ha-noi"/> ' +
                 '</a>' +
                 '</div>');
 

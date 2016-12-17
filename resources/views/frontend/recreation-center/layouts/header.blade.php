@@ -21,7 +21,8 @@
             <div class="col-sm-9 text-right header-sidebar hidden-xs">
                 <a href="">
                     @foreach(Gen::getMedia(Config::get('constants.mediatype.slide'),'9') as $key =>$ss)
-                        <img class="aligncenter size-full wp-image-1383" style="max-width: 100%;" src="{{asset(Gen::genImgUrl($ss->path_full))}}?w=1200">
+                        <img class="aligncenter size-full wp-image-1383" style="max-width: 100%;"
+                             src="{{asset(Gen::genImgUrl($ss->path_full))}}?w=1200">
                     @endforeach
                 </a></div>
             <div class="top-search col-xs-12 visible-xs">
@@ -54,7 +55,9 @@
                     @foreach($mtop as $mt)
                         <li id="menu-item-{{$mt['id']}}"
                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-189">
-                            <a title="{{ucwords($mt['menu_name'])}}" href="{{$mt['menu_type'] == 'link'? $mt['menu_slug'] : url($mt['menu_slug'])}}">{{ucwords($mt['menu_name'])}}</a></li>
+                            <a title="{{ucwords($mt['menu_name'])}}"
+                               href="{{$mt['menu_type'] == 'link'? $mt['menu_slug'] : url($mt['menu_slug'])}}">{{ucwords($mt['menu_name'])}}</a>
+                        </li>
                     @endforeach
                 </ul>
             </div>

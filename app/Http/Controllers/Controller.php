@@ -15,6 +15,5 @@ abstract class Controller extends BaseController {
     public function __construct() {
         $this->data['mtop'] = Menu\Menu::where('menu_status', 1)->where('menu_position','=','top')->wherelang(getLang())->orderBy('menu_order')->get();
         $this->data['mbotton'] = Menu\Menu::where('menu_status', 1)->where('menu_position', '=', 'bottom')->GetNested('bottom');
-        //dd($this->data['mbotton']);
     }
 }

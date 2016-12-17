@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Front;
 use Request;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
-use App\Models\Blog;
+use App\Models\News;
 use App\Models\Media;
 use App\Models\Order\Order;
 use App\Models\Page;
@@ -42,7 +42,16 @@ class PageCtrl extends Controller
         $slugcat = 'dich-vu';
         $findcat = Category\Category::where('slug', $slugcat)->first();
         $this->data['services'] = Category\Category::where('status','=','1')->where('parent','=',$findcat['id'])->orderBy('order')->get();
-        //dd($this->data['service']);
+        //Anh quang cao ben trai
+        $arrPic = Gen::getMedia(Config::get('constants.mediatype.slide'),'2');
+        $this->data['leftPath'] = $arrPic[0]->path_full;
+        //Anh quang cao ben phai
+        $arrPic = Gen::getMedia(Config::get('constants.mediatype.slide'),'10');
+        $this->data['rightPath'] = $arrPic[0]->path_full;
+        //Tin hoat dong tren trang chu
+        $slugcat = 'tin-tuc';
+        $findcat = Category\Category::where('slug', $slugcat)->first();
+        $this->data['news'] = News\News::where('status','=','1')->where('id_category','=',$findcat['id'])->orderBy('order')->get();
         $this->data['title'] = Gen::genOpt('title');
         return view('frontend.recreation-center.pages.home', $this->data);
     }
