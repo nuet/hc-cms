@@ -42,6 +42,9 @@ class PageCtrl extends Controller
         $slugcat = 'dich-vu';
         $findcat = Category\Category::where('slug', $slugcat)->first();
         $this->data['services'] = Category\Category::where('status','=','1')->where('parent','=',$findcat['id'])->orderBy('order')->get();
+        //San pham tren trang chu
+        $this->data['catProducts'] = Category\Category::with('product')->where('parent','=',$findcat['id'])->where('status','=','1')->where('viewhome','=','1')->take(3)->get();
+        //dd($this->data['catProducts']);
         //Anh quang cao ben trai
         $arrPic = Gen::getMedia(Config::get('constants.mediatype.slide'),'2');
         $this->data['leftPath'] = $arrPic[0]->path_full;

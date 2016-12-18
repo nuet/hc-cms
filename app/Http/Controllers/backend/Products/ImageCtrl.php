@@ -62,7 +62,8 @@ class ImageCtrl extends Controller {
                 $img->path_full = 'images/products/full/' . $name;
                 $img->save();
                 Image::make($image)->save($full . '/' . $name);
-                Image::make($image)->resize('100', '100')->save($thumb . '/' . $name);
+                //Image::make($image)->resize('100', '100')->save($thumb . '/' . $name);
+                Image::make($image)->resize('280', '210')->save($thumb . '/' . $name);
             }
         }
         if ($request->ajax()) {

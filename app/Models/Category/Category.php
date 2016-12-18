@@ -15,6 +15,10 @@ class Category extends Model {
         return $this->hasMany('App\Models\Category\Category', 'parent', 'id');
     }
 
+    public function product() {
+        return $this->hasMany('App\Models\Products\Product','id_category');
+    }
+
     public function scopeGetNested($query) {
         $pages = $query->with('children')->wherelang(getLang())->orderBy('order')->get()->toArray();
         $i = 0;

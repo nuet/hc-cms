@@ -40,244 +40,34 @@
                             </div>
                         </div>
                         <div class="home-products">
-                            <div class="item">
-                                <h2><a href="#" title="Ba Kích">Trò Chơi Trong Nhà</a>
-                                </h2>
-                                <div class="woocommerce columns-3">
 
-                                    <ul class="products">
-
-                                        <li class="first post-779 product type-product status-publish has-post-thumbnail product_cat-ba-kich product_cat-san-pham product_tag-ban-ba-kich-rung product_tag-dia-chi-ban-ba-kich-rung-uy-tin product_tag-gia-ba-kich-rung product_tag-mua-ba-kich-rung product_tag-mua-ban-cu-ba-kich-rung product_tag-noi-ban-ba-kich-rung-tot product_tag-tac-dung-cua-ba-kich-rung fancy-gallery-content-unit sale shipping-taxable purchasable product-type-simple product-cat-ba-kich product-cat-san-pham product-tag-ban-ba-kich-rung product-tag-dia-chi-ban-ba-kich-rung-uy-tin product-tag-gia-ba-kich-rung product-tag-mua-ba-kich-rung product-tag-mua-ban-cu-ba-kich-rung product-tag-noi-ban-ba-kich-rung-tot product-tag-tac-dung-cua-ba-kich-rung instock">
-
-
-                                            <a href="#">
-
-
-                                                <img width="280" height="210"
-                                                     src="/images/admin/files/12(31).jpg"
-                                                     class="attachment-shop_catalog wp-post-image"
-                                                     alt="ba kich rung chuan">
-                                                <h3>Game trong nhà</h3>
-
-
-                                                <span class="price"><del><span
-                                                                class="amount">540.000&nbsp;VNĐ</span></del> <ins><span
-                                                                class="amount">500.000&nbsp;VNĐ</span></ins></span>
-
-                                            </a>
-
-
-                                        </li>
-
-
-                                        <li class="post-361 product type-product status-publish has-post-thumbnail product_cat-ba-kich product_cat-san-pham product_tag-ban-ba-kich-kho product_tag-ban-ba-kich-kho-tai-ha-noi product_tag-cong-dung-cua-ba-kich-kho product_tag-gia-ba-kich-kho product_tag-mua-ba-kich-kho-o-dau fancy-gallery-content-unit sale shipping-taxable purchasable product-type-simple product-cat-ba-kich product-cat-san-pham product-tag-ban-ba-kich-kho product-tag-ban-ba-kich-kho-tai-ha-noi product-tag-cong-dung-cua-ba-kich-kho product-tag-gia-ba-kich-kho product-tag-mua-ba-kich-kho-o-dau instock">
-
-
-                                            <a href="#">
-
-
-                                                <img width="280" height="210"
-                                                     src="/images/admin/files/vincomceter.jpg"
-                                                     class="attachment-shop_catalog wp-post-image"
-                                                     alt="ba kich kho">
-                                                <h3>Game trong nha</h3>
-
-
-                                                <span class="price"><del><span
-                                                                class="amount">750.000&nbsp;VNĐ</span></del> <ins><span
-                                                                class="amount">700.000&nbsp;VNĐ</span></ins></span>
-
-                                            </a>
-
-
-                                        </li>
-
-
-                                        <li class="last post-358 product type-product status-publish has-post-thumbnail product_cat-ba-kich product_cat-san-pham product_tag-ban-ba-kich-trang product_tag-cay-ba-kich-trang product_tag-cu-ba-kich-trang product_tag-gia-ba-kich-trang product_tag-mua-ba-kich-trang-o-dau fancy-gallery-content-unit sale shipping-taxable purchasable product-type-simple product-cat-ba-kich product-cat-san-pham product-tag-ban-ba-kich-trang product-tag-cay-ba-kich-trang product-tag-cu-ba-kich-trang product-tag-gia-ba-kich-trang product-tag-mua-ba-kich-trang-o-dau instock">
-
-
-                                            <a href="#">
-
-
-                                                <img width="280" height="210"
-                                                     src="/images/admin/files/75336312-21592x1060.jpg"
-                                                     class="attachment-shop_catalog wp-post-image"
-                                                     alt="ba kich trang">
-                                                <h3>Game trong nhà</h3>
-
-
-                                                <span class="price"><del><span
-                                                                class="amount">200.000&nbsp;VNĐ</span></del> <ins><span
-                                                                class="amount">150.000&nbsp;VNĐ</span></ins></span>
-
-                                            </a>
-
-
-                                        </li>
-
-
-                                    </ul>
-
-                                </div>
-                            </div>
-                            <div class="item">
-                                <h2><a href="http://dongamruou.vn/danh-muc/nam-ngoc-cau/" title="Nấm Ngọc Cẩu">Trò Chơi
-                                        Ngoài Trời</a></h2>
-                                <div class="woocommerce columns-3">
-
-                                    <ul class="products">
-
-                                        <li class="first post-779 product type-product status-publish has-post-thumbnail product_cat-ba-kich product_cat-san-pham product_tag-ban-ba-kich-rung product_tag-dia-chi-ban-ba-kich-rung-uy-tin product_tag-gia-ba-kich-rung product_tag-mua-ba-kich-rung product_tag-mua-ban-cu-ba-kich-rung product_tag-noi-ban-ba-kich-rung-tot product_tag-tac-dung-cua-ba-kich-rung fancy-gallery-content-unit sale shipping-taxable purchasable product-type-simple product-cat-ba-kich product-cat-san-pham product-tag-ban-ba-kich-rung product-tag-dia-chi-ban-ba-kich-rung-uy-tin product-tag-gia-ba-kich-rung product-tag-mua-ba-kich-rung product-tag-mua-ban-cu-ba-kich-rung product-tag-noi-ban-ba-kich-rung-tot product-tag-tac-dung-cua-ba-kich-rung instock">
-
-
-                                            <a href="#">
-
-
-                                                <img width="280" height="210"
-                                                     src="/images/admin/files/12(31).jpg"
-                                                     class="attachment-shop_catalog wp-post-image"
-                                                     alt="ba kich rung chuan">
-                                                <h3>Game trong nhà</h3>
-
-
-                                                <span class="price"><del><span
-                                                                class="amount">540.000&nbsp;VNĐ</span></del> <ins><span
-                                                                class="amount">500.000&nbsp;VNĐ</span></ins></span>
-
-                                            </a>
-
-
-                                        </li>
-
-
-                                        <li class="post-361 product type-product status-publish has-post-thumbnail product_cat-ba-kich product_cat-san-pham product_tag-ban-ba-kich-kho product_tag-ban-ba-kich-kho-tai-ha-noi product_tag-cong-dung-cua-ba-kich-kho product_tag-gia-ba-kich-kho product_tag-mua-ba-kich-kho-o-dau fancy-gallery-content-unit sale shipping-taxable purchasable product-type-simple product-cat-ba-kich product-cat-san-pham product-tag-ban-ba-kich-kho product-tag-ban-ba-kich-kho-tai-ha-noi product-tag-cong-dung-cua-ba-kich-kho product-tag-gia-ba-kich-kho product-tag-mua-ba-kich-kho-o-dau instock">
-
-
-                                            <a href="#">
-
-
-                                                <img width="280" height="210"
-                                                     src="/images/admin/files/vincomceter.jpg"
-                                                     class="attachment-shop_catalog wp-post-image"
-                                                     alt="ba kich kho">
-                                                <h3>Game trong nha</h3>
-
-
-                                                <span class="price"><del><span
-                                                                class="amount">750.000&nbsp;VNĐ</span></del> <ins><span
-                                                                class="amount">700.000&nbsp;VNĐ</span></ins></span>
-
-                                            </a>
-
-
-                                        </li>
-
-
-                                        <li class="last post-358 product type-product status-publish has-post-thumbnail product_cat-ba-kich product_cat-san-pham product_tag-ban-ba-kich-trang product_tag-cay-ba-kich-trang product_tag-cu-ba-kich-trang product_tag-gia-ba-kich-trang product_tag-mua-ba-kich-trang-o-dau fancy-gallery-content-unit sale shipping-taxable purchasable product-type-simple product-cat-ba-kich product-cat-san-pham product-tag-ban-ba-kich-trang product-tag-cay-ba-kich-trang product-tag-cu-ba-kich-trang product-tag-gia-ba-kich-trang product-tag-mua-ba-kich-trang-o-dau instock">
-
-
-                                            <a href="#">
-
-
-                                                <img width="280" height="210"
-                                                     src="/images/admin/files/75336312-21592x1060.jpg"
-                                                     class="attachment-shop_catalog wp-post-image"
-                                                     alt="ba kich trang">
-                                                <h3>Game trong nhà</h3>
-
-
-                                                <span class="price"><del><span
-                                                                class="amount">200.000&nbsp;VNĐ</span></del> <ins><span
-                                                                class="amount">150.000&nbsp;VNĐ</span></ins></span>
-
-                                            </a>
-
-
-                                        </li>
-
-
-                                    </ul>
-                                </div>
+                            @foreach($catProducts as $cat)
                                 <div class="item">
-                                    <h2><a href="http://dongamruou.vn/danh-muc/sam-cau/" title="Sâm Cau">Tổ Chức Sự
-                                            Kiện</a>
-                                    </h2>
+                                    <h2><a href="{{url($cat->slug)}}" title="{{$cat->name}}">{{$cat->name}}</a></h2>
                                     <div class="woocommerce columns-3">
-
                                         <ul class="products">
-
-                                            <li class="first post-779 product type-product status-publish has-post-thumbnail product_cat-ba-kich product_cat-san-pham product_tag-ban-ba-kich-rung product_tag-dia-chi-ban-ba-kich-rung-uy-tin product_tag-gia-ba-kich-rung product_tag-mua-ba-kich-rung product_tag-mua-ban-cu-ba-kich-rung product_tag-noi-ban-ba-kich-rung-tot product_tag-tac-dung-cua-ba-kich-rung fancy-gallery-content-unit sale shipping-taxable purchasable product-type-simple product-cat-ba-kich product-cat-san-pham product-tag-ban-ba-kich-rung product-tag-dia-chi-ban-ba-kich-rung-uy-tin product-tag-gia-ba-kich-rung product-tag-mua-ba-kich-rung product-tag-mua-ban-cu-ba-kich-rung product-tag-noi-ban-ba-kich-rung-tot product-tag-tac-dung-cua-ba-kich-rung instock">
-
-
-                                                <a href="#">
-
-
-                                                    <img width="280" height="210"
-                                                         src="/images/admin/files/12(31).jpg"
-                                                         class="attachment-shop_catalog wp-post-image"
-                                                         alt="ba kich rung chuan">
-                                                    <h3>Game trong nhà</h3>
-
-
-                                                    <span class="price"><del><span
-                                                                    class="amount">540.000&nbsp;VNĐ</span></del> <ins><span
-                                                                    class="amount">500.000&nbsp;VNĐ</span></ins></span>
-
-                                                </a>
-
-
-                                            </li>
-
-
-                                            <li class="post-361 product type-product status-publish has-post-thumbnail product_cat-ba-kich product_cat-san-pham product_tag-ban-ba-kich-kho product_tag-ban-ba-kich-kho-tai-ha-noi product_tag-cong-dung-cua-ba-kich-kho product_tag-gia-ba-kich-kho product_tag-mua-ba-kich-kho-o-dau fancy-gallery-content-unit sale shipping-taxable purchasable product-type-simple product-cat-ba-kich product-cat-san-pham product-tag-ban-ba-kich-kho product-tag-ban-ba-kich-kho-tai-ha-noi product-tag-cong-dung-cua-ba-kich-kho product-tag-gia-ba-kich-kho product-tag-mua-ba-kich-kho-o-dau instock">
-
-
-                                                <a href="#">
-
-
-                                                    <img width="280" height="210"
-                                                         src="/images/admin/files/vincomceter.jpg"
-                                                         class="attachment-shop_catalog wp-post-image"
-                                                         alt="ba kich kho">
-                                                    <h3>Game trong nha</h3>
-
-
-                                                    <span class="price"><del><span
-                                                                    class="amount">750.000&nbsp;VNĐ</span></del> <ins><span
-                                                                    class="amount">700.000&nbsp;VNĐ</span></ins></span>
-
-                                                </a>
-
-
-                                            </li>
-
-
-                                            <li class="last post-358 product type-product status-publish has-post-thumbnail product_cat-ba-kich product_cat-san-pham product_tag-ban-ba-kich-trang product_tag-cay-ba-kich-trang product_tag-cu-ba-kich-trang product_tag-gia-ba-kich-trang product_tag-mua-ba-kich-trang-o-dau fancy-gallery-content-unit sale shipping-taxable purchasable product-type-simple product-cat-ba-kich product-cat-san-pham product-tag-ban-ba-kich-trang product-tag-cay-ba-kich-trang product-tag-cu-ba-kich-trang product-tag-gia-ba-kich-trang product-tag-mua-ba-kich-trang-o-dau instock">
-
-
-                                                <a href="#">
-
-
-                                                    <img width="280" height="210"
-                                                         src="/images/admin/files/75336312-21592x1060.jpg"
-                                                         class="attachment-shop_catalog wp-post-image"
-                                                         alt="ba kich trang">
-                                                    <h3>Game trong nhà</h3>
-
-
-                                                    <span class="price"><del><span
-                                                                    class="amount">200.000&nbsp;VNĐ</span></del> <ins><span
-                                                                    class="amount">150.000&nbsp;VNĐ</span></ins></span>
-
-                                                </a>
-
-
-                                            </li>
-
-
+                                            @foreach($cat->product as $key => $product)
+                                                <li class="@if ($key === 0)first @elseif ($key === 2)last @endif product type-product status-publish has-post-thumbnail fancy-gallery-content-unit sale shipping-taxable purchasable product-type-simple instock">
+                                                    <a href="{{url($cat->slug.'/'.$product->slug)}}">
+                                                        @if(count($product->image->first()) > 0)
+                                                            <img width="280" height="210"
+                                                                 src="{{asset($product->image->first()->path_thumb)}}"
+                                                                 class="attachment-shop_catalog wp-post-image"
+                                                                 alt="">
+                                                        @endif
+                                                        <h3>{{$product->product_name}}</h3>
+                                                        <span class="price">
+                                                            <del><span class="amount">{{$product->product_price}}&nbsp;VNĐ</span></del>
+                                                            <ins><span class="amount">{{$product->product_price}}&nbsp;VNĐ</span></ins>
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            @endforeach
                                         </ul>
                                     </div>
                                 </div>
+                            @endforeach
+                        </div>
                     </main><!-- #main -->
 
                 </div><!-- /#primary -->

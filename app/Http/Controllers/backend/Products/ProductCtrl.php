@@ -85,11 +85,11 @@ class ProductCtrl extends Controller {
                     $img->path_full = 'images/products/full/' . $name;
                     $img->save();
                     Image::make($image)->save($full . '/' . $name);
-                    Image::make($image)->resize('100', '100')->save($thumb . '/' . $name);
+                    Image::make($image)->resize('280', '210')->save($thumb . '/' . $name);
                 }
             }
-        } catch (Exception $exc) {
-            $message = $e->getMessage();
+        } catch (\Exception $exc) {
+            $message = $exc->getMessage();
         }
         if (isset($message)) {
             return redirect()->back()->withInput()->withErrors(['message' => $message]);
