@@ -115,6 +115,9 @@ function()
             Route::post('login', ['as' => 'customer.login', 'uses' => 'PageCtrl@login']);
             Route::Post('account', 'PageCtrl@updateAccount');
         });
+        Route::get('/dich-vu', 'PageCtrl@services');
+        Route::get('/dich-vu/{slug}', 'PageCtrl@service');
+        Route::get('/tin-tuc', 'PageCtrl@news');
         Route::get('/{kumis}', 'PageCtrl@show');
         Route::post('/{kumis}', 'PageCtrl@show');
     });
@@ -185,6 +188,9 @@ Route::group(['namespace' => 'Front'], function() {
         Route::post('login', ['as' => 'customer.login', 'uses' => 'PageCtrl@login']);
         Route::Post('account', 'PageCtrl@updateAccount');
     });
+    Route::get('/dich-vu', 'PageCtrl@services');
+    Route::get('/dich-vu/{slug}', 'PageCtrl@service');
+    Route::get('/tin-tuc', 'PageCtrl@news');
     Route::get('/{kumis}', 'PageCtrl@show');
     Route::post('/{kumis}', 'PageCtrl@show');
 });

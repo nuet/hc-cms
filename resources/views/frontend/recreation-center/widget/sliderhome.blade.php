@@ -27,10 +27,10 @@
                     </div>
 
                     <a href="#slider-carousel" class="left carousel-control hidden-xs" data-slide="prev">
-                        <i class="glyphicon glyphicon-chevron-left"></i>
+                        <i style="top: 50%; position: absolute;" class="fa fa-chevron-left fa-2" aria-hidden="true"></i>
                     </a>
                     <a href="#slider-carousel" class="right carousel-control hidden-xs" data-slide="next">
-                        <i class="glyphicon glyphicon-chevron-right"></i>
+                        <i style="top: 50%; position: absolute;" class="fa fa-chevron-right fa-2" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>

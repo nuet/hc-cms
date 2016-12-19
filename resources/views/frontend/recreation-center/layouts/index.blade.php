@@ -50,12 +50,12 @@
     var clientWidth = window.screen.width;
     if (clientWidth >= 1024) {
         document.write('<div id="divAdRight" style="position: absolute; top: 0px; width:160px; height:600px; overflow:hidden;"> ' +
-                '<a href="http://dongamruou.vn/gioi-thieu/" target="_blank">' +
+                '<a href="#" target="_blank">' +
                 '<img src="{{asset(Gen::genImgUrl($leftPath))}}" alt="ruou-ngam-ha-noi"/> ' +
                 '</a>' +
                 '</div>' +
                 '<div id="divAdLeft" style="position: absolute; top: 0px; width:160px; height:600px; overflow:hidden;">' +
-                '<a href="http://dongamruou.vn/gioi-thieu/" target="_blank">' +
+                '<a href="#" target="_blank">' +
                 '<img src="{{asset(Gen::genImgUrl($rightPath))}}" alt="ruou-ngam-ha-noi"/> ' +
                 '</a>' +
                 '</div>');

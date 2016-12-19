@@ -4,43 +4,8 @@
         <div class="row">
             <div class="main-content col-md-9 col-md-push-3">
                 <div id="primary">
-                    <div class="sslider slick-initialized slick-slider">
-                        @section('slider-main')
-                            @include('frontend.recreation-center.widget.sliderhome')
-                        @show
-                    </div>
-
                     <main id="main" class="site-main" role="main">
-                        <div class="home-desc clearfix">
-                            <h2 style="background: #dd9933;"><a href="http://dongamruou.vn/" title="Giới thiệu">Giới
-                                    thiệu</a></h2>
-                            <div class="row desc">
-                                <div class="col-sm-4">
-                                    <a href="http://dongamruou.vn/" title="Giới thiệu">
-                                        <img style="max-height: 162px;" id="logo_img"
-                                             src="{{asset(Gen::genImgUrl(Gen::genOpt('logo')))}}?h=162"
-                                             alt="The Project">
-                                    </a>
-                                </div>
-                                <div class="col-sm-8">
-                                    <p style="text-align: center;"><strong>TRUNG TÂM GIẢI TRÍ VÀ THỂ THAO THẾ HỆ
-                                            MỚI</strong>
-                                    </p>
-
-                                    <ul>
-                                        <li><em>CAM KẾT HÀNG CHUẨN CÓ NGUỒN GỐC XUẤT XỨ</em></li>
-                                        <li><em>GIÁ TỐT NHẤT</em></li>
-                                        <li><em>ĐA DẠNG CÁC MẶT HÀNG VÀ SẢN PHẨM</em></li>
-                                        <li><em>PHONG CÁCH PHỤC VỤ TƯ VẤN CHUYÊN NGHIỆP</em></li>
-                                        <li><em>DỊCH VỤ MIỄN PHÍ VẬN CHUYỂN</em></li>
-                                        <li><em>DỊCH VỤ HẬU MÃI CHU ĐÁO</em></li>
-                                    </ul>
-                                    <p style="text-align: center;"><strong>XIN CẢM
-                                            ƠN</strong>&nbsp;<strong>!</strong></p></div>
-                            </div>
-                        </div>
                         <div class="home-products">
-
                             @foreach($catProducts as $cat)
                                 <div class="item">
                                     <h2><a href="{{url($cat->slug)}}" title="{{$cat->name}}">{{$cat->name}}</a></h2>

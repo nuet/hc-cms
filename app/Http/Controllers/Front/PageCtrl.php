@@ -41,20 +41,8 @@ class PageCtrl extends Controller
         //Chuyen muc dich vu
         $slugcat = 'dich-vu';
         $findcat = Category\Category::where('slug', $slugcat)->first();
-        $this->data['services'] = Category\Category::where('status','=','1')->where('parent','=',$findcat['id'])->orderBy('order')->get();
-        //San pham tren trang chu
         $this->data['catProducts'] = Category\Category::with('product')->where('parent','=',$findcat['id'])->where('status','=','1')->where('viewhome','=','1')->take(3)->get();
         //dd($this->data['catProducts']);
-        //Anh quang cao ben trai
-        $arrPic = Gen::getMedia(Config::get('constants.mediatype.slide'),'2');
-        $this->data['leftPath'] = $arrPic[0]->path_full;
-        //Anh quang cao ben phai
-        $arrPic = Gen::getMedia(Config::get('constants.mediatype.slide'),'10');
-        $this->data['rightPath'] = $arrPic[0]->path_full;
-        //Tin hoat dong tren trang chu
-        $slugcat = 'tin-tuc';
-        $findcat = Category\Category::where('slug', $slugcat)->first();
-        $this->data['news'] = News\News::where('status','=','1')->where('id_category','=',$findcat['id'])->orderBy('order')->get();
         $this->data['title'] = Gen::genOpt('title');
         return view('frontend.recreation-center.pages.home', $this->data);
     }
@@ -80,7 +68,6 @@ class PageCtrl extends Controller
      * @return type
      */
     public function show($slug) {
-        //
         $findcat = Category\Category::where('slug', $slug)->first();
         if (count($findcat) == 0) {
             
@@ -89,6 +76,7 @@ class PageCtrl extends Controller
             $postcat = $findcat->blog()->where('status', '=', 1);
             return view('frontend.recreation-center.pages.category', $this->data);
         }
+
         $page = Page\Page::where('page_slug', $slug)->first();
         if (count($page)) {
             $this->data['page'] = $page;
@@ -96,6 +84,42 @@ class PageCtrl extends Controller
             return view('frontend.recreation-center.pages.pages', $this->data);
         }
         return abort('404', 'Page Not Found');
+    }
+
+    /**
+     *
+     * @param type $slug
+     * @return type
+     */
+    public function services() {
+        $findcat = Category\Category::where('slug', 'dich-vu')->first();
+        $this->data['catProducts'] = Category\Category::with('product')->where('parent','=',$findcat['id'])->where('status','=','1')->orderBy('order')->get();
+        return view('frontend.recreation-center.pages.services', $this->data);
+    }
+
+    /**
+     *
+     * @param type $slug
+     * @return type
+     */
+    public function service($slug) {
+        $slug = 'dich-vu/'.$slug;
+        $this->data['catProducts'] = Category\Category::with('product')->where('slug','=',$slug)->where('status','=','1')->orderBy('order')->get();
+        return view('frontend.recreation-center.pages.services', $this->data);
+    }
+
+    /**
+     *
+     * @param type $slug
+     * @return type
+     */
+    public function news() {
+        //Tin hoat dong tren trang chu
+        $slugcat = 'tin-tuc';
+        $perPage = Gen::genOpt('post_perpage_front');
+        $findcat = Category\Category::where('slug', $slugcat)->first();
+        $this->data['news'] = News\News::where('status','=','1')->where('id_category','=',$findcat['id'])->orderBy('order')->paginate($perPage);
+        return view('frontend.recreation-center.pages.news', $this->data);
     }
     /**
      * 

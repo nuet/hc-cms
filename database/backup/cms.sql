@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2016-12-17 23:20:14
+Date: 2016-12-20 06:07:31
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -38,12 +38,9 @@ CREATE TABLE `category` (
 -- ----------------------------
 INSERT INTO `category` VALUES ('7', '0', 'Tin tức', 'tin-tuc', '0', '1', 'vi', '2016-09-29 11:03:40', '2016-09-29 04:03:40', null);
 INSERT INTO `category` VALUES ('12', '0', 'Dịch vụ', 'dich-vu', '1', '1', 'vi', '2016-12-11 02:18:18', '2016-12-10 19:18:18', null);
-INSERT INTO `category` VALUES ('13', '7', 'Tin hoạt động', 'tin-tuc/tin-hoat-dong', '0', '1', 'vi', '2016-12-11 02:47:48', '2016-12-10 19:47:48', null);
-INSERT INTO `category` VALUES ('14', '7', 'Test1', 'tin-tuc/test1', '2', '1', 'vi', '2016-12-11 02:16:21', '2016-12-10 19:16:21', null);
-INSERT INTO `category` VALUES ('15', '7', 'Kinh tế', 'tin-tuc/kinh-te', '1', '1', 'vi', '2016-12-11 02:16:21', '2016-12-10 19:16:21', null);
-INSERT INTO `category` VALUES ('22', '12', 'Trò chơi trong nhà', 'dich-vu/tro-choi-trong-nha', '3', '1', 'vi', '2016-12-11 02:53:59', '2016-12-10 19:18:09', null);
-INSERT INTO `category` VALUES ('23', '12', 'Trò chơi ngoài trời', 'dich-vu/tro-choi-ngoai-troi', '4', '1', 'vi', '2016-12-10 19:18:48', '2016-12-10 19:18:48', null);
-INSERT INTO `category` VALUES ('24', '12', 'Thể thao trong nhà', 'dich-vu/the-thao-trong-nha', '5', '1', 'vi', '2016-12-10 19:19:11', '2016-12-10 19:19:11', null);
+INSERT INTO `category` VALUES ('22', '12', 'Trò chơi trong nhà', 'dich-vu/tro-choi-trong-nha', '3', '1', 'vi', '2016-12-17 23:20:21', '2016-12-17 16:20:21', '1');
+INSERT INTO `category` VALUES ('23', '12', 'Trò chơi ngoài trời', 'dich-vu/tro-choi-ngoai-troi', '4', '1', 'vi', '2016-12-17 23:20:32', '2016-12-17 16:20:32', '1');
+INSERT INTO `category` VALUES ('24', '12', 'Thể thao trong nhà', 'dich-vu/the-thao-trong-nha', '5', '1', 'vi', '2016-12-17 23:20:37', '2016-12-17 16:20:37', '1');
 INSERT INTO `category` VALUES ('25', '12', 'Thể thao ngoài trời', 'dich-vu/the-thao-ngoai-troi', '6', '1', 'vi', '2016-12-10 19:19:26', '2016-12-10 19:19:26', null);
 INSERT INTO `category` VALUES ('26', '12', 'Ăn uống', 'dich-vu/an-uong', '7', '1', 'vi', '2016-12-10 19:19:51', '2016-12-10 19:19:51', null);
 INSERT INTO `category` VALUES ('27', '12', 'Bán hàng', 'dich-vu/ban-hang', '8', '1', 'vi', '2016-12-10 19:20:09', '2016-12-10 19:20:09', null);
@@ -133,8 +130,8 @@ INSERT INTO `menu` VALUES ('53', '44', 'Tư vấn mua hàng', 'tu-van-mua-hang',
 INSERT INTO `menu` VALUES ('54', '44', 'Hướng dẫn mua hàng ', 'huong-dan-mua-hang', 'link', '1', 'bottom', '0', 'vi', '2016-12-10 20:30:07', '2016-12-10 20:30:07');
 INSERT INTO `menu` VALUES ('55', '44', 'Hướng dẫn mua online', 'huong-dan-mua-online', 'link', '1', 'bottom', '0', 'vi', '2016-12-10 20:30:27', '2016-12-10 20:30:27');
 INSERT INTO `menu` VALUES ('56', '44', 'Hướng dẫn thanh toán', 'huong-dan-thanh-toan', 'link', '1', 'bottom', '0', 'vi', '2016-12-10 20:30:46', '2016-12-10 20:30:57');
-INSERT INTO `menu` VALUES ('57', '0', 'Chính sách & Quy định', 'chinh', 'link', '1', 'top', '4', 'vi', '2016-12-10 22:05:30', '2016-12-10 22:05:43');
-INSERT INTO `menu` VALUES ('58', '0', 'Hướng dẫn mua hàng ', 'huong-dan', 'link', '1', 'top', '5', 'vi', '2016-12-10 22:06:21', '2016-12-10 22:06:26');
+INSERT INTO `menu` VALUES ('57', '0', 'Chính sách & Quy định', 'chinh-sach-quy-dinh', 'link', '1', 'top', '4', 'vi', '2016-12-10 22:05:30', '2016-12-18 04:10:22');
+INSERT INTO `menu` VALUES ('58', '0', 'Hướng dẫn mua hàng ', 'huong-dan-mua-hang', 'link', '1', 'top', '5', 'vi', '2016-12-10 22:06:21', '2016-12-18 04:11:17');
 
 -- ----------------------------
 -- Table structure for migrations
@@ -301,13 +298,22 @@ CREATE TABLE `pages` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of pages
 -- ----------------------------
-INSERT INTO `pages` VALUES ('19', 'asd fefd', 'asd-fefd', '1', '0', 'sdsadsa', 'vi', '2016-12-10 08:26:37', '2016-12-10 08:43:42');
-INSERT INTO `pages` VALUES ('23', 'asd', 'asd', '1', '0', 'asd adsa', 'vi', '2016-12-10 09:04:19', '2016-12-10 09:04:33');
+INSERT INTO `pages` VALUES ('19', 'Liên hệ', 'lien-he', '1', '0', '<ul>\r\n	<li>&nbsp;Tầng 12, T&ograve;a Nh&agrave; SCB, .....</li>\r\n	<li>&nbsp;<strong>1900 5454 40</strong></li>\r\n	<li>&nbsp;giaitrilethuy@aquilan.com</li>\r\n	<li><a href=\"http://giaitrilethuy.vn/\" title=\"Trung tâm Giải trí và Thể thao Thế Hệ Mới\">http://giaitrilethuy.vn</a></li>\r\n</ul>\r\n', 'vi', '2016-12-10 08:26:37', '2016-12-19 22:16:39');
+INSERT INTO `pages` VALUES ('23', 'Giới thiệu', 'gioi-thieu', '1', '0', '<p><strong>TRUNG T&Acirc;M GIẢI TR&Iacute; V&Agrave; THỂ THAO THẾ HỆ MỚI</strong></p>\r\n\r\n<ul>\r\n	<li><em>CAM KẾT H&Agrave;NG CHUẨN C&Oacute; NGUỒN GỐC XUẤT XỨ</em></li>\r\n	<li><em>GI&Aacute; TỐT NHẤT</em></li>\r\n	<li><em>ĐA DẠNG C&Aacute;C MẶT H&Agrave;NG V&Agrave; SẢN PHẨM</em></li>\r\n	<li><em>PHONG C&Aacute;CH PHỤC VỤ TƯ VẤN CHUY&Ecirc;N NGHIỆP</em></li>\r\n	<li><em>DỊCH VỤ MIỄN PH&Iacute; VẬN CHUYỂN</em></li>\r\n	<li><em>DỊCH VỤ HẬU M&Atilde;I CHU Đ&Aacute;O</em></li>\r\n</ul>\r\n\r\n<p><strong>XIN CẢM ƠN</strong>&nbsp;<strong>!</strong></p>\r\n', 'vi', '2016-12-10 09:04:19', '2016-12-18 03:43:38');
+INSERT INTO `pages` VALUES ('24', 'Chính Sách & Quy định', 'chinh-sach-quy-dinh', '1', '0', 'sađ&aacute; sađ&aacute;', 'vi', '2016-12-18 04:03:54', '2016-12-18 04:04:00');
+INSERT INTO `pages` VALUES ('25', 'Hướng dẫn mua hàng ', 'huong-dan-mua-hang', '1', '0', 'đ&aacute; sfadsa', 'vi', '2016-12-18 04:11:42', '2016-12-18 04:11:47');
+INSERT INTO `pages` VALUES ('26', 'Chính sách ưu đãi', 'chinh-sach-uu-dai', '1', '0', '', 'vi', '2016-12-19 22:17:33', '2016-12-19 22:17:33');
+INSERT INTO `pages` VALUES ('27', 'Chính sách vận chuyển', 'chinh-sach-van-chuyen', '1', '0', '', 'vi', '2016-12-19 22:17:57', '2016-12-19 22:17:57');
+INSERT INTO `pages` VALUES ('28', 'Quy định giao hàng & thanh toán', 'quy-dinh-giao-hang-thanh-toan', '1', '0', '', 'vi', '2016-12-19 22:18:34', '2016-12-19 22:18:34');
+INSERT INTO `pages` VALUES ('29', 'Hòm thư góp ý & khiếu nại', 'hom-thu-gop-y-khieu-nai', '1', '0', '', 'vi', '2016-12-19 22:19:08', '2016-12-19 22:19:08');
+INSERT INTO `pages` VALUES ('30', 'Tư vấn mua hàng', 'tu-van-mua-hang', '1', '0', '', 'vi', '2016-12-19 22:19:51', '2016-12-19 22:19:51');
+INSERT INTO `pages` VALUES ('31', 'Hướng dẫn mua online', 'huong-dan-mua-online', '1', '0', '', 'vi', '2016-12-19 22:20:30', '2016-12-19 22:20:30');
+INSERT INTO `pages` VALUES ('32', 'Hướng dẫn thanh toán', 'huong-dan-thanh-toan', '1', '0', 'sd', 'vi', '2016-12-19 22:20:47', '2016-12-19 22:20:47');
 
 -- ----------------------------
 -- Table structure for password_resets
@@ -476,12 +482,12 @@ CREATE TABLE `product` (
 -- ----------------------------
 -- Records of product
 -- ----------------------------
-INSERT INTO `product` VALUES ('23', '7', 'test', 'test 1', 'test', '200000', '1', '2015-05-05 05:55:54', '2016-12-17 16:04:13', 'test-1');
-INSERT INTO `product` VALUES ('25', '8', '1231', 'Madrid 4th', 'Madrid 4th', '200000', '1', '2015-05-05 07:38:02', '2015-05-13 02:22:58', 'madrid-4th');
-INSERT INTO `product` VALUES ('26', '8', '1212', 'Madrid Home', 'Madrid Home Warna Putih', '100000', '1', '2015-05-12 05:11:49', '2015-05-12 05:11:49', 'jersey/la-liga/madrid-home');
-INSERT INTO `product` VALUES ('27', '8', '221313', 'Madrid Away', '', '100000', '1', '2015-05-12 07:05:11', '2015-05-12 07:05:11', 'jersey/la-liga/madrid-away');
-INSERT INTO `product` VALUES ('28', '8', '1231', 'Madrid 3rd', '', '100000', '1', '2015-05-12 07:05:55', '2015-05-12 07:05:55', 'jersey/la-liga/madrid-3rd');
-INSERT INTO `product` VALUES ('29', '7', 'ád', 'áđá', 'ád', '20000000', '0', '2016-12-10 10:13:30', '2016-12-10 10:13:30', 'tin-tuc/ada');
+INSERT INTO `product` VALUES ('23', '22', 'test', 'test 1', 'test', '200000', '1', '2015-05-05 05:55:54', '2016-12-18 02:31:04', 'test-1');
+INSERT INTO `product` VALUES ('25', '22', '1231', 'Madrid 4th', 'Madrid 4th', '200000', '1', '2015-05-05 07:38:02', '2016-12-18 02:31:09', 'madrid-4th');
+INSERT INTO `product` VALUES ('26', '22', '1212', 'Madrid Home', 'Madrid Home Warna Putih', '100000', '1', '2015-05-12 05:11:49', '2016-12-18 02:31:14', 'madrid-home');
+INSERT INTO `product` VALUES ('27', '23', '221313', 'Madrid Away', '', '100000', '1', '2015-05-12 07:05:11', '2016-12-18 01:44:56', 'madrid-away');
+INSERT INTO `product` VALUES ('28', '23', '1231', 'Madrid 3rd', '', '100000', '1', '2015-05-12 07:05:55', '2016-12-18 01:45:04', 'madrid-3rd');
+INSERT INTO `product` VALUES ('29', '23', 'ád', 'áđá', 'ád', '20000000', '1', '2016-12-10 10:13:30', '2016-12-18 01:45:19', 'ada');
 
 -- ----------------------------
 -- Table structure for product_attr
@@ -495,14 +501,14 @@ CREATE TABLE `product_attr` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of product_attr
 -- ----------------------------
-INSERT INTO `product_attr` VALUES ('26', '25', 'ukuran', 'S,M,L,XL,XXL', '2015-05-13 02:22:58', '2015-05-13 02:22:58');
-INSERT INTO `product_attr` VALUES ('33', '23', 'warna', 'biru,hijau,kuning', '2016-12-17 16:04:13', '2016-12-17 16:04:13');
-INSERT INTO `product_attr` VALUES ('34', '23', 'ukuran', 's,m,l,xl,xxl', '2016-12-17 16:04:13', '2016-12-17 16:04:13');
+INSERT INTO `product_attr` VALUES ('43', '23', 'warna', 'biru,hijau,kuning', '2016-12-18 02:31:04', '2016-12-18 02:31:04');
+INSERT INTO `product_attr` VALUES ('44', '23', 'ukuran', 's,m,l,xl,xxl', '2016-12-18 02:31:04', '2016-12-18 02:31:04');
+INSERT INTO `product_attr` VALUES ('45', '25', 'ukuran', 'S,M,L,XL,XXL', '2016-12-18 02:31:09', '2016-12-18 02:31:09');
 
 -- ----------------------------
 -- Table structure for product_category
@@ -544,19 +550,24 @@ CREATE TABLE `product_img` (
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `primary` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of product_img
 -- ----------------------------
 INSERT INTO `product_img` VALUES ('14', '22', '6jkxL.jpg', 'images/products/thumb/6jkxL.jpg', 'images/products/full/6jkxL.jpg', '2015-05-05 04:36:32', '2015-05-05 04:36:32', '0');
-INSERT INTO `product_img` VALUES ('17', '25', 'pixXL.jpg', 'images/products/thumb/pixXL.jpg', 'images/products/full/pixXL.jpg', '2015-05-05 07:38:02', '2015-05-05 07:38:02', '0');
-INSERT INTO `product_img` VALUES ('34', '25', 'emGp8.jpg', 'images/products/thumb/emGp8.jpg', 'images/products/full/emGp8.jpg', '2015-05-13 02:23:31', '2015-05-13 02:23:31', '0');
-INSERT INTO `product_img` VALUES ('35', '25', 'aA0bL.jpg', 'images/products/thumb/aA0bL.jpg', 'images/products/full/aA0bL.jpg', '2015-05-13 02:23:50', '2015-05-13 02:23:50', '0');
-INSERT INTO `product_img` VALUES ('36', '29', 'Vt8GP.jpg', 'images/products/thumb/Vt8GP.jpg', 'images/products/full/Vt8GP.jpg', '2016-12-10 10:14:05', '2016-12-10 10:14:05', '0');
-INSERT INTO `product_img` VALUES ('39', '23', 'Ln9wM.jpg', 'images/products/thumb/Ln9wM.jpg', 'images/products/full/Ln9wM.jpg', '2016-12-17 16:03:34', '2016-12-17 16:03:34', '0');
-INSERT INTO `product_img` VALUES ('40', '23', 'JnzQk.jpg', 'images/products/thumb/JnzQk.jpg', 'images/products/full/JnzQk.jpg', '2016-12-17 16:03:43', '2016-12-17 16:03:43', '0');
-INSERT INTO `product_img` VALUES ('41', '23', 'mZ3HC.jpg', 'images/products/thumb/mZ3HC.jpg', 'images/products/full/mZ3HC.jpg', '2016-12-17 16:03:57', '2016-12-17 16:03:57', '0');
+INSERT INTO `product_img` VALUES ('44', '23', 'YSLyp.jpg', 'images/products/thumb/YSLyp.jpg', 'images/products/full/YSLyp.jpg', '2016-12-18 02:28:43', '2016-12-18 02:28:43', '0');
+INSERT INTO `product_img` VALUES ('45', '23', 'BImli.jpg', 'images/products/thumb/BImli.jpg', 'images/products/full/BImli.jpg', '2016-12-18 02:28:49', '2016-12-18 02:28:49', '0');
+INSERT INTO `product_img` VALUES ('46', '25', 'zndQE.jpg', 'images/products/thumb/zndQE.jpg', 'images/products/full/zndQE.jpg', '2016-12-18 02:30:33', '2016-12-18 02:30:33', '0');
+INSERT INTO `product_img` VALUES ('47', '25', '5O22G.jpg', 'images/products/thumb/5O22G.jpg', 'images/products/full/5O22G.jpg', '2016-12-18 02:30:36', '2016-12-18 02:30:36', '0');
+INSERT INTO `product_img` VALUES ('48', '26', 'zuMjD.jpg', 'images/products/thumb/zuMjD.jpg', 'images/products/full/zuMjD.jpg', '2016-12-18 02:30:52', '2016-12-18 02:30:52', '0');
+INSERT INTO `product_img` VALUES ('49', '26', 'naay7.jpg', 'images/products/thumb/naay7.jpg', 'images/products/full/naay7.jpg', '2016-12-18 02:30:55', '2016-12-18 02:30:55', '0');
+INSERT INTO `product_img` VALUES ('50', '27', 'lmDYx.jpg', 'images/products/thumb/lmDYx.jpg', 'images/products/full/lmDYx.jpg', '2016-12-18 02:31:30', '2016-12-18 02:31:30', '0');
+INSERT INTO `product_img` VALUES ('51', '27', 'AZDQ6.jpg', 'images/products/thumb/AZDQ6.jpg', 'images/products/full/AZDQ6.jpg', '2016-12-18 02:31:32', '2016-12-18 02:31:32', '0');
+INSERT INTO `product_img` VALUES ('52', '29', 'G33Yy.jpg', 'images/products/thumb/G33Yy.jpg', 'images/products/full/G33Yy.jpg', '2016-12-18 02:31:59', '2016-12-18 02:31:59', '0');
+INSERT INTO `product_img` VALUES ('53', '29', 'ov99U.jpg', 'images/products/thumb/ov99U.jpg', 'images/products/full/ov99U.jpg', '2016-12-18 02:32:01', '2016-12-18 02:32:01', '0');
+INSERT INTO `product_img` VALUES ('54', '28', 'EQctv.jpg', 'images/products/thumb/EQctv.jpg', 'images/products/full/EQctv.jpg', '2016-12-18 02:32:30', '2016-12-18 02:32:30', '0');
+INSERT INTO `product_img` VALUES ('55', '28', 'onLXp.jpg', 'images/products/thumb/onLXp.jpg', 'images/products/full/onLXp.jpg', '2016-12-18 02:32:32', '2016-12-18 02:32:32', '0');
 
 -- ----------------------------
 -- Table structure for product_meta

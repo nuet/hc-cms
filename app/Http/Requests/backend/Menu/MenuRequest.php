@@ -26,7 +26,7 @@ class MenuRequest extends Request {
             //
             'menu_type' => 'required',
             "menu_name" => "required",
-            "menu_slug" => 'required|unique:menu,menu_slug,' . Request::get('id'),
+            "menu_slug" => 'required',
         ];
     }
 
