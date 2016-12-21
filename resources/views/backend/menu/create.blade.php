@@ -252,6 +252,7 @@ $(function() {
                             <label for="menu_type">Loại Menu</label>
                             <select id="menu_type" class="form-control search-select kopet" name="menu_type">
                                 <option value="link">Link</option>
+                                <option value="page">Trang</option>
                                 <option value="category">Chuyên mục</option>
                             </select>
                         </div>

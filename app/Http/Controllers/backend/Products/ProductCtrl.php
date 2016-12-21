@@ -64,6 +64,7 @@ class ProductCtrl extends Controller {
         try {
             $input = $request->except('image');
             $input['product_price'] = str_replace('.', '', $input['product_price']);
+            $input['product_old_price'] = str_replace('.', '', $input['product_old_price']);
             $cat_slug = Category::find($input['id_category'])->slug;
             $input['slug'] = $cat_slug . '/' . str_slug($input['product_name']);
             $input['product_status'] = $request->get('status') == 'on' ? 1 : 0;
@@ -147,6 +148,7 @@ class ProductCtrl extends Controller {
         $product = Product::find($id);
         $input = $request->all();
         $input['product_price'] = str_replace('.', '', $input['product_price']);
+        $input['product_old_price'] = str_replace('.', '', $input['product_old_price']);
         $input['slug'] = str_slug($input['product_name']);
         $input['product_status'] = $request->get('status') == 'on' ? 1 : 0;
         $attr = array_filter($input['name']);

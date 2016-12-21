@@ -115,3 +115,23 @@ function mb_word_wrap($string, $max_length, $end_substitute = null, $html_linebr
 
     return $string;
 }
+
+/**
+ * @param array $array
+ * @return string
+ */
+function SetAttr($array = []) {
+    $html = '';
+    $html .= '<span>';
+    foreach ($array as $attr) {
+        $html .= '<label>' . ucwords($attr->name) . '</label>';
+        $html .= '<select class="item_' . $attr->name . '" name="' . $attr->name . '">';
+        $values = explode(',', $attr->values);
+        foreach ($values as $val) {
+            $html .= '<option value=' . $val . '>' . $val . '</option>';
+        }
+        $html .= '</select>';
+    }
+    $html .='</span>';
+    return $html;
+}

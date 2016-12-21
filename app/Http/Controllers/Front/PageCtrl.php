@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\News;
 use App\Models\Media;
+use App\Models\Products;
 use App\Models\Order\Order;
 use App\Models\Page;
 use App\Models\Widget;
@@ -105,6 +106,20 @@ class PageCtrl extends Controller
         return view('frontend.recreation-center.pages.services', $this->data);
     }
 
+    /**
+     *
+     * @param type $slug
+     * @return type
+     */
+    public function product($slug,$product) {
+        $findpro = Products\Product::where('slug', $product)->first();
+
+        $this->data['product'] = $findpro;
+        $this->data['related_product'] = Products\Product::where('id_category', $findpro->id_category)->where('id', '!=', $findpro->id)->get();
+        if (count($findpro) > 0) {
+            return view('frontend.recreation-center.pages.product', $this->data);
+        }
+    }
     /**
      *
      * @param type $slug

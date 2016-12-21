@@ -111,6 +111,7 @@ $(function() {
                             <label for="menu_type">Menu Type</label>
                             <select id="menu_type" class="form-control search-select kopet" name="menu_type">
                                 <option value="link" {{$menu->menu_type == 'link' ? 'selected="selected"' : ''}}>Link</option>
+                                <option value="page" {{$menu->menu_type == 'page' ? 'selected="selected"' : ''}}>Trang</option>
                                 <option value="category" {{$menu->menu_type == 'category' ? 'selected="selected"' : ''}}>Chuyên mục</option>
                             </select>
                         </div>

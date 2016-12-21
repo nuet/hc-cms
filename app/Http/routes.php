@@ -117,6 +117,7 @@ function()
         });
         Route::get('/dich-vu', 'PageCtrl@services');
         Route::get('/dich-vu/{slug}', 'PageCtrl@service');
+        Route::get('/dich-vu/{slug}/{product}', 'PageCtrl@product');
         Route::get('/tin-tuc', 'PageCtrl@news');
         Route::get('/{kumis}', 'PageCtrl@show');
         Route::post('/{kumis}', 'PageCtrl@show');
