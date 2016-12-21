@@ -31,6 +31,7 @@ $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
     radioClass: 'iradio_flat-green'
 });
 $("#price").inputmask();
+$("#old_price").inputmask();
 $("#input-2").fileinput({
     uploadUrl: "{{route('backend.image.store')}}",
     uploadAsync: true,
@@ -92,6 +93,18 @@ $("#image-pro").on('click', '.del-img', function(e) {
                 }
             });
         }
+    });
+});
+
+$(function () {
+    var editor = CKEDITOR.replace('product_description', {
+        language: 'vi',
+        filebrowserBrowseUrl: "{{asset('backend/plugins/ckfinder/ckfinder.html')}}",
+        filebrowserImageBrowseUrl: "{{asset('backend/plugins/ckfinder/ckfinder.html?Type=Images')}}",
+        filebrowserFlashBrowseUrl: "{{asset('backend/plugins/ckfinder/ckfinder.html?Type=Flash')}}",
+        filebrowserUploadUrl: "{{asset('backend/plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files')}}",
+        filebrowserImageUploadUrl: "{{asset('backend/plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images')}}",
+        filebrowserFlashUploadUrl: "{{asset('backend/plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash')}}"
     });
 });
 </script>
@@ -159,11 +172,15 @@ $("#image-pro").on('click', '.del-img', function(e) {
                                             </div>
                                             <div class="form-group">
                                                 <label>Mô tả sản phẩm</label>
-                                                <textarea name="product_description" class="form-control">{{$product->product_description}}</textarea>
+                                                <textarea name="product_description" id="product_description" class="form-control">{{$product->product_description}}</textarea>
                                             </div>
                                             <div class="form-group">
                                                 <label>Giá</label>
                                                 <input id="price" data-inputmask="'alias': 'decimal', 'groupSeparator': '.', 'autoGroup': true" type="text" name="product_price" class="form-control" value="{{$product->product_price}}">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Giá khuyến mãi</label>
+                                                <input id="old_price" data-inputmask="'alias': 'decimal', 'groupSeparator': '.', 'autoGroup': true" type="text" name="product_old_price" class="form-control" value="{{$product->product_old_price}}">
                                             </div>
                                             <div class="input_fields_wrap">
                                                 @if(count($product->attribute) > 0)

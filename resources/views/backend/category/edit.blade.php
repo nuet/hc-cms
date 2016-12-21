@@ -85,7 +85,7 @@
                                     @if($category->viewhome == 1)
                                         <input type="checkbox" class="minimal" name='viewhome' checked/> Hiện trên trang chủ ?
                                     @else
-                                        <input type="checkbox" class="minimal" name='viewhome'/> Hiện trên trang chủ ?
+                                        <input type="checkbox" class="minimal" name='viewhome'/> Hiển thị trên trang chủ ?
                                     @endif
                                 </label>
                             </div>

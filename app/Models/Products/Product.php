@@ -11,7 +11,7 @@ class Product extends Model {
     //class Absensi extends Model {
     //
     protected $table = 'product';
-    protected $fillable = array('id_category', 'product_sku', 'slug', 'product_name', 'product_description', 'product_price', 'product_status');
+    protected $fillable = array('id_category', 'product_sku', 'slug', 'product_name', 'product_description', 'product_price', 'product_old_price', 'product_status');
 
     public function category() {
         return $this->belongsTo('App\Models\Products\Category', 'id_category', 'id');

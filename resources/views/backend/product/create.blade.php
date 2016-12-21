@@ -26,6 +26,7 @@ $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
     radioClass: 'iradio_flat-green'
 });
 $("#price").inputmask();
+$("#old_price").inputmask();
 $("#input-2").fileinput({
     uploadUrl: "{{route('backend.image.store')}}",
     uploadAsync: true,
@@ -55,7 +56,19 @@ $(wrapper).on("click", ".remove_field", function(e) { //user click on remove tex
     e.preventDefault();
     $(this).closest('.form-group').remove();
     x--;
-})
+});
+
+$(function () {
+    var editor = CKEDITOR.replace('product_description', {
+        language: 'vi',
+        filebrowserBrowseUrl: "{{asset('backend/plugins/ckfinder/ckfinder.html')}}",
+        filebrowserImageBrowseUrl: "{{asset('backend/plugins/ckfinder/ckfinder.html?Type=Images')}}",
+        filebrowserFlashBrowseUrl: "{{asset('backend/plugins/ckfinder/ckfinder.html?Type=Flash')}}",
+        filebrowserUploadUrl: "{{asset('backend/plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files')}}",
+        filebrowserImageUploadUrl: "{{asset('backend/plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images')}}",
+        filebrowserFlashUploadUrl: "{{asset('backend/plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash')}}"
+    });
+});
 </script>
 @endsection
 @section('content')
@@ -122,6 +135,10 @@ $(wrapper).on("click", ".remove_field", function(e) { //user click on remove tex
                                             <div class="form-group">
                                                 <label>Giá</label>
                                                 <input id="price" data-inputmask="'alias': 'decimal', 'groupSeparator': '.', 'autoGroup': true" type="text" name="product_price" class="form-control" value="{{old('product_price')}}">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Giá khuyến mãi</label>
+                                                <input id="old_price" data-inputmask="'alias': 'decimal', 'groupSeparator': '.', 'autoGroup': true" type="text" name="product_old_price" class="form-control" value="{{old('product_old_price')}}">
                                             </div>
                                             <div class="form-group">
                                                 <label for="exampleInputFile">Hình ảnh</label>

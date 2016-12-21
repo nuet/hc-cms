@@ -68,13 +68,10 @@ class PageCtrl extends Controller
      * @return type
      */
     public function show($slug) {
-        $findcat = Category\Category::where('slug', $slug)->first();
-        if (count($findcat) == 0) {
-            
-        } else {
-            $this->data['title'] = $findcat->name.' | '.Gen::genOpt('title');
-            $postcat = $findcat->blog()->where('status', '=', 1);
-            return view('frontend.recreation-center.pages.category', $this->data);
+        $findnew = News\News::where('slug', $slug)->first();
+        if (count($findnew)) {
+            $this->data['new'] = $findnew;
+            return view('frontend.recreation-center.pages.newsdetail', $this->data);
         }
 
         $page = Page\Page::where('page_slug', $slug)->first();

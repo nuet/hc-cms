@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2016-12-20 06:07:31
+Date: 2016-12-22 05:39:48
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -31,7 +31,7 @@ CREATE TABLE `category` (
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `viewhome` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of category
@@ -176,7 +176,7 @@ CREATE TABLE `news` (
 -- ----------------------------
 INSERT INTO `news` VALUES ('25', '7', 'Trung tâm Giải trí và Thể thao Thế Hệ Mới, huyện Lệ Thuỷ, tỉnh Quảng Bình đang đẩy nhanh...', 'trung-tam-giai-tri-va-the-thao-the-he-moi-huyen-le-thuy-tinh-quang-binh-dang-day-nhanh', 'sdf', '/images/admin/files/11896260_491702007657673_3877675263664202134_n.jpg', null, '', '1', '0,1', null, 'vi', '2016-09-21 06:18:42', '2016-12-17 15:34:20');
 INSERT INTO `news` VALUES ('26', '7', 'THÔNG BÁO KHUYẾN MÃI BÓNG ĐÁ', 'thong-bao-khuyen-mai-bong-da', 'đấ', '/images/admin/files/15203279_714175835410288_4950455490887737955_n.jpg', null, '', '1', '0,1', null, 'vi', '2016-09-21 06:23:29', '2016-12-17 15:34:36');
-INSERT INTO `news` VALUES ('29', '7', 'Khu vui chơi thể thao thế hệ mới mai khai trương ca Fe', 'khu-vui-choi-the-thao-the-he-moi-mai-khai-truong-ca-fe', '&aacute;dsa', '/images/admin/files/tinhte_vn_4d21151e8b0c8__TMH3611.jpg', null, '', '1', '0,1,2', null, 'vi', '2016-09-22 01:25:55', '2016-12-17 15:32:48');
+INSERT INTO `news` VALUES ('29', '7', 'Khu vui chơi thể thao thế hệ mới mai khai trương ca Fe', 'khu-vui-choi-the-thao-the-he-moi-mai-khai-truong-ca-fe', 'if you are looking for a function that trims some actual text, you will probably need a UTF-8 safe function. Also, if you want to trim the text somewhat intelligently (trim the text after alphanumeric characters only, no HTML and so on) you can try this funciton I wrote:&nbsp;f you are looking for a function that trims some actual text, you will probably need a UTF-8 safe function. Also, if you want to trim the text somewhat intelligently (trim the text after alphanumeric characters only, no HTML and so on) you can try this funciton I wrote:&nbsp;f you are looking for a function that trims some actual text, you will probably need a UTF-8 safe function. Also, if you want to trim the text somewhat intelligently (trim the text after alphanumeric characters only, no HTML and so on) you can try this funciton I wrote:<br />\r\nf you are looking for a function that trims some actual text, you will probably need a UTF-8 safe function. Also, if you want to trim the text somewhat intelligently (trim the text after alphanumeric characters only, no HTML and so on) you can try this funciton I wrote:<br />\r\nf you are looking for a function that trims some actual text, you will probably need a UTF-8 safe function. Also, if you want to trim the text somewhat intelligently (trim the text after alphanumeric characters only, no HTML and so on) you can try this funciton I wrote:f you are looking for a function that trims some actual text, you will probably need a UTF-8 safe function. Also, if you want to trim the text somewhat intelligently (trim the text after alphanumeric characters only, no HTML and so on) you can try this funciton I wrote:<br />\r\n<img alt=\"\" src=\"/images/admin/images/logo.jpg\" style=\"height:848px; width:1124px\" />if you are looking for a function that trims some actual text, you will probably need a UTF-8 safe function. Also, if you want to trim the text somewhat intelligently (trim the text after alphanumeric characters only, no HTML and so on) you can try this funciton I wrote:&nbsp;f you are looking for a function that trims some actual text, you will probably need a UTF-8 safe function. Also, if you want to trim the text somewhat intelligently (trim the text after alphanumeric characters only, no HTML and so on) you can try this funciton I wrote:&nbsp;f you are looking for a function that trims some actual text, you will probably need a UTF-8 safe function. Also, if you want to trim the text somewhat intelligently (trim the text after alphanumeric characters only, no HTML and so on) you can try this funciton I wrote:<br />\r\nf you are looking for a function that trims some actual text, you will probably need a UTF-8 safe function. Also, if you want to trim the text somewhat intelligently (trim the text after alphanumeric characters only, no HTML and so on) you can try this funciton I wrote:', '/images/admin/files/tinhte_vn_4d21151e8b0c8__TMH3611.jpg', null, '', '1', '0,1,2', null, 'vi', '2016-09-22 01:25:55', '2016-12-21 13:32:06');
 
 -- ----------------------------
 -- Table structure for option
@@ -476,18 +476,19 @@ CREATE TABLE `product` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `slug` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `product_old_price` bigint(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of product
 -- ----------------------------
-INSERT INTO `product` VALUES ('23', '22', 'test', 'test 1', 'test', '200000', '1', '2015-05-05 05:55:54', '2016-12-18 02:31:04', 'test-1');
-INSERT INTO `product` VALUES ('25', '22', '1231', 'Madrid 4th', 'Madrid 4th', '200000', '1', '2015-05-05 07:38:02', '2016-12-18 02:31:09', 'madrid-4th');
-INSERT INTO `product` VALUES ('26', '22', '1212', 'Madrid Home', 'Madrid Home Warna Putih', '100000', '1', '2015-05-12 05:11:49', '2016-12-18 02:31:14', 'madrid-home');
-INSERT INTO `product` VALUES ('27', '23', '221313', 'Madrid Away', '', '100000', '1', '2015-05-12 07:05:11', '2016-12-18 01:44:56', 'madrid-away');
-INSERT INTO `product` VALUES ('28', '23', '1231', 'Madrid 3rd', '', '100000', '1', '2015-05-12 07:05:55', '2016-12-18 01:45:04', 'madrid-3rd');
-INSERT INTO `product` VALUES ('29', '23', 'ád', 'áđá', 'ád', '20000000', '1', '2016-12-10 10:13:30', '2016-12-18 01:45:19', 'ada');
+INSERT INTO `product` VALUES ('23', '22', 'test', 'test 1', 'test', '200000', '1', '2015-05-05 05:55:54', '2016-12-18 02:31:04', 'test-1', null);
+INSERT INTO `product` VALUES ('25', '22', '1231', 'Madrid 4th', 'Madrid 4th', '200000', '1', '2015-05-05 07:38:02', '2016-12-18 02:31:09', 'madrid-4th', null);
+INSERT INTO `product` VALUES ('26', '22', '1212', 'Madrid Home', 'Madrid Home Warna Putih', '100000', '1', '2015-05-12 05:11:49', '2016-12-18 02:31:14', 'madrid-home', null);
+INSERT INTO `product` VALUES ('27', '23', '221313', 'Madrid Away', '', '100000', '1', '2015-05-12 07:05:11', '2016-12-18 01:44:56', 'madrid-away', null);
+INSERT INTO `product` VALUES ('28', '23', '1231', 'Madrid 3rd', '', '100000', '1', '2015-05-12 07:05:55', '2016-12-18 01:45:04', 'madrid-3rd', null);
+INSERT INTO `product` VALUES ('29', '23', 'ád', 'áđá', 'ád', '20000000', '1', '2016-12-10 10:13:30', '2016-12-18 01:45:19', 'ada', null);
 
 -- ----------------------------
 -- Table structure for product_attr

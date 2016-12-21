@@ -80,7 +80,7 @@
                             </div>
                             <div class="form-group">
                                 <label>
-                                    <input type="checkbox" class="minimal" name='viewhome'/> Active ?
+                                    <input type="checkbox" class="minimal" name='viewhome'/> Hiển thị trên trang chủ ?
                                 </label>
                             </div>
                             <div class="form-group">
