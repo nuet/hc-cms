@@ -226,7 +226,7 @@ dl.aligncenter,
 @media (min-width: 768px) {
 	.navbar-nav.navbar-right:last-child {
 	margin-right: 0px;
-	}	
+	}
 }
 
 /*================================================
@@ -322,7 +322,7 @@ nav#site-navigation .moztheme-nav>li:last-child>a {
 	text-transform: uppercase;
 	color: #FD8A26;
 	font-weight: bold;
-	
+
 }
 .sslider .info p {
 	color: #fff;
@@ -485,7 +485,7 @@ column-fill: balance;
 	margin: 0 !important;
 	border-bottom: none;
 	padding: 10px 0px 0 10px !important;
-	background-color: rgba(247, 247, 247, 0.23);; 
+	background-color: rgba(247, 247, 247, 0.23);;
 }
 ul.related_post li {
 	display: inline-block;
@@ -818,7 +818,7 @@ aside > * {
 	border: 5px solid #fff;
 	display: block;
 	float: left;
-	margin-right: 25px;	
+	margin-right: 25px;
 	-webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.19);
 	-moz-box-shadow:    0px 0px 5px 0px rgba(50, 50, 50, 0.19);
 	box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.19);
@@ -1002,7 +1002,7 @@ footer#colophon .ft-widget {
 	border-radius: 3px 3px 0 0;
 	margin-bottom: 10px !important;
 
-} 
+}
 .yarpp-related ul {
 	padding-left: 40px;
 	list-style: square;

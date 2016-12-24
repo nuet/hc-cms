@@ -28,15 +28,13 @@
                                     </p>
 
                                     <ul>
-                                        <li><em>CAM KẾT HÀNG CHUẨN CÓ NGUỒN GỐC XUẤT XỨ</em></li>
-                                        <li><em>GIÁ TỐT NHẤT</em></li>
-                                        <li><em>ĐA DẠNG CÁC MẶT HÀNG VÀ SẢN PHẨM</em></li>
-                                        <li><em>PHONG CÁCH PHỤC VỤ TƯ VẤN CHUYÊN NGHIỆP</em></li>
-                                        <li><em>DỊCH VỤ MIỄN PHÍ VẬN CHUYỂN</em></li>
-                                        <li><em>DỊCH VỤ HẬU MÃI CHU ĐÁO</em></li>
+                                        <li><em>BÁN VÉ MÁY BAY CÁC HÃNG TRONG NƯỚC</em></li>
+                                        <li><em>TỔ CHỨC CÁC TOUR DU LỊCH TRONG NƯỚC</em></li>
+                                        <li><em>QUÁN CAFE XEM PHIM 3D MIỄN PHÍ</em></li>
+                                        <li><em>QUÁN CAFE CA NHẠC KẾT HỢP BAR</em></li>
+                                        <li><em>TRÔNG DỮ TRẺ MIỄN PHÍ KHI SỬ DỤNG DỊCH VỤ TẠI KHU TRÒ CHƠI LIÊN HOÀN</em></li>
                                     </ul>
-                                    <p style="text-align: center;"><strong>XIN CẢM
-                                            ƠN</strong>&nbsp;<strong>!</strong></p></div>
+                                    <p style="text-align: center;"><strong>XIN CẢM ƠN</strong>&nbsp;<strong>!</strong></p></div>
                             </div>
                         </div>
                         <div class="home-products">

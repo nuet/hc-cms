@@ -54,7 +54,7 @@
                 <ul id="menu-footer-menu" class="menu moztheme-nav nav navbar-nav">
                     @foreach($mtop as $mt)
                         <li id="menu-item-{{$mt['id']}}"
-                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-189">
+                            class="menu-item menu-item-type-custom menu-item-object-custom {{ Ekko::isActiveURL($mt['menu_slug']) == 'active'? 'current-menu-item':''}}">
                             <a title="{{ucwords($mt['menu_name'])}}"
                                href="{{$mt['menu_type'] == 'link'? $mt['menu_slug'] : url($mt['menu_slug'])}}">{{ucwords($mt['menu_name'])}}</a>
                         </li>

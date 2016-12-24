@@ -51,20 +51,12 @@
 
 <div class="hidden-xs hidden-sm">
     <aside id="moztheme_likebox_widget-2"
-           class="widget-4 widget-last widget-even widget widget_moztheme_likebox_widget"><h2
-                class="widget-title"><span>Giaitrilethuy on FB</span></h2>
-        <div id="likebox" style="width: 235px; overflow-x: hidden;">
-            <div class="fb-page fb_iframe_widget" data-href="https://www.facebook.com/ruoungamhanoi"
-                 data-hide-cover="false" data-show-facepile="true" data-show-posts="false"
-                 data-width="235" data-height="" fb-xfbml-state="rendered"
-                 fb-iframe-plugin-query="app_id=&amp;container_width=235&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fruoungamhanoi&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=true&amp;show_posts=false&amp;width=235">
-                                    <span style="vertical-align: bottom; width: 235px; height: 214px;"><iframe
-                                                name="f134cc3e08cbf14" width="235px" height="1000px" frameborder="0"
-                                                allowtransparency="true" allowfullscreen="true" scrolling="no"
-                                                title="fb:page Facebook Social Plugin"
-                                                src="https://www.facebook.com/v2.0/plugins/page.php?app_id=&amp;channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2F_IDqWBiKXtV.js%3Fversion%3D42%23cb%3Df20fbe08e23959%26domain%3Ddongamruou.vn%26origin%3Dhttp%253A%252F%252Fdongamruou.vn%252Ff34576e23f881b%26relation%3Dparent.parent&amp;container_width=235&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fruoungamhanoi&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=true&amp;show_posts=false&amp;width=235"
-                                                style="border: none; visibility: visible; width: 235px; height: 214px;"
-                                                class=""></iframe></span></div>
+           class="widget-4 widget-last widget-even widget widget_moztheme_likebox_widget">
+        <h2 class="widget-title"><span>Giaitrilethuy on FB</span></h2>
+        <div id="likebox" style="width: 230px; overflow-x: hidden;">
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fgiaitrilethuy%2F%3Ffref%3Dts&tabs=timeline&width=230&height=400&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1205774589445826"
+                    width="230" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                    allowTransparency="true"></iframe>
         </div>
     </aside>
 </div>
