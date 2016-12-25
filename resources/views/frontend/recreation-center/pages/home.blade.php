@@ -12,11 +12,11 @@
 
                     <main id="main" class="site-main" role="main">
                         <div class="home-desc clearfix">
-                            <h2 style="background: #dd9933;"><a href="http://dongamruou.vn/" title="Giới thiệu">Giới
+                            <h2 style="background: #dd9933;"><a href="{{url('gioi-thieu')}}" title="Giới thiệu">Giới
                                     thiệu</a></h2>
                             <div class="row desc">
                                 <div class="col-sm-4">
-                                    <a href="http://dongamruou.vn/" title="Giới thiệu">
+                                    <a href="{{Gen::genOpt('url')}}" title="Giới thiệu">
                                         <img style="max-height: 162px;" id="logo_img"
                                              src="{{asset(Gen::genImgUrl(Gen::genOpt('logo')))}}?h=162"
                                              alt="The Project">
@@ -55,7 +55,9 @@
                                                         @endif
                                                         <h3>{{$product->product_name}}</h3>
                                                         <span class="price">
-                                                            <del><span class="amount">{{$product->product_price}}&nbsp;VNĐ</span></del>
+                                                            @if ($product->product_old_price)
+                                                            <del><span class="amount">{{$product->product_old_price}}&nbsp;VNĐ</span></del>
+                                                            @endif
                                                             <ins><span class="amount">{{$product->product_price}}&nbsp;VNĐ</span></ins>
                                                         </span>
                                                     </a>

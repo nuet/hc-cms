@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2016-12-22 05:39:48
+Date: 2016-12-25 18:38:40
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -31,7 +31,7 @@ CREATE TABLE `category` (
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `viewhome` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of category
@@ -112,7 +112,7 @@ CREATE TABLE `menu` (
 -- ----------------------------
 INSERT INTO `menu` VALUES ('12', '0', 'Giới thiệu', 'gioi-thieu', 'page', '1', 'top', '3', 'vi', '2015-05-12 10:49:46', '2016-12-10 21:58:34');
 INSERT INTO `menu` VALUES ('16', '0', 'Trang chủ', '/', 'link', '1', 'top', '0', 'vi', '2016-09-08 11:29:47', '2016-12-10 19:14:15');
-INSERT INTO `menu` VALUES ('17', '0', 'Liên hệ', 'lien-he', 'link', '1', 'top', '6', 'vi', '2016-09-08 11:30:44', '2016-12-10 22:06:26');
+INSERT INTO `menu` VALUES ('17', '0', 'Liên hệ', 'lien-he', 'page', '1', 'top', '6', 'vi', '2016-09-08 11:30:44', '2016-12-21 23:42:25');
 INSERT INTO `menu` VALUES ('30', '0', 'Dịch vụ', 'dich-vu', 'category', '1', 'top', '1', 'vi', '2016-09-23 07:28:20', '2016-12-10 21:58:34');
 INSERT INTO `menu` VALUES ('35', '0', 'Tin tức', 'tin-tuc', 'category', '1', 'top', '2', 'vi', '2016-09-23 07:41:30', '2016-12-10 21:58:34');
 INSERT INTO `menu` VALUES ('42', '0', 'LIÊN KẾT WEB', 'dongamruouvn', 'link', '1', 'bottom', '0', 'vi', '2016-12-10 20:22:30', '2016-12-10 20:24:06');
@@ -122,16 +122,16 @@ INSERT INTO `menu` VALUES ('45', '42', 'lethuy.gov.vn', 'http://lethuy.gov.vn', 
 INSERT INTO `menu` VALUES ('46', '42', 'lethuy.edu.vn', 'http://lethuy.edu.vn', 'link', '1', 'bottom', '0', 'vi', '2016-12-10 20:25:38', '2016-12-10 20:26:23');
 INSERT INTO `menu` VALUES ('47', '42', 'tourquangbinh.com', 'http://tourquangbinh.com', 'link', '1', 'bottom', '0', 'vi', '2016-12-10 20:26:08', '2016-12-10 20:26:08');
 INSERT INTO `menu` VALUES ('48', '42', 'quangbinhtourism.vn', 'http://quangbinhtourism.vn', 'link', '1', 'bottom', '0', 'vi', '2016-12-10 20:27:34', '2016-12-10 20:27:34');
-INSERT INTO `menu` VALUES ('49', '43', 'Chính sách ưu đãi', 'chinh-sach-uu-dai', 'link', '1', 'bottom', '0', 'vi', '2016-12-10 20:28:25', '2016-12-10 20:28:25');
+INSERT INTO `menu` VALUES ('49', '43', 'Chính sách ưu đãi', 'chinh-sach-uu-dai', 'page', '1', 'bottom', '0', 'vi', '2016-12-10 20:28:25', '2016-12-21 23:43:58');
 INSERT INTO `menu` VALUES ('50', '43', 'Chính sách vận chuyển', 'chinh-sach-van-chuyen', 'link', '1', 'bottom', '0', 'vi', '2016-12-10 20:28:42', '2016-12-10 20:28:42');
 INSERT INTO `menu` VALUES ('51', '43', 'Quy định giao hàng & thanh toán', 'quy-dinh-giao-hang-thanh-toan', 'link', '1', 'bottom', '0', 'vi', '2016-12-10 20:29:04', '2016-12-10 20:29:04');
 INSERT INTO `menu` VALUES ('52', '43', 'Hòm thư góp ý & khiếu nại', 'hom-thu-gop-y-khieu-nai', 'link', '1', 'bottom', '0', 'vi', '2016-12-10 20:29:21', '2016-12-10 20:29:21');
-INSERT INTO `menu` VALUES ('53', '44', 'Tư vấn mua hàng', 'tu-van-mua-hang', 'link', '1', 'bottom', '0', 'vi', '2016-12-10 20:29:41', '2016-12-10 20:29:41');
+INSERT INTO `menu` VALUES ('53', '44', 'Tư vấn mua hàng', 'tu-van-mua-hang', 'page', '1', 'bottom', '0', 'vi', '2016-12-10 20:29:41', '2016-12-21 23:44:16');
 INSERT INTO `menu` VALUES ('54', '44', 'Hướng dẫn mua hàng ', 'huong-dan-mua-hang', 'link', '1', 'bottom', '0', 'vi', '2016-12-10 20:30:07', '2016-12-10 20:30:07');
 INSERT INTO `menu` VALUES ('55', '44', 'Hướng dẫn mua online', 'huong-dan-mua-online', 'link', '1', 'bottom', '0', 'vi', '2016-12-10 20:30:27', '2016-12-10 20:30:27');
 INSERT INTO `menu` VALUES ('56', '44', 'Hướng dẫn thanh toán', 'huong-dan-thanh-toan', 'link', '1', 'bottom', '0', 'vi', '2016-12-10 20:30:46', '2016-12-10 20:30:57');
-INSERT INTO `menu` VALUES ('57', '0', 'Chính sách & Quy định', 'chinh-sach-quy-dinh', 'link', '1', 'top', '4', 'vi', '2016-12-10 22:05:30', '2016-12-18 04:10:22');
-INSERT INTO `menu` VALUES ('58', '0', 'Hướng dẫn mua hàng ', 'huong-dan-mua-hang', 'link', '1', 'top', '5', 'vi', '2016-12-10 22:06:21', '2016-12-18 04:11:17');
+INSERT INTO `menu` VALUES ('57', '0', 'Chính sách & Quy định', 'chinh-sach-quy-dinh', 'page', '1', 'top', '4', 'vi', '2016-12-10 22:05:30', '2016-12-21 23:43:00');
+INSERT INTO `menu` VALUES ('58', '0', 'Hướng dẫn mua hàng ', 'huong-dan-mua-hang', 'page', '1', 'top', '5', 'vi', '2016-12-10 22:06:21', '2016-12-21 23:43:18');
 
 -- ----------------------------
 -- Table structure for migrations
@@ -483,9 +483,9 @@ CREATE TABLE `product` (
 -- ----------------------------
 -- Records of product
 -- ----------------------------
-INSERT INTO `product` VALUES ('23', '22', 'test', 'test 1', 'test', '200000', '1', '2015-05-05 05:55:54', '2016-12-18 02:31:04', 'test-1', null);
-INSERT INTO `product` VALUES ('25', '22', '1231', 'Madrid 4th', 'Madrid 4th', '200000', '1', '2015-05-05 07:38:02', '2016-12-18 02:31:09', 'madrid-4th', null);
-INSERT INTO `product` VALUES ('26', '22', '1212', 'Madrid Home', 'Madrid Home Warna Putih', '100000', '1', '2015-05-12 05:11:49', '2016-12-18 02:31:14', 'madrid-home', null);
+INSERT INTO `product` VALUES ('23', '22', 'test', 'test 1', '<h1>Khuyến m&atilde;i H&agrave; Nội</h1>\r\nTổng hợp th&ocirc;ng tin&nbsp;<strong>khuyến m&atilde;i, ưu đ&atilde;i, giảm gi&aacute;, ưu đ&atilde;i, sale</strong>&nbsp;về c&aacute;c l&atilde;nh vực&nbsp;<strong>thời trang, ẩm thực, giải tr&iacute;, mỹ phẩm, du lịch, đồ điện tử, c&ocirc;ng nghệ</strong>&nbsp;ở&nbsp;<strong>H&agrave; Nội (HN)</strong><em>C&aacute;c trung t&acirc;m thương mại mua sắm, ẩm thực, giải tr&iacute; tại H&agrave; Nội&nbsp;thường xuy&ecirc;n c&oacute; khuyến m&atilde;i, ưu đ&atilde;i, giảm gi&aacute;:</em>\r\n\r\n<ul>\r\n	<li><strong>Vincom H&agrave; Nội:</strong>\r\n\r\n	<ul>\r\n		<li><a href=\"http://www.khuyenmaivui.com/tag/vincom-ba-trieu/\" target=\"_blank\">Vincom B&agrave; Triệu</a>&nbsp;91 B&agrave; Triệu, H&agrave; Nội</li>\r\n		<li><a href=\"http://www.khuyenmaivui.com/tag/vincom-nguyen-chi-thanh/\" target=\"_blank\">Vincom Nguyễn Ch&iacute; Thanh</a>&nbsp;54A Nguyễn Ch&iacute; Thanh HN</li>\r\n		<li><a href=\"http://www.khuyenmaivui.com/tag/vincom-times-city/\" target=\"_blank\">Vincom Times City</a>&nbsp;458 Minh Khai, Hai B&agrave; Trưng</li>\r\n		<li><a href=\"http://www.khuyenmaivui.com/tag/vincom-royal-city/\" target=\"_blank\">Vincom Royal City</a>&nbsp;72A Nguyễn Tr&atilde;i, Thượng Đ&igrave;nh, Thanh Xu&acirc;n,&nbsp;HN</li>\r\n		<li><a href=\"http://www.khuyenmaivui.com/tag/vincom-long-bien/\" target=\"_blank\"><strong>Vincom Long Bi&ecirc;n</strong></a>&nbsp;Vincom Village Long Bi&ecirc;n (phường Ph&uacute;c Lợi, quận Long Bi&ecirc;n, H&agrave; Nội)</li>\r\n	</ul>\r\n	</li>\r\n	<li><strong>Parkson&nbsp;H&agrave; Nội:</strong>\r\n	<ul>\r\n		<li><a href=\"http://www.khuyenmaivui.com/tag/parkson-viet-tower/\" target=\"_blank\">Parkson Viet Tower</a>:&nbsp;198 T&acirc;y Sơn, phường Trung Liệt Quận Đống Đa, H&agrave; Nội</li>\r\n	</ul>\r\n	</li>\r\n	<li><a href=\"http://www.khuyenmaivui.com/tag/aeon-mall-long-bien/\" target=\"_blank\">AEON Mall Long Bi&ecirc;n</a>:&nbsp;27 đường Cổ Linh, Phường Long Bi&ecirc;n, Quận Long Bi&ecirc;n</li>\r\n	<li><a href=\"http://www.khuyenmaivui.com/tag/trang-tien-plaza/\" target=\"_blank\"><strong>Tr&agrave;ng Tiền Plaza</strong></a>:&nbsp;24 Hai B&agrave; Trưng, Ho&agrave;n Kiếm</li>\r\n	<li><a href=\"http://www.khuyenmaivui.com/tag/savico-megamall-long-bien/\" target=\"_blank\">Savico Megamall</a>:&nbsp;7-9 Nguyễn Văn Linh, P. Gia Thụy, Quận Long Bi&ecirc;n</li>\r\n	<li><a href=\"http://www.khuyenmaivui.com/tag/the-garden/\" target=\"_blank\">The Garden</a>:&nbsp;khu đ&ocirc; thị The Manor, đường Mễ Tr&igrave;, phường Mỹ Đ&igrave;nh 1, quận Nam Từ Li&ecirc;m</li>\r\n	<li><a href=\"http://www.khuyenmaivui.com/tag/lotte-center-hanoi/\" target=\"_blank\">Lotte Center Hanoi</a>&nbsp;v&agrave;&nbsp;<a href=\"http://www.khuyenmaivui.com/tag/lotte-department-store/\" target=\"_blank\">Lotte Department Store</a>:&nbsp;Số 54 Liễu Giai, phường Cống Vị, quận Ba Đ&igrave;nh</li>\r\n</ul>\r\n', '200000', '1', '2015-05-05 05:55:54', '2016-12-24 08:31:28', 'test-1', '250000');
+INSERT INTO `product` VALUES ('25', '22', '1231', 'Madrid 4th', 'Madrid 4th', '200000', '1', '2015-05-05 07:38:02', '2016-12-24 08:31:39', 'madrid-4th', '250000');
+INSERT INTO `product` VALUES ('26', '22', '1212', 'Madrid Home', 'Madrid Home Warna Putih', '100000', '1', '2015-05-12 05:11:49', '2016-12-21 22:57:53', 'madrid-home', '90000');
 INSERT INTO `product` VALUES ('27', '23', '221313', 'Madrid Away', '', '100000', '1', '2015-05-12 07:05:11', '2016-12-18 01:44:56', 'madrid-away', null);
 INSERT INTO `product` VALUES ('28', '23', '1231', 'Madrid 3rd', '', '100000', '1', '2015-05-12 07:05:55', '2016-12-18 01:45:04', 'madrid-3rd', null);
 INSERT INTO `product` VALUES ('29', '23', 'ád', 'áđá', 'ád', '20000000', '1', '2016-12-10 10:13:30', '2016-12-18 01:45:19', 'ada', null);
@@ -502,14 +502,14 @@ CREATE TABLE `product_attr` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=60 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of product_attr
 -- ----------------------------
-INSERT INTO `product_attr` VALUES ('43', '23', 'warna', 'biru,hijau,kuning', '2016-12-18 02:31:04', '2016-12-18 02:31:04');
-INSERT INTO `product_attr` VALUES ('44', '23', 'ukuran', 's,m,l,xl,xxl', '2016-12-18 02:31:04', '2016-12-18 02:31:04');
-INSERT INTO `product_attr` VALUES ('45', '25', 'ukuran', 'S,M,L,XL,XXL', '2016-12-18 02:31:09', '2016-12-18 02:31:09');
+INSERT INTO `product_attr` VALUES ('57', '25', 'ukuran', 'S,M,L,XL,XXL', '2016-12-24 08:31:39', '2016-12-24 08:31:39');
+INSERT INTO `product_attr` VALUES ('58', '23', 'warna', 'biru,hijau,kuning', '2016-12-24 08:39:08', '2016-12-24 08:39:08');
+INSERT INTO `product_attr` VALUES ('59', '23', 'ukuran', 's,m,l,xl,xxl', '2016-12-24 08:39:08', '2016-12-24 08:39:08');
 
 -- ----------------------------
 -- Table structure for product_category
@@ -551,13 +551,12 @@ CREATE TABLE `product_img` (
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `primary` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of product_img
 -- ----------------------------
 INSERT INTO `product_img` VALUES ('14', '22', '6jkxL.jpg', 'images/products/thumb/6jkxL.jpg', 'images/products/full/6jkxL.jpg', '2015-05-05 04:36:32', '2015-05-05 04:36:32', '0');
-INSERT INTO `product_img` VALUES ('44', '23', 'YSLyp.jpg', 'images/products/thumb/YSLyp.jpg', 'images/products/full/YSLyp.jpg', '2016-12-18 02:28:43', '2016-12-18 02:28:43', '0');
 INSERT INTO `product_img` VALUES ('45', '23', 'BImli.jpg', 'images/products/thumb/BImli.jpg', 'images/products/full/BImli.jpg', '2016-12-18 02:28:49', '2016-12-18 02:28:49', '0');
 INSERT INTO `product_img` VALUES ('46', '25', 'zndQE.jpg', 'images/products/thumb/zndQE.jpg', 'images/products/full/zndQE.jpg', '2016-12-18 02:30:33', '2016-12-18 02:30:33', '0');
 INSERT INTO `product_img` VALUES ('47', '25', '5O22G.jpg', 'images/products/thumb/5O22G.jpg', 'images/products/full/5O22G.jpg', '2016-12-18 02:30:36', '2016-12-18 02:30:36', '0');
@@ -569,6 +568,9 @@ INSERT INTO `product_img` VALUES ('52', '29', 'G33Yy.jpg', 'images/products/thum
 INSERT INTO `product_img` VALUES ('53', '29', 'ov99U.jpg', 'images/products/thumb/ov99U.jpg', 'images/products/full/ov99U.jpg', '2016-12-18 02:32:01', '2016-12-18 02:32:01', '0');
 INSERT INTO `product_img` VALUES ('54', '28', 'EQctv.jpg', 'images/products/thumb/EQctv.jpg', 'images/products/full/EQctv.jpg', '2016-12-18 02:32:30', '2016-12-18 02:32:30', '0');
 INSERT INTO `product_img` VALUES ('55', '28', 'onLXp.jpg', 'images/products/thumb/onLXp.jpg', 'images/products/full/onLXp.jpg', '2016-12-18 02:32:32', '2016-12-18 02:32:32', '0');
+INSERT INTO `product_img` VALUES ('56', '23', 'sbzrz.jpg', 'images/products/thumb/sbzrz.jpg', 'images/products/full/sbzrz.jpg', '2016-12-24 08:38:41', '2016-12-24 08:38:41', '0');
+INSERT INTO `product_img` VALUES ('57', '23', 'pPEUJ.jpg', 'images/products/thumb/pPEUJ.jpg', 'images/products/full/pPEUJ.jpg', '2016-12-24 08:38:44', '2016-12-24 08:38:44', '0');
+INSERT INTO `product_img` VALUES ('58', '23', 'csncN.jpg', 'images/products/thumb/csncN.jpg', 'images/products/full/csncN.jpg', '2016-12-24 08:38:47', '2016-12-24 08:38:47', '0');
 
 -- ----------------------------
 -- Table structure for product_meta

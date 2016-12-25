@@ -49,7 +49,7 @@
     <div class="container">
         <div class="inside">
             © 2016 Trung tâm Giải trí và Thể thao Thế Hệ Mới. Thiết kế Website bởi <a href="http://giaitrilethuy.vn">giaitrilethuy </a>.
-            <a href="http://www.dmca.com/Protection/Status.aspx?ID=4944d03a-aa40-4bf7-8fb7-b1d5e9a9935d&amp;refurl=http://dongamruou.vn/" title="DMCA.com Protection Status" class="dmca-badge"> <img src="//images.dmca.com/Badges/dmca_protected_sml_120m.png?ID=4944d03a-aa40-4bf7-8fb7-b1d5e9a9935d" alt="DMCA.com Protection Status"></a> <script src="//images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
+            <a href="http://www.dmca.com/Protection/Status.aspx?ID=4944d03a-aa40-4bf7-8fb7-b1d5e9a9935d&amp;refurl=http://giaitrilethuy.vn" title="DMCA.com Protection Status" class="dmca-badge"> <img src="//images.dmca.com/Badges/dmca_protected_sml_120m.png?ID=4944d03a-aa40-4bf7-8fb7-b1d5e9a9935d" alt="DMCA.com Protection Status"></a> <script src="//images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
         </div>
     </div>
 </div>

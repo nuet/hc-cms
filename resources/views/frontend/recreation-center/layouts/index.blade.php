@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="">
-    <link href="{{Gen::genOpt('store_favicon')}}" rel="shortcut icon" type="image/x-icon"/>
+    {{--<link href="{{Gen::genOpt('store_favicon')}}" rel="shortcut icon" type="image/x-icon"/>--}}
     <meta http-equiv="content-language" content="vi"/>
     <title>{{$title or Gen::genOpt('store_title')}}</title>
     <meta name="description" content="{{Gen::genOpt('store_description')}}"/>
@@ -23,6 +23,7 @@
     <link href="{{asset('frontend/recreation-center/theme/css/slick.css')}}" rel="stylesheet" media='all'>
     <link href="{{asset('frontend/recreation-center/plugins/font-awesome-4.7.0/css/font-awesome.min.css')}}"
           rel="stylesheet" media='all'>
+    <link href="{{asset('frontend/recreation-center/theme/css/etalage.css')}}" rel="stylesheet" media='all'>
     <link href="{{asset('frontend/recreation-center/theme/css/style.css')}}" rel="stylesheet" media='all'>
     <link href="{{asset('frontend/recreation-center/theme/css/upw-theme-standard.min.css')}}" rel="stylesheet"
           media='all'>
@@ -31,6 +32,7 @@
 
     <script src="{{asset('frontend/recreation-center/plugins/jquery/dist/jquery.min.js')}}"></script>
     <script src="{{asset('frontend/recreation-center/plugins/bootstrap-3.3.4/dist/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('frontend/recreation-center/theme/js/jquery.etalage.min.js')}}"></script>
     <script src="{{asset('frontend/recreation-center/theme/js/floatads.js')}}"></script>
     <script src="{{asset('frontend/recreation-center/theme/js/app.js')}}"></script>
 </head>
@@ -50,12 +52,12 @@
     var clientWidth = window.screen.width;
     if (clientWidth >= 1024) {
         document.write('<div id="divAdRight" style="position: absolute; top: 0px; width:160px; height:600px; overflow:hidden;"> ' +
-                '<a href="#" target="_blank">' +
+                '<a href="{{$leftPathGo}}" target="_blank">' +
                 '<img src="{{asset(Gen::genImgUrl($leftPath))}}" alt="ruou-ngam-ha-noi"/> ' +
                 '</a>' +
                 '</div>' +
                 '<div id="divAdLeft" style="position: absolute; top: 0px; width:160px; height:600px; overflow:hidden;">' +
-                '<a href="#" target="_blank">' +
+                '<a href="{{$rightPathGo}}" target="_blank">' +
                 '<img src="{{asset(Gen::genImgUrl($rightPath))}}" alt="ruou-ngam-ha-noi"/> ' +
                 '</a>' +
                 '</div>');
@@ -69,6 +71,15 @@
         ShowAdDiv();
         window.onresize = ShowAdDiv;
     }
+
+    $('#etalage').etalage({
+        thumb_image_width: 280,
+        thumb_image_height: 250,
+        show_hint: true,
+        click_callback: function(image_anchor, instance_id) {
+            //alert('Callback example:\nYou clicked on an image with the anchor: "' + image_anchor + '"\n(in Etalage instance: "' + instance_id + '")');
+        }
+    });
 </script>
 </body>
 </html>

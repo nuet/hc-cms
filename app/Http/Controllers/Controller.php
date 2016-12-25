@@ -21,9 +21,11 @@ abstract class Controller extends BaseController {
         //Anh quang cao ben trai
         $arrPic = Gen::getMedia(Config::get('constants.mediatype.slide'),'2');
         $this->data['leftPath'] = $arrPic[0]->path_full;
+        $this->data['leftPathGo'] = $arrPic[0]->img_url;
         //Anh quang cao ben phai
         $arrPic = Gen::getMedia(Config::get('constants.mediatype.slide'),'10');
         $this->data['rightPath'] = $arrPic[0]->path_full;
+        $this->data['rightPathGo'] = $arrPic[0]->img_url;
         //Chuyen muc dich vu
         $slugcat = 'dich-vu';
         $findcat = Category\Category::where('slug', $slugcat)->first();

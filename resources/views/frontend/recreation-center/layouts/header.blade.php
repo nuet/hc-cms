@@ -19,12 +19,13 @@
             </button>
 
             <div class="col-sm-9 text-right header-sidebar hidden-xs">
-                <a href="">
-                    @foreach(Gen::getMedia(Config::get('constants.mediatype.slide'),'9') as $key =>$ss)
-                        <img class="aligncenter size-full wp-image-1383" style="max-width: 100%;"
-                             src="{{asset(Gen::genImgUrl($ss->path_full))}}?w=1200">
-                    @endforeach
-                </a></div>
+                @foreach(Gen::getMedia(Config::get('constants.mediatype.slide'),'9') as $key =>$ss)
+                <a href="{{$ss->img_url}}">
+                    <img class="aligncenter size-full wp-image-1383" style="max-width: 100%;"
+                         src="{{asset(Gen::genImgUrl($ss->path_full))}}?w=1200">
+                </a>
+                @endforeach
+            </div>
             <div class="top-search col-xs-12 visible-xs">
 
                 <div class="yith-ajaxsearchform-container">

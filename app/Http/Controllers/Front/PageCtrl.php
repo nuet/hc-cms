@@ -6,24 +6,13 @@ use Request;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\News;
-use App\Models\Media;
 use App\Models\Products;
-use App\Models\Order\Order;
 use App\Models\Page;
-use App\Models\Widget;
 use App\Models\Users\User;
-use Illuminate\Support\Str;
 use App\Http\Requests\RegisterAccount;
-use App\Http\Requests\LoginAccount;
-use App\Http\Requests\UpdateAccount;
-use App\Models\Users\Role;
-use Illuminate\Pagination\LengthAwarePaginator;
 use Config,Gen;
 use Session,
     Auth;
-use Veritrans_VtWeb;
-use Veritrans_Transaction;
-use Exception;
 
 class PageCtrl extends Controller
 {
@@ -43,26 +32,10 @@ class PageCtrl extends Controller
         $slugcat = 'dich-vu';
         $findcat = Category\Category::where('slug', $slugcat)->first();
         $this->data['catProducts'] = Category\Category::with('product')->where('parent','=',$findcat['id'])->where('status','=','1')->where('viewhome','=','1')->take(3)->get();
-        //dd($this->data['catProducts']);
         $this->data['title'] = Gen::genOpt('title');
         return view('frontend.recreation-center.pages.home', $this->data);
     }
-    /**
-     * 
-     * @param RegisterAccount $request
-     * @return type
-     */
-    public function registerAccount(RegisterAccount $request)
-    {
-        $input = $request->all();
-        $input['password'] = bcrypt($input['password']);
-        $input['status'] = 1;
-        $user = new User($input);
-        if ($user->save()) {
-            $user->attachRole(5);
-            return redirect("/")->with('status', 'Tài khoản được tạo thành công!');
-        }
-    }
+
     /**
      * 
      * @param type $slug
@@ -72,9 +45,9 @@ class PageCtrl extends Controller
         $findnew = News\News::where('slug', $slug)->first();
         if (count($findnew)) {
             $this->data['new'] = $findnew;
+            $this->data['related_new'] = News\News::where('id_category', $findnew->id_category)->where('id', '!=', $findnew->id)->get();
             return view('frontend.recreation-center.pages.newsdetail', $this->data);
         }
-
         $page = Page\Page::where('page_slug', $slug)->first();
         if (count($page)) {
             $this->data['page'] = $page;
@@ -114,6 +87,7 @@ class PageCtrl extends Controller
     public function product($slug,$product) {
         $findpro = Products\Product::where('slug', $product)->first();
 
+        $this->data['catslug'] = 'dich-vu/'.$slug;
         $this->data['product'] = $findpro;
         $this->data['related_product'] = Products\Product::where('id_category', $findpro->id_category)->where('id', '!=', $findpro->id)->get();
         if (count($findpro) > 0) {
@@ -132,67 +106,5 @@ class PageCtrl extends Controller
         $findcat = Category\Category::where('slug', $slugcat)->first();
         $this->data['news'] = News\News::where('status','=','1')->where('id_category','=',$findcat['id'])->orderBy('order')->paginate($perPage);
         return view('frontend.recreation-center.pages.news', $this->data);
-    }
-    /**
-     * 
-     * @param UpdateAccount $request
-     * @return type
-     */
-    public function updateAccount(UpdateAccount $request)
-    {
-        $input = $request->all();
-        if ($input["password"]!="") {
-            $input["password"] = bcrypt($input["password"]);
-        }else{
-            unset($input["password"]);
-        }
-        $user=User::find(Auth::user()->id);
-        if ($user->update($input)) {
-             return redirect()->to("customer/account")->with(['data' => Request::all()]);
-        }
-    }
-    /**
-     * 
-     * @return type
-     */
-    public function getAccount()
-    {
-        if (!Auth::check()) {
-            return redirect('customer/login');
-        }
-        return view('frontend.recreation-center.pages.account', $this->data);
-    }
-    /**
-     * 
-     * @param LoginAccount $request
-     * @return type
-     * @throws Exception
-     */
-    public function login(LoginAccount $request)
-    {
-        $message = '';
-        $username = $request->get('username');
-        $password = $request->get('password');
-        $remember = $request->get('remember');
-        $check = User::where('username', '=', $username)->get();
-        try {
-            if (!count($check) > 0) {
-                throw new Exception("Tài khoản không tồn tại!");
-            }
-            if (!Auth::validate(['username' => $username, 'password' => $password, 'status' => 1])) {
-                throw new Exception("login faild!");
-            } elseif ($remember) {
-                if (Auth::attempt(['username' => $username, 'password' => $password, 'status' => 1, $remember])) {
-                    return redirect('customer/account');
-                }
-            } else {
-                if (Auth::attempt(['username' => $username, 'password' => $password, 'status' => 1])) {
-                    return redirect('customer/account');
-                }
-            }
-        } catch (Exception $e) {
-            $message = $e->getMessage();
-        }
-        return redirect($this->getRedirectUrl())->withInput()->withErrors(['message' => $message], "login");
     }
 }

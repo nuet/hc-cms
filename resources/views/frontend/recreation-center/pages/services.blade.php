@@ -22,7 +22,9 @@
                                                         @endif
                                                         <h3>{{$product->product_name}}</h3>
                                                         <span class="price">
-                                                            <del><span class="amount">{{$product->product_price}}&nbsp;VNĐ</span></del>
+                                                            @if ($product->product_old_price)
+                                                                <del><span class="amount">{{$product->product_old_price}}&nbsp;VNĐ</span></del>
+                                                            @endif
                                                             <ins><span class="amount">{{$product->product_price}}&nbsp;VNĐ</span></ins>
                                                         </span>
                                                     </a>

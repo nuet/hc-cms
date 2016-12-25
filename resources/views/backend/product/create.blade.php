@@ -137,7 +137,7 @@ $(function () {
                                                 <input id="price" data-inputmask="'alias': 'decimal', 'groupSeparator': '.', 'autoGroup': true" type="text" name="product_price" class="form-control" value="{{old('product_price')}}">
                                             </div>
                                             <div class="form-group">
-                                                <label>Giá khuyến mãi</label>
+                                                <label>Giá cũ</label>
                                                 <input id="old_price" data-inputmask="'alias': 'decimal', 'groupSeparator': '.', 'autoGroup': true" type="text" name="product_old_price" class="form-control" value="{{old('product_old_price')}}">
                                             </div>
                                             <div class="form-group">

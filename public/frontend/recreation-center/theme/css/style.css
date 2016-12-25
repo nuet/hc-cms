@@ -38,11 +38,6 @@ img.wp-post-image {
 	height: auto;
 }
 
-iframe {
-	display: block;
-	margin: 0 auto;
-}
-
 ul {
 	padding-left: 20px
 }
@@ -1533,4 +1528,127 @@ nav#site-navigation .navbar-nav>li>a, .topbar .navbar-nav>li>a, footer#colophon 
 	font-size: 11px;
 	height: 17px;
 	width: 78px;
+}
+.product-details {
+	overflow: hidden;
+	margin-top: 10px;
+}
+#reviews {
+	padding-left: 25px;
+	padding-right: 25px;
+}
+.product-information {
+	border: 1px solid #F7F7F0;
+	overflow: hidden;
+	padding-bottom: 15px;
+	padding-left: 15px;
+	padding-top: 15px;
+	position: relative;
+}
+.shop-details-tab {
+	border: 1px solid #F7F7F0;
+	margin-bottom: 50px;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding-bottom: 10px;
+}
+.category-tab {
+	overflow: hidden;
+}
+.shop-details-tab .col-sm-12 {
+	padding-left: 0;
+	padding-right: 0;
+}
+.nav-tabs {
+	background: #40403E;
+	border-bottom: 1px solid #FE980F;
+	list-style: none outside none;
+	padding: 0;
+	width: 100%;
+}
+.nav-tabs li.active a, .nav-tabs li.active a:hover, .nav-tabs li.active a:focus {
+	background-color: #FE980F;
+	border: 0;
+	border-radius: 0;
+	color: #FFFFFF;
+	cursor: default;
+	margin-right: 0;
+	margin-left: 0;
+}
+.recommended_items {
+	overflow: hidden;
+}
+h2.title {
+	color: #FE980F;
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	font-weight: 700;
+	margin: 0 15px;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+	position: relative;
+}
+#recommended-item-carousel .carousel-inner .item {
+	padding-left: 0;
+}
+.product-image-wrapper {
+	border: 1px solid #F7F7F5;
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+.single-products {
+	position: relative;
+}
+.productinfo {
+	position: relative;
+}
+.productinfo img {
+	width: 100%;
+}
+.item h2 {
+	color: #363432;
+	font-family: 'Roboto', sans-serif;
+	font-size: 28px;
+	font-weight: 700;
+	margin-bottom: 22px;
+	margin-top: 10px;
+}
+.productinfo h2 {
+	color: #FE980F;
+	font-family: 'Roboto', sans-serif;
+	font-size: 24px;
+	font-weight: 700;
+}
+.productinfo p {
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	color: #696763;
+}
+.recommended-item-control {
+	position: absolute;
+	top: 41%;
+}
+.recommended-item-control i {
+	background: none repeat scroll 0 0 #FE980F;
+	color: #FFFFFF;
+	font-size: 20px;
+	padding: 4px 10px;
+}
+.right {
+	right: 0;
+}
+.price del {
+	font-size: 0.85em;
+	color: #2291e6;
+}
+.price ins {
+	text-decoration: none;
+	color: #DA1C5C;
+}
+.price{
+	text-align: center;
+	font-size: 1em;
+	font-weight: bold;
+	color: #DA1C5C !important;
 }

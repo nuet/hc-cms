@@ -31,21 +31,22 @@
                                     <img src="{{asset('frontend/recreation-center/theme/img/product-details/new.jpg')}}"
                                          class="newarrival" alt=""/>
                                     <h2 class="item_name">{{$product->product_name}}</h2>
-
                                     <p>
                                     <span>
-                                        <span>Rp. {{number_format($product->product_price,0,',','.')}}</span>
+                                        <span>Giá.</span>
                                     </span>
+                                        <span class="price">
+                                                            @if ($product->product_old_price)
+                                                <del style="font-size: 20px;"><span class="amount">{{number_format($product->product_old_price)}}
+                                                        &nbsp;VNĐ</span></del>
+                                            @endif
+                                            <ins style="font-size: 28px;"><span class="amount">{{number_format($product->product_price)}}
+                                                    &nbsp;VNĐ</span></ins>
+                                                        </span>
                                     </p>
-                                    <span>
-                                        <label>Quantity:</label>
-                                        <input type="text" class="item_quantity" value="3">
-                                        <button class="item_add btn btn-fefault cart"
-                                                value="add to cart">Add to Cart </button>
-                                    </span>
-                                    <a href=""><img
-                                                src="{{asset('frontend/recreation-center/theme/img/product-details/share.png')}}"
-                                                class="share img-responsive" alt=""/></a>
+                                    <iframe src="https://www.facebook.com/plugins/like.php?href={{url($product->slug)}}%2Fdocs%2Fplugins%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=false&height=80&appId=1205774589445826"
+                                            style="border:none; overflow:hidden; height:30px;"
+                                            scrolling="no" frameborder="0" allowTransparency="true"></iframe>
                                 </div><!--/product-information-->
                             </div>
                         </div><!--/product-details-->
@@ -53,23 +54,20 @@
                         <div class="category-tab shop-details-tab"><!--category-tab-->
                             <div class="col-sm-12">
                                 <ul class="nav nav-tabs">
-                                    <li class="active"><a href="#reviews" data-toggle="tab">Details</a></li>
+                                    <li class="active"><a href="#reviews" data-toggle="tab">Thông tin chi tiết</a></li>
                                 </ul>
                             </div>
                             <div class="tab-content">
                                 <div class="tab-pane fade active in" id="reviews">
                                     <div class="col-sm-12">
-                                        <br/>
-                                        <a href="javascript:;" class="simpleCart_empty">empty cart</a><br/>
                                         <p>{!!$product->product_description!!}</p>
                                     </div>
                                 </div>
-
                             </div>
                         </div><!--/category-tab-->
-
+                        <div style="clear: both;"></div>
                         <div class="recommended_items"><!--recommended_items-->
-                            <h2 class="title text-center">recommended items</h2>
+                            <h2 class="title text-center">Dịch vụ liên quan</h2>
 
                             <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
@@ -78,14 +76,23 @@
                                             <div class="col-sm-4">
                                                 <div class="product-image-wrapper">
                                                     <div class="single-products">
-                                                        <div class="productinfo text-center">
-                                                            <img src="images/home/recommend3.jpg" alt=""/>
-                                                            <h2>$56</h2>
-                                                            <p>Easy Polo Black Edition</p>
-                                                            <button type="button" class="btn btn-default add-to-cart"><i
-                                                                        class="fa fa-shopping-cart"></i>Add to cart
-                                                            </button>
-                                                        </div>
+                                                        <a href="{{url($catslug.'/'.$related->slug)}}">
+                                                            <div class="productinfo text-center">
+                                                                <img src="{{asset($related->image->first()->path_thumb)}}"
+                                                                     alt=""/>
+
+                                                                <span class="price">
+                                                            @if ($product->product_old_price)
+                                                                        <del><span class="amount">{{$related->product_old_price}}
+                                                                                &nbsp;VNĐ</span></del><br>
+                                                                    @endif
+                                                                    <ins><span class="amount">{{$related->product_price}}
+                                                                            &nbsp;VNĐ</span></ins>
+                                                            </span>
+
+                                                                <p>{{$related->product_name}}</p>
+                                                            </div>
+                                                        </a>
                                                     </div>
                                                 </div>
                                             </div>
